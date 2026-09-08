@@ -1,12 +1,12 @@
 {
-  "name": "cmx-monorepo",
+  "name": "cmx-enterprise-portal",
   "version": "0.1.0",
   "private": true,
   "description": "CMX 系列项目根（workspaces）。数据与表格组件统一在 packages/cmx-data-comp，由 CMXHTMLDesigner、CMXPortalManager 等子项目复用。",
   "workspaces": [
     "packages/*",
-    "CMXHTMLDesigner",
-    "CMXPortalManager"
+    "cmx-html-designer",
+    "cmx-portal-manager"
   ],
   "overrides": {
     "graphql": "16.14.0",

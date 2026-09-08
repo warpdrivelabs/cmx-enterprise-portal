@@ -1426,7 +1426,7 @@ export class PortalAgentConsole extends HTMLElement {
   }
 
   _shortPath (file) {
-    const marker = '/CMXPortalManager/'
+    const marker = '/cmx-portal-manager/'
     const idx = String(file || '').indexOf(marker)
     return idx >= 0 ? String(file).slice(idx + marker.length) : String(file || '')
   }

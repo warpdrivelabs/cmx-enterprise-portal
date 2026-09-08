@@ -41,8 +41,7 @@ export default defineConfig(({ mode }) => {
     plugins: [cmxUi5SideEffectShimPlugin(), cmxUi5RuntimeAppPlugin(), localeDataWhitelistPlugin],
     resolve: {
       alias: [
-        { find: '@cmx-form-designer', replacement: path.resolve(__dirname, '../CMXFormDesigner') },
-        { find: '@cmx-html-designer', replacement: path.resolve(__dirname, '../CMXHTMLDesigner') },
+        { find: '@cmx-html-designer', replacement: path.resolve(__dirname, '../cmx-html-designer') },
         {
           find: /^cmx-data-comp\/lib\/(.+)$/,
           replacement: path.resolve(__dirname, '../packages/cmx-data-comp/src/lib/$1'),
