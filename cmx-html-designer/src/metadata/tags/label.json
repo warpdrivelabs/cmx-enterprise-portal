@@ -1,0 +1,27 @@
+{
+  "tag": "label",
+  "group": "default",
+  "label": "<label>",
+  "description": "表单标签",
+  "isVoid": false,
+  "canNest": false,
+  "attrs": [
+    {
+      "name": "for",
+      "label": "for",
+      "type": "text",
+      "placeholder": "input-id"
+    }
+  ],
+  "defaults": {
+    "text": "标签文字"
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

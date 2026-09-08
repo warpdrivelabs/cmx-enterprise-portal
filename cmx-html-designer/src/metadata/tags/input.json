@@ -1,0 +1,81 @@
+{
+  "tag": "input",
+  "group": "default",
+  "label": "<input>",
+  "description": "输入框",
+  "isVoid": true,
+  "canNest": false,
+  "attrs": [
+    {
+      "name": "type",
+      "label": "type",
+      "type": "select",
+      "options": [
+        "text",
+        "password",
+        "email",
+        "number",
+        "tel",
+        "url",
+        "search",
+        "date",
+        "time",
+        "datetime-local",
+        "month",
+        "week",
+        "color",
+        "range",
+        "file",
+        "checkbox",
+        "radio",
+        "hidden",
+        "submit",
+        "reset",
+        "button",
+        "image"
+      ]
+    },
+    {
+      "name": "name",
+      "label": "name",
+      "type": "text",
+      "placeholder": "字段名"
+    },
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": "默认值"
+    },
+    {
+      "name": "placeholder",
+      "label": "placeholder",
+      "type": "text",
+      "placeholder": "占位提示"
+    },
+    {
+      "name": "required",
+      "label": "required",
+      "type": "boolean"
+    },
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    }
+  ],
+  "defaults": {
+    "attributes": {
+      "type": "text",
+      "placeholder": "请输入内容"
+    }
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "form"
+}

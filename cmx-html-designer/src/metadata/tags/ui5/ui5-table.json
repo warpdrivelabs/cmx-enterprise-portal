@@ -1,0 +1,79 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-table>",
+  "isVoid": false,
+  "tag": "ui5-table",
+  "description": "UI5 表格",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    },
+    {
+      "name": "no-data-text",
+      "label": "no-data-text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "overflow-mode",
+      "label": "overflow-mode",
+      "type": "select",
+      "options": [
+        "Scroll",
+        "Popin"
+      ]
+    },
+    {
+      "name": "loading",
+      "label": "loading",
+      "type": "boolean"
+    },
+    {
+      "name": "loading-delay",
+      "label": "loading-delay",
+      "type": "text",
+      "placeholder": "1000"
+    },
+    {
+      "name": "row-action-count",
+      "label": "row-action-count",
+      "type": "text",
+      "placeholder": "0"
+    },
+    {
+      "name": "alternate-row-colors",
+      "label": "alternate-row-colors",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "",
+    "headerRow",
+    "noData",
+    "features"
+  ],
+  "extraEvents": [
+    "row-click",
+    "move-over",
+    "move",
+    "row-action-click"
+  ]
+}

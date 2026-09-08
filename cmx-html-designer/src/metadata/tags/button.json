@@ -1,0 +1,39 @@
+{
+  "tag": "button",
+  "group": "default",
+  "label": "<button>",
+  "description": "按钮",
+  "isVoid": false,
+  "canNest": false,
+  "attrs": [
+    {
+      "name": "type",
+      "label": "type",
+      "type": "select",
+      "options": [
+        "button",
+        "submit",
+        "reset"
+      ]
+    },
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    }
+  ],
+  "defaults": {
+    "text": "按钮",
+    "attributes": {
+      "type": "button"
+    }
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "form"
+}

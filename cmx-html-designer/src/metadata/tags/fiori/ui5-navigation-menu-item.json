@@ -1,0 +1,32 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-navigation-menu-item>",
+  "isVoid": false,
+  "tag": "ui5-navigation-menu-item",
+  "description": "UI5 Fiori 导航菜单项",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "href",
+      "label": "href",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "target",
+      "label": "target",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

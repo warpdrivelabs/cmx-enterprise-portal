@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CMXPortalManager 软件质量评估报告</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #dbe3ee;
+      --good: #0f766e;
+      --warn: #b45309;
+      --bad: #b91c1c;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .page {
+      width: min(1200px, calc(100vw - 40px));
+      margin: 24px auto 48px;
+    }
+    .hero, .section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+    .hero {
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
+    h1, h2, h3 { margin: 0 0 12px; }
+    h1 { font-size: 30px; }
+    h2 {
+      font-size: 22px;
+      padding: 22px 26px 0;
+    }
+    h3 { font-size: 17px; }
+    p { margin: 8px 0; }
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .meta .item, .score, .risk, .finding, .metric {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+    }
+    .meta .item {
+      padding: 14px 16px;
+      background: #fafcff;
+    }
+    .label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .value {
+      margin-top: 4px;
+      font-size: 15px;
+      font-weight: 600;
+      word-break: break-word;
+    }
+    .section { margin-bottom: 20px; overflow: hidden; }
+    .section-body { padding: 18px 26px 26px; }
+    .grid-4, .grid-3, .grid-2 {
+      display: grid;
+      gap: 14px;
+    }
+    .grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+    .score {
+      padding: 18px;
+      border-left: 5px solid var(--accent);
+      background: linear-gradient(180deg, #fff, #f9fbff);
+    }
+    .score .big {
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .score.good { border-left-color: var(--good); }
+    .score.warn { border-left-color: var(--warn); }
+    .score.bad { border-left-color: var(--bad); }
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      vertical-align: middle;
+    }
+    .badge.good { color: var(--good); background: #ccfbf1; }
+    .badge.warn { color: var(--warn); background: #fef3c7; }
+    .badge.bad { color: var(--bad); background: #fee2e2; }
+    .risk, .finding, .metric {
+      padding: 16px 18px;
+    }
+    .risk { border-left: 5px solid var(--bad); }
+    .finding.good { border-left: 5px solid var(--good); }
+    .finding.warn { border-left: 5px solid var(--warn); }
+    .finding.bad { border-left: 5px solid var(--bad); }
+    ul { margin: 8px 0 0 20px; padding: 0; }
+    li { margin: 6px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f8fafc;
+      font-weight: 700;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background: #f3f4f6;
+      padding: 1px 5px;
+      border-radius: 6px;
+      word-break: break-word;
+    }
+    .muted { color: var(--muted); }
+    .small { font-size: 13px; }
+    .toc a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .toc li { margin: 4px 0; }
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <h1>CMXPortalManager 软件质量评估报告</h1>
+      <p>本报告基于对工程结构、前端与后端代码、构建与静态检查、依赖安全、运行可达性以及可维护性特征的详细检查形成，目标是给出可落地的软件质量结论与整改优先级。</p>
+      <div class="meta">
+        <div class="item"><div class="label">评估日期</div><div class="value">2026-05-13</div></div>
+        <div class="item"><div class="label">评估对象</div><div class="value">CMXPortalManager</div></div>
+        <div class="item"><div class="label">工程形态</div><div class="value">Vite + UI5 Web Components 前端 + Fastify 多协议 Node 服务</div></div>
+        <div class="item"><div class="label">报告文件</div><div class="value">docs/software-quality-assessment-report.html</div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>目录</h2>
+      <div class="section-body toc">
+        <ul>
+          <li><a href="#summary">1. 执行摘要</a></li>
+          <li><a href="#scope">2. 评估范围与方法</a></li>
+          <li><a href="#architecture">3. 架构与工程概况</a></li>
+          <li><a href="#scores">4. 质量评分</a></li>
+          <li><a href="#findings">5. 详细发现</a></li>
+          <li><a href="#risks">6. 关键风险清单</a></li>
+          <li><a href="#recommendations">7. 整改建议与优先级</a></li>
+          <li><a href="#evidence">8. 关键证据</a></li>
+          <li><a href="#conclusion">9. 总体结论</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="summary">
+      <h2>1. 执行摘要</h2>
+      <div class="section-body">
+        <p><strong>总体判断：</strong><span class="badge warn">中等偏上</span>。该工程具备清晰的产品原型和较强的前后端联动能力，前端工作区系统、HTML 页面批量加载与动态挂载机制、后端多协议封装等方面体现出较高的实现复杂度和一定的工程能力。</p>
+        <p>但从软件质量角度看，当前项目更接近“功能可运行的高复杂度原型”而非“生产级成熟系统”。主要短板集中在：<strong>自动化测试缺失、Lint 未达绿、动态 HTML/脚本执行带来的高安全风险、依赖安全告警、超大前端包体、关键模块过长过重</strong>。</p>
+        <p>当前状态适合继续做原型验证、内部演示和受控环境开发，不适合直接作为面向外部用户或高敏环境的生产系统发布。</p>
+      </div>
+    </section>
+
+    <section class="section" id="scope">
+      <h2>2. 评估范围与方法</h2>
+      <div class="section-body grid-2">
+        <div class="metric">
+          <h3>评估范围</h3>
+          <ul>
+            <li>根工程构建与配置：<code>package.json</code>、<code>vite.config.js</code>、<code>eslint.config.js</code></li>
+            <li>前端源码：<code>src/</code> 下组件、API 层、运行时与工作区机制</li>
+            <li>后端源码：<code>cmx-node-server/</code> 下服务入口、数据存储、协议插件</li>
+            <li>运行数据与页面资源：<code>cmx-node-server/data/</code></li>
+            <li>构建、Lint、依赖审计与服务启动可达性验证</li>
+          </ul>
+        </div>
+        <div class="metric">
+          <h3>评估方法</h3>
+          <ul>
+            <li>静态结构扫描与关键文件人工审阅</li>
+            <li>执行 <code>npm run lint</code>、<code>npm run build</code>、<code>npm audit --omit=dev --json</code></li>
+            <li>启动服务并验证 <code>/</code>、<code>/api/activities</code>、<code>/api/menu-pages</code>、<code>/api/html-pages</code></li>
+            <li>基于代码证据对可维护性、可靠性、安全性、性能与可测试性进行分项评分</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="architecture">
+      <h2>3. 架构与工程概况</h2>
+      <div class="section-body grid-3">
+        <div class="metric">
+          <h3>技术栈</h3>
+          <ul>
+            <li>前端：Vite 6、Lit、UI5 Web Components</li>
+            <li>后端：Fastify 5、自定义 CMXService</li>
+            <li>协议：REST、JSON-RPC、GraphQL、tRPC、SSE、WebSocket、gRPC</li>
+            <li>校验：ESLint 9、Zod</li>
+          </ul>
+        </div>
+        <div class="metric">
+          <h3>规模概况</h3>
+          <ul>
+            <li>项目文件数：约 106 个源码/数据文件（排除 <code>node_modules</code> 与 <code>dist</code>）</li>
+            <li>前端源码总行数：约 11472 行</li>
+            <li>后端与数据总行数：约 2541 行</li>
+            <li>合计评估规模：约 14013 行</li>
+          </ul>
+        </div>
+        <div class="metric">
+          <h3>模块特征</h3>
+          <ul>
+            <li>前端高度集中在工作区、标签页、布局、动态页面注入</li>
+            <li>后端以演示型多协议聚合服务为主</li>
+            <li>数据持久化主要使用 JSON/HTML 文件存储</li>
+            <li>存在跨工程别名耦合：<code>@cmx-html-designer</code>、<code>@cmx-form-designer</code></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="scores">
+      <h2>4. 质量评分</h2>
+      <div class="section-body grid-4">
+        <div class="score warn"><div class="big">72/100</div><div><strong>总体质量</strong></div><p class="small muted">功能可用，但距离生产级仍有明显差距。</p></div>
+        <div class="score good"><div class="big">82/100</div><div><strong>架构表达</strong></div><p class="small muted">职责边界基本可识别，前后端分层较明确。</p></div>
+        <div class="score warn"><div class="big">60/100</div><div><strong>可维护性</strong></div><p class="small muted">复杂模块偏大，局部耦合重，后续演化成本较高。</p></div>
+        <div class="score bad"><div class="big">45/100</div><div><strong>可测试性</strong></div><p class="small muted">未发现自动化测试体系，回归能力弱。</p></div>
+        <div class="score bad"><div class="big">48/100</div><div><strong>安全性</strong></div><p class="small muted">动态脚本执行与依赖高危告警需要优先处理。</p></div>
+        <div class="score warn"><div class="big">58/100</div><div><strong>性能与交付</strong></div><p class="small muted">构建成功，但主包和 UI5 相关 chunk 体积过大。</p></div>
+        <div class="score warn"><div class="big">65/100</div><div><strong>可靠性</strong></div><p class="small muted">基础服务可启动，文件存储层具备原子写入，但缺少自动化保障。</p></div>
+        <div class="score warn"><div class="big">62/100</div><div><strong>工程规范</strong></div><p class="small muted">有安全导向 ESLint 规则，但当前未通过 lint。</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="findings">
+      <h2>5. 详细发现</h2>
+      <div class="section-body grid-2">
+        <div class="finding good">
+          <h3>5.1 优点与亮点</h3>
+          <ul>
+            <li><strong>前后端边界清晰：</strong>前端在 <code>src/</code>，后端在 <code>cmx-node-server/</code>，结构上可快速定位职责。</li>
+            <li><strong>工程配置有针对性：</strong><code>eslint.config.js:38</code> 起明确限制 <code>innerHTML</code>、<code>outerHTML</code>、<code>insertAdjacentHTML</code>、<code>eval</code>、<code>new Function</code>，说明作者有主动的安全意识。</li>
+            <li><strong>文件写入具备原子性：</strong><code>cmx-node-server/lib/htmlPagesStore.js:109</code>、<code>cmx-node-server/lib/formPagesStore.js:74</code> 使用临时文件 + rename，降低写入损坏风险。</li>
+            <li><strong>并发写入有串行锁：</strong><code>withLock</code> 机制可避免列表文件并发更新相互覆盖。</li>
+            <li><strong>动态 UI 初始化顺序处理较严谨：</strong><code>src/main.js:18</code> 与 <code>src/import-ui5-and-app.js:10</code> 对 UI5 boot、bundle、theme、language 的先后顺序控制较好。</li>
+            <li><strong>服务可运行：</strong>实测服务可启动，核心 REST 接口返回正常，gRPC 自检通过。</li>
+          </ul>
+        </div>
+
+        <div class="finding warn">
+          <h3>5.2 可维护性</h3>
+          <ul>
+            <li><strong>超长文件较多：</strong><code>src/components/portal-content-area.js</code> 约 1396 行，<code>portal-workspace-float-window.js</code> 约 916 行，<code>portal-app-workspace.js</code> 约 737 行。这类文件承担了过多状态、渲染和事件逻辑，阅读与修改成本高。</li>
+            <li><strong>大量 <code>any</code> 风格 JSDoc 断言：</strong>例如 <code>src/components/portal-app.js:68</code>、<code>src/lib/workspace-dock-layout.js</code> 多处，说明类型约束不足，复杂数据结构较难被工具验证。</li>
+            <li><strong>跨工程别名耦合：</strong><code>vite.config.js:50</code> 将本工程依赖到相邻工程源码，这有助于复用，但会增加构建环境一致性要求，也会放大联调复杂度。</li>
+            <li><strong>运行时字符串模板 HTML 较多：</strong>多个组件依赖 <code>innerHTML</code> 注入模板，即便很多场景已做转义，也增加后续审计成本。</li>
+          </ul>
+        </div>
+
+        <div class="finding bad">
+          <h3>5.3 安全性</h3>
+          <ul>
+            <li><strong>动态脚本执行面较大：</strong><code>src/lib/workspace-html-page-preview.js:99-153</code> 会解析存储的 HTML 页面并重新创建 <code>&lt;script&gt;</code> 节点执行。只要后端存储的页面内容可被低信任来源写入，就存在明显的脚本注入与权限提升风险。</li>
+            <li><strong>HTML 页面内容直接持久化：</strong><code>cmx-node-server/lib/htmlPagesStore.js:182-223</code> 保存原始 HTML 文本，未见服务端清洗、隔离策略或可信内容签名。</li>
+            <li><strong>依赖审计存在高危告警：</strong><code>npm audit</code> 发现 4 个 high 级问题，链路为 <code>mercurius -&gt; graphql-jit -&gt; fast-json-stringify -&gt; fast-uri</code>，其中包含路径穿越与 host confusion 风险。</li>
+            <li><strong>GraphQL IDE 默认开启：</strong><code>cmx-node-server/portalManagerService.js:243</code> 与 <code>cmx-node-server/cmx-service/src/plugins/GraphQLPlugin.js:23-28</code> 默认启用 <code>graphiql</code>，在生产环境应受环境变量控制。</li>
+            <li><strong>CORS 过宽：</strong><code>cmx-node-server/portalManagerService.js:75</code> 使用 <code>origin: true</code>，在未配合鉴权与来源约束时，默认信任面偏大。</li>
+            <li><strong>WebSocket/多协议接口偏演示化：</strong>当前未见认证、鉴权、速率限制与审计控制，不适合直接外放。</li>
+          </ul>
+        </div>
+
+        <div class="finding warn">
+          <h3>5.4 构建与交付质量</h3>
+          <ul>
+            <li><strong>构建通过：</strong><code>npm run build</code> 成功，说明当前主路径可发布静态产物。</li>
+            <li><strong>包体过大：</strong><code>ui5-main</code> 约 4.1 MB，<code>ui5-fiori</code> 约 10.17 MB，多个 UI5 chunk 明显偏大，首屏和弱网体验存在风险。</li>
+            <li><strong>虽已做 chunk 拆分，但效果有限：</strong><code>vite.config.js:95-108</code> 进行了 <code>manualChunks</code>，说明已有优化意识，但 UI5 资源体量仍然主导整体性能瓶颈。</li>
+            <li><strong>Source map 全量开启：</strong><code>vite.config.js:87</code> 生产构建启用 sourcemap，若发布到外部环境需考虑源码暴露风险。</li>
+          </ul>
+        </div>
+
+        <div class="finding bad">
+          <h3>5.5 测试与验证能力</h3>
+          <ul>
+            <li><strong>未发现自动化测试代码或测试脚本：</strong>工程中没有明显的 <code>test</code>、<code>spec</code> 目录或对应 npm script，回归验证主要依赖人工。</li>
+            <li><strong>Lint 未通过：</strong><code>npm run lint</code> 出现 1 个 error、17 个 warning，其中 <code>src/lib/workspace-html-page-preview.js:178</code> 的 <code>no-unexpected-multiline</code> 会导致检查失败。</li>
+            <li><strong>运行验证覆盖有限：</strong>虽然启动和接口可达，但没有冒烟测试、接口测试或组件测试来自动兜底。</li>
+          </ul>
+        </div>
+
+        <div class="finding warn">
+          <h3>5.6 后端设计与数据层</h3>
+          <ul>
+            <li><strong>优点：</strong><code>CMXService</code> 对插件注册、启动与停止做了抽象，结构简洁，便于扩展协议。</li>
+            <li><strong>问题：</strong><code>cmx-node-server/portalManagerService.js</code> 集中了静态托管、REST、RPC、GraphQL、gRPC、自检与进程信号处理，单文件职责过多。</li>
+            <li><strong>存储方式适合原型，不适合高并发生产：</strong>JSON/HTML 文件持久化对于单机、轻量编辑场景较合适，但对审计、锁冲突、索引、权限控制与恢复能力有限。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="risks">
+      <h2>6. 关键风险清单</h2>
+      <div class="section-body">
+        <div class="risk">
+          <h3>R1. 动态 HTML 页面脚本执行风险</h3>
+          <p>风险等级：<span class="badge bad">高</span></p>
+          <p>证据：<code>src/lib/workspace-html-page-preview.js:99-153</code></p>
+          <p>说明：系统会将服务端保存的 HTML 文档重新注入 DOM，并对其中脚本重新执行。这一机制对产品能力很关键，但也意味着页面内容本身具备代码执行能力。若页面数据被恶意修改、通过不可信导入进入系统、或后续开放给更广泛用户编辑，将形成明显攻击面。</p>
+        </div>
+        <div class="risk">
+          <h3>R2. 依赖高危漏洞未处理</h3>
+          <p>风险等级：<span class="badge bad">高</span></p>
+          <p>证据：<code>npm audit --omit=dev --json</code></p>
+          <p>说明：检测到 4 个 high 级漏洞，根因集中在 GraphQL 相关依赖链，需尽快评估升级 <code>mercurius</code> 及其传递依赖的可行性。</p>
+        </div>
+        <div class="risk">
+          <h3>R3. 自动化测试缺失导致回归风险高</h3>
+          <p>风险等级：<span class="badge bad">高</span></p>
+          <p>说明：当前大量复杂交互依赖人工回归。随着工作区、浮窗、拖拽布局、动态页面挂载能力继续扩展，缺少自动化测试会显著提高变更出错概率。</p>
+        </div>
+        <div class="risk">
+          <h3>R4. 前端超大包体影响交付体验</h3>
+          <p>风险等级：<span class="badge warn">中高</span></p>
+          <p>说明：UI5 相关 chunk 非常大，特别是 <code>ui5-fiori</code> 和 <code>ui5-main</code>。在局域网演示环境尚可接受，但在跨网络访问或低性能设备上会带来明显加载压力。</p>
+        </div>
+        <div class="risk">
+          <h3>R5. 大文件与高复杂模块带来的维护风险</h3>
+          <p>风险等级：<span class="badge warn">中高</span></p>
+          <p>说明：多个关键文件接近或超过 600 行，后续定位问题、引入新成员和实施重构都会受到影响。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recommendations">
+      <h2>7. 整改建议与优先级</h2>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th>优先级</th>
+              <th>建议</th>
+              <th>目标</th>
+              <th>预期收益</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>P0</td>
+              <td>修复 lint error，确保 <code>npm run lint</code> 全绿</td>
+              <td>恢复基本工程门禁</td>
+              <td>降低低级错误进入主线的概率</td>
+            </tr>
+            <tr>
+              <td>P0</td>
+              <td>为动态 HTML 执行链路增加信任边界控制，例如仅允许受信来源、增加服务端清洗/签名、限制可执行脚本能力或考虑 iframe/沙箱隔离</td>
+              <td>控制最高安全风险</td>
+              <td>显著降低脚本注入与横向影响面</td>
+            </tr>
+            <tr>
+              <td>P0</td>
+              <td>处理 <code>npm audit</code> 中的 high 级漏洞，优先评估 GraphQL 相关依赖升级或临时下线非必要 GraphQL 能力</td>
+              <td>修复已知漏洞</td>
+              <td>提升可上线性</td>
+            </tr>
+            <tr>
+              <td>P1</td>
+              <td>补充自动化测试：至少为文件存储层、API 层和关键前端工作区交互建立冒烟测试</td>
+              <td>形成可回归保障</td>
+              <td>提升修改信心，降低回归成本</td>
+            </tr>
+            <tr>
+              <td>P1</td>
+              <td>拆分超长文件，如 <code>portal-content-area.js</code>、<code>portal-workspace-float-window.js</code>、<code>portal-app-workspace.js</code></td>
+              <td>降低复杂度</td>
+              <td>提升可读性与可维护性</td>
+            </tr>
+            <tr>
+              <td>P1</td>
+              <td>将 GraphQL IDE、CORS、调试接口和自检逻辑按环境开关控制</td>
+              <td>缩小生产暴露面</td>
+              <td>提升安全治理能力</td>
+            </tr>
+            <tr>
+              <td>P2</td>
+              <td>进一步优化 UI5 资源加载，评估按页面或按功能懒加载图标包和 Fiori 资源</td>
+              <td>缩小首屏成本</td>
+              <td>改善加载体验</td>
+            </tr>
+            <tr>
+              <td>P2</td>
+              <td>为数据文件引入版本校验、结构校验与运维工具</td>
+              <td>提升数据可靠性</td>
+              <td>减少坏数据导致的运行故障</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="evidence">
+      <h2>8. 关键证据</h2>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th>类别</th>
+              <th>结论</th>
+              <th>证据位置</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>安全规则</td>
+              <td>已配置针对 <code>innerHTML</code>、<code>eval</code> 等的限制规则</td>
+              <td><code>eslint.config.js:38-68</code></td>
+            </tr>
+            <tr>
+              <td>动态执行</td>
+              <td>HTML 页面脚本会被重新注入执行</td>
+              <td><code>src/lib/workspace-html-page-preview.js:99-153</code></td>
+            </tr>
+            <tr>
+              <td>存储可靠性</td>
+              <td>列表与页面文件采用原子写入</td>
+              <td><code>cmx-node-server/lib/htmlPagesStore.js:109-123</code>、<code>cmx-node-server/lib/formPagesStore.js:74-80</code></td>
+            </tr>
+            <tr>
+              <td>构建状态</td>
+              <td><code>npm run build</code> 成功，但输出大 chunk 告警</td>
+              <td>构建结果</td>
+            </tr>
+            <tr>
+              <td>静态检查</td>
+              <td><code>npm run lint</code> 失败，1 error + 17 warnings</td>
+              <td><code>src/lib/workspace-html-page-preview.js:178</code> 等</td>
+            </tr>
+            <tr>
+              <td>依赖安全</td>
+              <td>发现 4 个 high 级漏洞</td>
+              <td><code>npm audit --omit=dev --json</code></td>
+            </tr>
+            <tr>
+              <td>运行性</td>
+              <td>服务启动正常，根路径与核心 REST 接口返回 200</td>
+              <td><code>cmx-node-server/portalManagerService.js</code> 运行输出与 <code>curl</code> 验证</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="conclusion">
+      <h2>9. 总体结论</h2>
+      <div class="section-body">
+        <p>CMXPortalManager 已具备较完整的门户式原型能力，架构思路和实现深度都不低，尤其在工作区组织、页面装配与多协议服务方面，已经展示出相当明确的产品方向。</p>
+        <p>但从“软件质量”而非“功能演示”视角看，当前最需要解决的是 <strong>安全边界、测试体系、Lint 门禁与依赖治理</strong>。只要先把这四项补齐，再逐步处理超大模块拆分与前端包体优化，项目质量会有明显跃升。</p>
+        <p><strong>结论建议：</strong>当前版本建议定位为内部开发/演示环境可用；在完成 P0 和主要 P1 项之前，不建议直接作为生产级外部服务发布。</p>
+      </div>
+    </section>
+
+    <div class="footer">本报告由代码静态审阅、构建验证、依赖审计与运行抽样检查生成。</div>
+  </div>
+</body>
+</html>

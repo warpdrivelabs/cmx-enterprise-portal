@@ -1,0 +1,93 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-popover>",
+  "defaults": {
+    "attributes": {
+      "header-text": "浮层"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-popover",
+  "description": "UI5 浮层",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "header-text",
+      "label": "header-text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "placement",
+      "label": "placement",
+      "type": "select",
+      "options": [
+        "Start",
+        "End",
+        "Top",
+        "Bottom"
+      ]
+    },
+    {
+      "name": "horizontal-align",
+      "label": "horizontal-align",
+      "type": "select",
+      "options": [
+        "Center",
+        "Start",
+        "End",
+        "Stretch"
+      ]
+    },
+    {
+      "name": "vertical-align",
+      "label": "vertical-align",
+      "type": "select",
+      "options": [
+        "Center",
+        "Top",
+        "Bottom",
+        "Stretch"
+      ]
+    },
+    {
+      "name": "modal",
+      "label": "modal",
+      "type": "boolean"
+    },
+    {
+      "name": "hide-arrow",
+      "label": "hide-arrow",
+      "type": "boolean"
+    },
+    {
+      "name": "allow-target-overlap",
+      "label": "allow-target-overlap",
+      "type": "boolean"
+    },
+    {
+      "name": "resizable",
+      "label": "resizable",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "header",
+    "footer"
+  ],
+  "extraEvents": [
+    "before-open",
+    "open",
+    "before-close",
+    "close",
+    "scroll"
+  ]
+}

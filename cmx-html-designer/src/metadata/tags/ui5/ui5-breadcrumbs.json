@@ -1,0 +1,44 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-breadcrumbs>",
+  "isVoid": false,
+  "tag": "ui5-breadcrumbs",
+  "description": "UI5 面包屑",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "design",
+      "label": "design",
+      "type": "select",
+      "options": [
+        "Standard",
+        "NoCurrentPage"
+      ]
+    },
+    {
+      "name": "separators",
+      "label": "separators",
+      "type": "select",
+      "options": [
+        "Slash",
+        "BackSlash",
+        "DoubleBackSlash",
+        "DoubleGreaterThan",
+        "DoubleSlash",
+        "GreaterThan"
+      ]
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "item-click"
+  ]
+}

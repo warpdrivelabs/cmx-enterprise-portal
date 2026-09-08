@@ -1,0 +1,38 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-avatar-badge>",
+  "isVoid": true,
+  "tag": "ui5-avatar-badge",
+  "description": "UI5 头像徽标叠加层",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "icon",
+      "label": "icon",
+      "type": "text",
+      "placeholder": "sap-icon://add"
+    },
+    {
+      "name": "state",
+      "label": "state",
+      "type": "select",
+      "options": [
+        "None",
+        "Positive",
+        "Critical",
+        "Negative",
+        "Information"
+      ]
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

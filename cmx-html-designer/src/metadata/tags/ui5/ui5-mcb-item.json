@@ -1,0 +1,36 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-mcb-item>",
+  "defaults": {
+    "attributes": {
+      "text": "选项"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-mcb-item",
+  "description": "UI5 多选组合项",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "selected",
+      "label": "selected",
+      "type": "boolean"
+    },
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

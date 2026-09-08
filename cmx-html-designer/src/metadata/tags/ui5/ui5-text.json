@@ -1,0 +1,38 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-text>",
+  "defaults": {
+    "text": "文本内容"
+  },
+  "isVoid": false,
+  "tag": "ui5-text",
+  "description": "UI5 文本",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "max-lines",
+      "label": "max-lines",
+      "type": "text",
+      "placeholder": "Infinity"
+    },
+    {
+      "name": "empty-indicator-mode",
+      "label": "empty-indicator-mode",
+      "type": "select",
+      "options": [
+        "Off",
+        "On"
+      ]
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

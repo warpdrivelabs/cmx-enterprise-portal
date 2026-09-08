@@ -1,0 +1,30 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-menu-item-group>",
+  "isVoid": false,
+  "tag": "ui5-menu-item-group",
+  "description": "UI5 菜单项分组",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "check-mode",
+      "label": "check-mode",
+      "type": "select",
+      "options": [
+        "None",
+        "Single",
+        "Multiple"
+      ]
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

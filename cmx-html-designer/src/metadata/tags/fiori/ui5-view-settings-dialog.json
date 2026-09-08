@@ -1,0 +1,45 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-view-settings-dialog>",
+  "isVoid": true,
+  "tag": "ui5-view-settings-dialog",
+  "description": "UI5 Fiori 排序/筛选/分组设置对话框",
+  "canNest": false,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "sort-descending",
+      "label": "sort-descending",
+      "type": "boolean"
+    },
+    {
+      "name": "group-descending",
+      "label": "group-descending",
+      "type": "boolean"
+    },
+    {
+      "name": "open",
+      "label": "open",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "sortItems",
+    "filterItems",
+    "groupItems"
+  ],
+  "extraEvents": [
+    "confirm",
+    "cancel",
+    "before-open",
+    "open",
+    "close"
+  ]
+}

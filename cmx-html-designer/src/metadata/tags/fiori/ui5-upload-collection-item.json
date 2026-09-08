@@ -1,0 +1,70 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-upload-collection-item>",
+  "isVoid": false,
+  "tag": "ui5-upload-collection-item",
+  "description": "UI5 Fiori 上传集合文件项",
+  "canNest": false,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "file-name",
+      "label": "file-name",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "file-name-clickable",
+      "label": "file-name-clickable",
+      "type": "boolean"
+    },
+    {
+      "name": "disable-delete-button",
+      "label": "disable-delete-button",
+      "type": "boolean"
+    },
+    {
+      "name": "hide-delete-button",
+      "label": "hide-delete-button",
+      "type": "boolean"
+    },
+    {
+      "name": "hide-retry-button",
+      "label": "hide-retry-button",
+      "type": "boolean"
+    },
+    {
+      "name": "hide-terminate-button",
+      "label": "hide-terminate-button",
+      "type": "boolean"
+    },
+    {
+      "name": "progress",
+      "label": "progress",
+      "type": "text",
+      "placeholder": "0"
+    },
+    {
+      "name": "upload-state",
+      "label": "upload-state",
+      "type": "select",
+      "options": [
+        "Complete",
+        "Error",
+        "Ready",
+        "Uploading"
+      ]
+    }
+  ],
+  "slots": [
+    "thumbnail"
+  ],
+  "extraEvents": []
+}

@@ -1,0 +1,27 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-toolbar-spacer>",
+  "defaults": {},
+  "isVoid": false,
+  "tag": "ui5-toolbar-spacer",
+  "description": "UI5 工具栏间隔",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "width",
+      "label": "width",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

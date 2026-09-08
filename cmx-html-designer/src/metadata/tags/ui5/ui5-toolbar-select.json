@@ -1,0 +1,60 @@
+{
+  "eventPreset": "ui5Form",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-toolbar-select>",
+  "isVoid": false,
+  "tag": "ui5-toolbar-select",
+  "description": "UI5 工具栏下拉",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "width",
+      "label": "width",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "value-state",
+      "label": "value-state",
+      "type": "select",
+      "options": [
+        "None",
+        "Positive",
+        "Critical",
+        "Negative",
+        "Information"
+      ]
+    },
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    }
+  ],
+  "slots": [
+    "",
+    "label"
+  ],
+  "extraEvents": [
+    "close-overflow"
+  ]
+}

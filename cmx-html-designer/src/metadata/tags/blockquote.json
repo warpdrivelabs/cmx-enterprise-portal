@@ -1,0 +1,27 @@
+{
+  "tag": "blockquote",
+  "group": "default",
+  "label": "<blockquote>",
+  "description": "块级引用",
+  "isVoid": false,
+  "canNest": false,
+  "attrs": [
+    {
+      "name": "cite",
+      "label": "cite",
+      "type": "url",
+      "placeholder": "https://..."
+    }
+  ],
+  "defaults": {
+    "text": "引用内容"
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

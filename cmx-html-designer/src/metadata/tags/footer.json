@@ -1,0 +1,20 @@
+{
+  "tag": "footer",
+  "group": "default",
+  "label": "<footer>",
+  "description": "页面或区块页脚",
+  "isVoid": false,
+  "canNest": true,
+  "attrs": [],
+  "defaults": {
+    "text": "页脚内容"
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

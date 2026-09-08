@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 同步提醒（治理清单 C-04）：本文件与 ../CMXHTMLDesigner/login.html 为同源双副本（~99% 相似），
+       实际差异仅品牌文案（title/brand/feature 副标题）。改样式 / 登录逻辑时务必同步另一端。 -->
+  <title>登录 · CMX Enterprise Portal</title>
+  <link rel="icon" type="image/png" href="./assets/cmx.png" />
+  <style>
+    :root {
+      --el-bg-color: #ffffff;
+      --el-bg-color-page: #f2f3f5;
+      --el-text-color-primary: #303133;
+      --el-text-color-secondary: #909399;
+      --el-border-color: #dcdfe6;
+      --el-fill-color-blank: #ffffff;
+      --error: #f56c6c;
+      --wdl-mark-color: #5c6678;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+      color: var(--el-text-color-primary);
+      background: var(--el-bg-color);
+    }
+    .login-page {
+      background-color: var(--el-bg-color);
+      width: 100%;
+      height: 100vh;
+      min-height: 640px;
+      display: flex;
+      overflow: hidden;
+    }
+    .brand-panel {
+      color: #fff;
+      --wdl-mark-color: #e8edf5;
+      isolation: isolate;
+      background: linear-gradient(160deg, #0a1124 0%, #070b16 45%, #050811 100%);
+      flex-direction: column;
+      justify-content: space-between;
+      width: 54%;
+      max-width: 880px;
+      padding: 48px 64px;
+      display: flex;
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-bg { z-index: -2; position: absolute; inset: 0; overflow: hidden; }
+    .space-nebula {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(64px);
+      opacity: 0.5;
+      animation: space-nebula-drift 28s ease-in-out infinite alternate;
+    }
+    .space-nebula--a {
+      width: 72%;
+      height: 58%;
+      top: -12%;
+      left: -18%;
+      background: radial-gradient(circle, rgba(88, 28, 135, 0.38) 0%, rgba(24, 144, 255, 0.16) 42%, transparent 72%);
+    }
+    .space-nebula--b {
+      width: 58%;
+      height: 52%;
+      bottom: -18%;
+      right: -12%;
+      background: radial-gradient(circle, rgba(54, 207, 201, 0.28) 0%, rgba(105, 177, 255, 0.12) 45%, transparent 70%);
+      animation-delay: -10s;
+    }
+    .space-nebula--c {
+      width: 42%;
+      height: 38%;
+      top: 38%;
+      left: 28%;
+      background: radial-gradient(circle, rgba(147, 112, 219, 0.18) 0%, transparent 68%);
+      animation-delay: -16s;
+    }
+    @keyframes space-nebula-drift {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(4%, 3%) scale(1.07); }
+    }
+    .space-galaxy {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      top: 10%;
+      left: 6%;
+      border-radius: 50%;
+      background:
+        radial-gradient(ellipse 90% 35% at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 55%),
+        radial-gradient(circle at 50% 50%, rgba(147, 112, 219, 0.14) 0%, transparent 62%);
+      filter: blur(1px);
+      opacity: 0.75;
+      animation: space-galaxy-spin 140s linear infinite;
+    }
+    .space-galaxy::after {
+      content: '';
+      position: absolute;
+      inset: 34%;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 0 24px rgba(232, 244, 255, 0.18);
+    }
+    @keyframes space-galaxy-spin {
+      to { transform: rotate(360deg); }
+    }
+    .space-stars,
+    .space-rush,
+    .space-shooters {
+      z-index: -1;
+      pointer-events: none;
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    .space-star {
+      position: absolute;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 0 4px rgba(169, 210, 255, 0.45);
+      animation: space-star-twinkle ease-in-out infinite;
+    }
+    @keyframes space-star-twinkle {
+      0%, 100% { opacity: var(--star-o-min, 0.25); }
+      50% { opacity: var(--star-o-max, 0.9); }
+    }
+    .space-rush-star {
+      position: absolute;
+      width: var(--star-size, 2px);
+      height: var(--star-size, 2px);
+      border-radius: 50%;
+      background: radial-gradient(circle, #fff 0%, rgba(186, 215, 255, 0.95) 45%, transparent 100%);
+      box-shadow: 0 0 8px rgba(169, 210, 255, 0.65);
+      animation: space-rush-fly linear infinite;
+    }
+    @keyframes space-rush-fly {
+      0% { transform: translate(-50%, -50%) scale(0.04); opacity: 0; }
+      10% { opacity: 1; }
+      100% {
+        transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(var(--star-scale, 2));
+        opacity: 0;
+      }
+    }
+    .space-shooter {
+      position: absolute;
+      width: 72px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15) 20%, rgba(255, 255, 255, 0.85) 55%, transparent);
+      transform: rotate(var(--shoot-angle, -12deg));
+      animation: space-shooter-fly linear infinite;
+      opacity: 0;
+    }
+    @keyframes space-shooter-fly {
+      0% { transform: rotate(var(--shoot-angle, -12deg)) translateX(-24vw); opacity: 0; }
+      6% { opacity: 0.75; }
+      100% { transform: rotate(var(--shoot-angle, -12deg)) translateX(130vw); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .space-nebula,
+      .space-galaxy,
+      .space-star,
+      .space-rush-star,
+      .space-shooter { animation: none !important; }
+    }
+    .brand-header { align-items: center; height: 48px; display: flex; gap: 12px; }
+    .brand-header .brand-logo { height: 40px; width: auto; flex-shrink: 0; animation: .8s both fadeInDown; }
+    .brand-wordmark {
+      font-size: 22px; font-weight: 700; letter-spacing: .5px; line-height: 1; color: #fff;
+      animation: .8s .05s both fadeInDown;
+    }
+    .brand-wordmark__accent {
+      -webkit-text-fill-color: transparent;
+      background: linear-gradient(90deg, #36cfc9, #1890ff 60%, #69b1ff);
+      -webkit-background-clip: text; background-clip: text;
+    }
+    .brand-content {
+      flex-direction: column; flex: 1; justify-content: center; max-width: 520px; margin-top: -40px; display: flex;
+    }
+    .brand-eyebrow {
+      letter-spacing: 3px; color: #36cfc9e6; background: #36cfc914; border: 1px solid #36cfc933; border-radius: 2px;
+      align-items: center; gap: 10px; width: fit-content; margin-bottom: 28px; padding: 6px 14px;
+      font-family: SF Mono, Cascadia Code, Consolas, monospace; font-size: 12px;
+      animation: .7s .1s both fadeInUp; display: inline-flex;
+    }
+    .brand-eyebrow__dot { background: #36cfc9; border-radius: 50%; width: 6px; height: 6px; animation: 2s infinite pulse; box-shadow: 0 0 8px #36cfc9; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+    .brand-title { letter-spacing: 1px; white-space: nowrap; margin: 0 0 24px; font-size: 56px; font-weight: 800; line-height: 1.1; }
+    .brand-title__text { animation: .8s .2s both fadeInUp; display: inline-block; }
+    .brand-title__accent {
+      -webkit-text-fill-color: transparent;
+      background: linear-gradient(90deg, #36cfc9, #1890ff 60%, #69b1ff);
+      -webkit-background-clip: text; background-clip: text;
+    }
+    .brand-desc {
+      color: #ffffff8c; letter-spacing: 1px; margin: 0 0 48px; font-size: 16px; line-height: 1.9;
+      animation: .8s .5s both fadeInUp;
+    }
+    .brand-features { flex-direction: column; gap: 18px; margin: 0; padding: 0; list-style: none; display: flex; }
+    .brand-features li {
+      backdrop-filter: blur(8px); background: #ffffff08; border: 1px solid #ffffff0f; border-left: 2px solid #1890ff;
+      border-radius: 2px; align-items: center; gap: 18px; padding: 14px 18px; transition: all .3s;
+      animation: .7s both fadeInUp; display: flex;
+    }
+    .brand-features li:nth-child(1) { animation-delay: .6s; }
+    .brand-features li:nth-child(2) { animation-delay: .72s; }
+    .brand-features li:nth-child(3) { animation-delay: .84s; }
+    .brand-features li:hover { background: #1890ff14; border-left-color: #36cfc9; transform: translate(6px); }
+    .brand-features .feature-index { color: #1890ffb3; font-family: SF Mono, Cascadia Code, Consolas, monospace; font-size: 18px; font-weight: 700; }
+    .brand-features .feature-text { flex-direction: column; gap: 2px; display: flex; }
+    .brand-features .feature-text strong { color: #fffffff2; font-size: 15px; font-weight: 600; }
+    .brand-features .feature-text em { color: #ffffff73; font-size: 13px; font-style: normal; }
+    .brand-footer { color: #ffffff59; letter-spacing: 1px; align-items: center; gap: 14px; font-size: 12px; animation: 1s .9s both fadeIn; display: flex; }
+    .brand-footer-copy { align-items: center; gap: 0; display: inline-flex; }
+    .brand-footer-mark {
+      flex-shrink: 0;
+      display: inline-block;
+      vertical-align: -2px;
+      width: 14px;
+      height: 14px;
+      margin: 0 6px 0 4px;
+      background-color: var(--wdl-mark-color);
+      -webkit-mask: url('./assets/cmx.png') center / contain no-repeat;
+      mask: url('./assets/cmx.png') center / contain no-repeat;
+    }
+    .brand-footer-wdl {
+      color: inherit;
+      text-decoration: none;
+    }
+    .brand-footer-wdl:hover {
+      color: #ffffff8c;
+      text-decoration: underline;
+    }
+    .form-panel {
+      --el-text-color-primary: #e8edf5;
+      --el-text-color-secondary: #8b95a8;
+      --el-border-color: #2f3a4d;
+      --el-fill-color-blank: #121822;
+      color: var(--el-text-color-primary);
+      background-color: #0b0f18;
+      background-image:
+        radial-gradient(circle at 100% 0, #1890ff18, #0000 52%),
+        radial-gradient(circle at 0 100%, #36cfc914, #0000 48%),
+        linear-gradient(180deg, #0d121c 0%, #080b12 100%);
+      flex: 1; justify-content: center; align-items: center; padding: 48px; display: flex; position: relative;
+    }
+    .form-panel::before {
+      content: '';
+      position: absolute; inset: 0; pointer-events: none;
+      background-image: linear-gradient(90deg, #1890ff08 1px, transparent 1px), linear-gradient(#1890ff08 1px, transparent 1px);
+      background-size: 40px 40px;
+      -webkit-mask-image: radial-gradient(90% 80% at 70% 20%, #000 20%, transparent 72%);
+      mask-image: radial-gradient(90% 80% at 70% 20%, #000 20%, transparent 72%);
+      opacity: .45;
+    }
+    .form-wrapper { width: 100%; max-width: 400px; animation: .8s .3s both fadeInUp; position: relative; z-index: 1; }
+    .form-card__head { margin-bottom: 36px; }
+    .form-title { letter-spacing: 1px; color: var(--el-text-color-primary); margin: 0 0 10px; font-size: 30px; font-weight: 700; }
+    .form-subtitle { color: var(--el-text-color-secondary); letter-spacing: .5px; margin: 0; font-size: 14px; }
+    .login-form__item { margin-bottom: 22px; }
+    .login-form label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: var(--el-text-color-primary); }
+    .login-form input {
+      width: 100%; height: 44px; padding: 0 14px; font-size: 14px;
+      background: var(--el-fill-color-blank); border: 1px solid var(--el-border-color); border-radius: 4px;
+      outline: none; transition: all .25s; color: var(--el-text-color-primary);
+    }
+    .login-form input::placeholder { color: #6a7385; }
+    .login-form input:hover { border-color: #1890ff; background: #151c28; }
+    .login-form input:focus { border-color: #1890ff; background: #151c28; box-shadow: inset 0 0 0 1px #1890ff, 0 4px 16px #1890ff2e; }
+    .login-submit {
+      letter-spacing: 8px; text-indent: 8px;
+      background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+      border: none; border-radius: 4px; width: 100%; height: 48px; margin-top: 4px;
+      font-size: 16px; font-weight: 600; color: #fff; cursor: pointer; transition: all .3s;
+      box-shadow: 0 6px 20px #1890ff59;
+    }
+    .login-submit:hover:not(:disabled) {
+      background: linear-gradient(135deg, #40a9ff 0%, #69b1ff 100%);
+      transform: translateY(-1px); box-shadow: 0 8px 26px #1890ff80;
+    }
+    .login-submit:active:not(:disabled) { transform: translateY(0); box-shadow: 0 4px 12px #1890ff4d; }
+    .login-submit:disabled { opacity: .65; cursor: default; }
+    .error { margin-top: 16px; color: var(--error); font-size: 13px; min-height: 18px; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @media screen and (max-width: 1100px) {
+      .brand-panel { width: 48%; padding: 40px 44px; }
+      .brand-title { font-size: 52px; }
+      .brand-features { display: none; }
+    }
+    @media screen and (max-width: 860px) {
+      .login-page { flex-direction: column; height: auto; min-height: 100vh; }
+      .brand-panel { width: 100%; max-width: none; min-height: 280px; padding: 40px 32px; }
+      .brand-content { max-width: none; margin-top: 0; }
+      .brand-title { margin-bottom: 16px; font-size: 38px; }
+      .brand-desc { margin-bottom: 0; font-size: 14px; }
+      .brand-footer { display: none; }
+      .form-panel { padding: 40px 24px; }
+    }
+    @media screen and (max-width: 480px) {
+      .brand-panel { min-height: 220px; padding: 32px 24px; }
+      .brand-title { font-size: 30px; }
+      .brand-eyebrow { margin-bottom: 16px; font-size: 11px; }
+      .form-title { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-page">
+    <aside class="brand-panel">
+      <div class="brand-bg">
+        <div class="space-nebula space-nebula--a"></div>
+        <div class="space-nebula space-nebula--b"></div>
+        <div class="space-nebula space-nebula--c"></div>
+        <div class="space-galaxy"></div>
+      </div>
+      <div class="space-stars" id="space-stars-far" aria-hidden="true"></div>
+      <div class="space-stars" id="space-stars-mid" aria-hidden="true"></div>
+      <div class="space-rush" id="space-rush" aria-hidden="true"></div>
+      <div class="space-shooters" id="space-shooters" aria-hidden="true"></div>
+      <header class="brand-header">
+        <img src="./assets/cmx.png" class="brand-logo" alt="CMX" />
+        <span class="brand-wordmark">Cloud<span class="brand-wordmark__accent">Matrix</span></span>
+      </header>
+      <div class="brand-content">
+        <div class="brand-eyebrow"><span class="brand-eyebrow__dot"></span> DEVELOPMENT SUITE</div>
+        <h1 class="brand-title"><span class="brand-title__text">Enterprise <span class="brand-title__accent">Portal</span></span></h1>
+        <p class="brand-desc">新一代企业级高性能应用平台<br>Rust 驱动内核，极致运行速度，重塑企业软件体验</p>
+        <ul class="brand-features">
+          <li><span class="feature-index">01</span><div class="feature-text"><strong>统一门户工作台</strong><em>多模块协同，一站式业务入口</em></div></li>
+          <li><span class="feature-index">02</span><div class="feature-text"><strong>可视化建模</strong><em>拖拽式页面与流程编排</em></div></li>
+          <li><span class="feature-index">03</span><div class="feature-text"><strong>企业级安全</strong><em>内存安全与细粒度权限防护</em></div></li>
+        </ul>
+      </div>
+      <footer class="brand-footer">
+        <span class="brand-footer-copy">
+          <span>© <span id="year"></span><a class="brand-footer-wdl" href="https://warpdrive.run" target="_blank" rel="noopener noreferrer"><span class="brand-footer-mark" aria-hidden="true"></span> Warp Drive Labs</a></span>
+        </span>
+      </footer>
+    </aside>
+    <main class="form-panel">
+      <div class="form-wrapper">
+        <div class="form-card">
+          <div class="form-card__head">
+            <h2 class="form-title">欢迎回来</h2>
+            <p class="form-subtitle">登录 CMX Enterprise Portal 开启你的工作</p>
+          </div>
+          <form id="login-form" class="login-form" autocomplete="on">
+            <div class="login-form__item">
+              <label for="username">用户名</label>
+              <input id="username" name="username" type="text" autocomplete="username" placeholder="请输入用户名" required autofocus />
+            </div>
+            <div class="login-form__item">
+              <label for="password">密码</label>
+              <input id="password" name="password" type="password" autocomplete="current-password" placeholder="请输入密码" required />
+            </div>
+            <button class="login-submit" id="submit" type="submit">登 录</button>
+            <div class="error" id="error" role="alert"></div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>
+    document.getElementById('year').textContent = String(new Date().getFullYear())
+
+    function seedSpaceStars (host, count, sizeMin, sizeMax) {
+      for (let i = 0; i < count; i++) {
+        const el = document.createElement('span')
+        el.className = 'space-star'
+        const size = sizeMin + Math.random() * (sizeMax - sizeMin)
+        el.style.width = size + 'px'
+        el.style.height = size + 'px'
+        el.style.left = (Math.random() * 100) + '%'
+        el.style.top = (Math.random() * 100) + '%'
+        el.style.setProperty('--star-o-min', (0.12 + Math.random() * 0.28).toFixed(2))
+        el.style.setProperty('--star-o-max', (0.45 + Math.random() * 0.55).toFixed(2))
+        el.style.animationDuration = (2.2 + Math.random() * 4.5) + 's'
+        el.style.animationDelay = (-Math.random() * 6) + 's'
+        host.appendChild(el)
+      }
+    }
+
+    seedSpaceStars(document.getElementById('space-stars-far'), 52, 1, 1.6)
+    seedSpaceStars(document.getElementById('space-stars-mid'), 28, 1.6, 2.8)
+
+    const rushHost = document.getElementById('space-rush')
+    const travelVpX = 75
+    const travelVpY = 45
+    for (let i = 0; i < 58; i++) {
+      const el = document.createElement('span')
+      el.className = 'space-rush-star'
+      const angle = Math.random() * Math.PI * 2
+      const dist = 32 + Math.random() * 58
+      el.style.left = (travelVpX + Math.random() * 8 - 4) + '%'
+      el.style.top = (travelVpY + Math.random() * 8 - 4) + '%'
+      el.style.setProperty('--dx', (Math.cos(angle) * dist) + 'vmax')
+      el.style.setProperty('--dy', (Math.sin(angle) * dist) + 'vmax')
+      el.style.setProperty('--star-size', (1 + Math.random() * 2.2).toFixed(1) + 'px')
+      el.style.setProperty('--star-scale', (1.4 + Math.random() * 2.8).toFixed(2))
+      el.style.animationDuration = (1.6 + Math.random() * 2.6) + 's'
+      el.style.animationDelay = (-Math.random() * 4.5) + 's'
+      rushHost.appendChild(el)
+    }
+
+    const shooterHost = document.getElementById('space-shooters')
+    for (let i = 0; i < 7; i++) {
+      const el = document.createElement('span')
+      el.className = 'space-shooter'
+      el.style.setProperty('--shoot-angle', (-18 + Math.random() * 36) + 'deg')
+      el.style.top = (8 + Math.random() * 72) + '%'
+      el.style.left = (-12 + Math.random() * 18) + '%'
+      el.style.animationDuration = (3.8 + Math.random() * 5.5) + 's'
+      el.style.animationDelay = (-Math.random() * 12) + 's'
+      shooterHost.appendChild(el)
+    }
+  </script>
+  <script type="module" src="./src/login.js"></script>
+</body>
+</html>

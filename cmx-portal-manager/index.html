@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CMX Enterprise Portal</title>
+  <link rel="icon" type="image/png" href="./assets/cmx.png" />
+  <!--
+    先于 JS/CSS 打包加载的关键样式：
+    - 防止首帧 cmx-portal-app 默认 inline 撑坏 body flex 高度
+    - display:grid 与 shadow DOM :host{display:grid} 一致，避免外部 author 规则优先级覆盖
+  -->
+  <style id="portal-layout-critical">
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    cmx-portal-app {
+      display: grid;
+      flex: 1 1 0%;
+      min-height: 0;
+      width: 100%;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+  </style>
+  <!--
+    UI5 主题预配置：内联脚本在 deferred module 之前同步执行。
+    InitialConfiguration.initConfiguration() 惰性首次触发时（UI5 组件首帧渲染）
+    会读取 [data-ui5-config] 元素，此时 sessionStorage 中的主题已就位，
+    避免用 DEFAULT_THEME 渲染后再靠 setTheme() 异步补正导致的样式闪烁。
+    存储键与 portal-ui5-theme.js 中的 PORTAL_THEME_STORAGE_KEY 保持同步。
+  -->
+  <script>
+    (function () {
+      var theme = 'sap_horizon_dark'
+      try {
+        var stored = sessionStorage.getItem('__portal_ui5_theme__')
+        if (stored) theme = stored
+      } catch (_) {}
+      var el = document.createElement('script')
+      el.setAttribute('data-ui5-config', '')
+      el.type = 'application/json'
+      el.textContent = JSON.stringify({ theme: theme })
+      document.head.appendChild(el)
+    })()
+  </script>
+</head>
+<body class="ui5-content-density-compact">
+  <cmx-portal-app></cmx-portal-app>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

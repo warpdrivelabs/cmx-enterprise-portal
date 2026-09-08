@@ -1,0 +1,49 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-color-picker>",
+  "isVoid": true,
+  "tag": "ui5-color-picker",
+  "description": "UI5 颜色拾取器",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "name",
+      "label": "name",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "simplified",
+      "label": "simplified",
+      "type": "boolean"
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

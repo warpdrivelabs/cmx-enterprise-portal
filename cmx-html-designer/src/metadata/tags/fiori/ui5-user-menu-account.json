@@ -1,0 +1,86 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-user-menu-account>",
+  "isVoid": true,
+  "tag": "ui5-user-menu-account",
+  "description": "UI5 Fiori 用户菜单账户条目",
+  "canNest": false,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "avatar-src",
+      "label": "avatar-src",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "avatar-initials",
+      "label": "avatar-initials",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "avatar-color-scheme",
+      "label": "avatar-color-scheme",
+      "type": "select",
+      "options": [
+        "Auto",
+        "Accent1",
+        "Accent2",
+        "Accent3",
+        "Accent4",
+        "Accent5",
+        "Accent6",
+        "Accent7",
+        "Accent8",
+        "Accent9",
+        "Accent10",
+        "Placeholder",
+        "Transparent"
+      ]
+    },
+    {
+      "name": "title-text",
+      "label": "title-text",
+      "type": "text",
+      "placeholder": "标题"
+    },
+    {
+      "name": "subtitle-text",
+      "label": "subtitle-text",
+      "type": "text",
+      "placeholder": "副标题"
+    },
+    {
+      "name": "description",
+      "label": "description",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "additional-info",
+      "label": "additional-info",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "selected",
+      "label": "selected",
+      "type": "boolean"
+    },
+    {
+      "name": "loading",
+      "label": "loading",
+      "type": "boolean"
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

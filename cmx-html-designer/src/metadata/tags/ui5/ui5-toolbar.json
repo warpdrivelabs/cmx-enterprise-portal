@@ -1,0 +1,50 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-toolbar>",
+  "isVoid": false,
+  "tag": "ui5-toolbar",
+  "description": "UI5 工具栏",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "align-content",
+      "label": "align-content",
+      "type": "select",
+      "options": [
+        "Start",
+        "End"
+      ]
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    },
+    {
+      "name": "design",
+      "label": "design",
+      "type": "select",
+      "options": [
+        "Solid",
+        "Transparent"
+      ]
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

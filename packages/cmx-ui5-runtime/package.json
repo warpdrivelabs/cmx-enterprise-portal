@@ -1,0 +1,31 @@
+{
+  "name": "cmx-ui5-runtime",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "CMX 共用 UI5 + Tabler 运行时（Portal / HTMLDesigner 共享 dist）",
+  "exports": {
+    "./client": "./src/client.js",
+    "./api-client": "./src/api-client.js",
+    "./vite": "./vite.js",
+    "./vite-app": "./vite-app.js"
+  },
+  "scripts": {
+    "build": "node scripts/run-vite.mjs build",
+    "dev": "node scripts/run-vite.mjs build --watch"
+  },
+  "dependencies": {
+    "@ui5/webcomponents": "^2.23.2",
+    "@ui5/webcomponents-base": "^2.23.2",
+    "@ui5/webcomponents-fiori": "^2.23.2",
+    "@ui5/webcomponents-icons": "^2.23.2",
+    "@ui5/webcomponents-icons-business-suite": "^2.23.2",
+    "@ui5/webcomponents-icons-tnt": "^2.23.2",
+    "@ui5/webcomponents-localization": "^2.23.2",
+    "@ui5/webcomponents-theming": "^2.23.2",
+    "cmx-icon-resource": "*"
+  },
+  "devDependencies": {
+    "vite": "^8.0.0"
+  }
+}

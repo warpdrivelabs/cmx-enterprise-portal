@@ -1,0 +1,30 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-suggestion-item-custom>",
+  "isVoid": false,
+  "tag": "ui5-suggestion-item-custom",
+  "description": "UI5 自定义输入建议项",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "request-tabindex-change",
+    "forward-after",
+    "forward-before"
+  ]
+}

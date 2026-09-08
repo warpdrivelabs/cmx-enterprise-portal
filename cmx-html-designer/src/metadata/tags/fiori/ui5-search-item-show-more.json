@@ -1,0 +1,35 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-search-item-show-more>",
+  "isVoid": true,
+  "tag": "ui5-search-item-show-more",
+  "description": "UI5 Fiori 搜索显示更多项",
+  "canNest": false,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "items-to-show-count",
+      "label": "items-to-show-count",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "selected",
+      "label": "selected",
+      "type": "boolean"
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "request-tabindex-change",
+    "forward-after",
+    "forward-before"
+  ]
+}

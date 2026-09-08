@@ -1,0 +1,57 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-form-group>",
+  "isVoid": false,
+  "tag": "ui5-form-group",
+  "description": "UI5 表单分组",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "header-text",
+      "label": "header-text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "header-level",
+      "label": "header-level",
+      "type": "select",
+      "options": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6"
+      ]
+    },
+    {
+      "name": "column-span",
+      "label": "column-span",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

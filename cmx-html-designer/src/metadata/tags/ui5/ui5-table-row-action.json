@@ -1,0 +1,32 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-table-row-action>",
+  "isVoid": true,
+  "tag": "ui5-table-row-action",
+  "description": "UI5 表格行操作按钮",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "icon",
+      "label": "icon",
+      "type": "text",
+      "placeholder": "sap-icon://add"
+    },
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

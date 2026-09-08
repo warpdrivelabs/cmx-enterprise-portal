@@ -1,0 +1,43 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-calendar-legend>",
+  "isVoid": false,
+  "tag": "ui5-calendar-legend",
+  "description": "UI5 日历图例",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "hide-today",
+      "label": "hide-today",
+      "type": "boolean"
+    },
+    {
+      "name": "hide-selected-day",
+      "label": "hide-selected-day",
+      "type": "boolean"
+    },
+    {
+      "name": "hide-non-working-day",
+      "label": "hide-non-working-day",
+      "type": "boolean"
+    },
+    {
+      "name": "hide-working-day",
+      "label": "hide-working-day",
+      "type": "boolean"
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "calendar-legend-selection-change",
+    "calendar-legend-focus-out"
+  ]
+}

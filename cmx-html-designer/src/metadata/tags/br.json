@@ -1,0 +1,18 @@
+{
+  "tag": "br",
+  "group": "default",
+  "label": "<br>",
+  "description": "换行符",
+  "isVoid": true,
+  "canNest": false,
+  "attrs": [],
+  "defaults": {},
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "custom"
+}

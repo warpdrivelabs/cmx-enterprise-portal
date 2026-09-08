@@ -1,0 +1,30 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-user-settings-account-view>",
+  "isVoid": false,
+  "tag": "ui5-user-settings-account-view",
+  "description": "UI5 Fiori 用户设置账户视图",
+  "canNest": false,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "show-manage-account",
+      "label": "show-manage-account",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "account"
+  ],
+  "extraEvents": [
+    "edit-accounts-click",
+    "manage-account-click"
+  ]
+}

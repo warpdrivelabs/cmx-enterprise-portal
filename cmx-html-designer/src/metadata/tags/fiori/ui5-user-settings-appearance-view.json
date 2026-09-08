@@ -1,0 +1,24 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-user-settings-appearance-view>",
+  "isVoid": false,
+  "tag": "ui5-user-settings-appearance-view",
+  "description": "UI5 Fiori 用户设置外观视图",
+  "canNest": false,
+  "group": "fiori",
+  "attrs": [],
+  "slots": [
+    "",
+    "additionalContent"
+  ],
+  "extraEvents": [
+    "selection-change"
+  ]
+}

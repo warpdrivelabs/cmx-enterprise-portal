@@ -1,0 +1,58 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-product-switch-item>",
+  "defaults": {
+    "attributes": {
+      "title-text": "应用",
+      "subtitle-text": "描述"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-product-switch-item",
+  "description": "Fiori 产品切换项",
+  "canNest": false,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "title-text",
+      "label": "title-text",
+      "type": "text",
+      "placeholder": "标题"
+    },
+    {
+      "name": "subtitle-text",
+      "label": "subtitle-text",
+      "type": "text",
+      "placeholder": "副标题"
+    },
+    {
+      "name": "icon",
+      "label": "icon",
+      "type": "text",
+      "placeholder": "sap-icon://add"
+    },
+    {
+      "name": "target",
+      "label": "target",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "target-src",
+      "label": "target-src",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [
+    "image"
+  ],
+  "extraEvents": []
+}

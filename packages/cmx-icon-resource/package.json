@@ -1,0 +1,23 @@
+{
+  "name": "cmx-icon-resource",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "CMX 图标资源：集中存放 SVG、PNG 等图标文件，供各子项目按需引用",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./vite": "./vite.js",
+    "./ui5": "./src/ui5/index.js",
+    "./ui5/safe-ui5-icon-name": "./src/ui5/safe-ui5-icon-name.js",
+    "./ui5/register-tabler": "./src/ui5/index.js",
+    "./tabler/*": "./src/icons/tabler/*",
+    "./icons/*": "./src/icons/*"
+  },
+  "peerDependencies": {
+    "@ui5/webcomponents-base": ">=2.0.0"
+  },
+  "scripts": {
+    "test": "node --test src/ui5/tabler-icon-bridge.test.js"
+  }
+}

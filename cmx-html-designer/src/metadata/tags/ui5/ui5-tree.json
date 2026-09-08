@@ -1,0 +1,89 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-tree>",
+  "isVoid": false,
+  "tag": "ui5-tree",
+  "description": "UI5 树形列表",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "selection-mode",
+      "label": "selection-mode",
+      "type": "select",
+      "options": [
+        "None",
+        "Single",
+        "SingleStart",
+        "SingleEnd",
+        "SingleAuto",
+        "Multiple",
+        "Delete"
+      ]
+    },
+    {
+      "name": "no-data-text",
+      "label": "no-data-text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "header-text",
+      "label": "header-text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "footer-text",
+      "label": "footer-text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    },
+    {
+      "name": "accessible-description",
+      "label": "accessible-description",
+      "type": "text",
+      "placeholder": "无障碍描述"
+    },
+    {
+      "name": "accessible-description-ref",
+      "label": "accessible-description-ref",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [
+    "",
+    "header"
+  ],
+  "extraEvents": [
+    "item-toggle",
+    "item-mouseover",
+    "item-mouseout",
+    "item-click",
+    "item-delete",
+    "item-focus",
+    "selection-change",
+    "move",
+    "move-over"
+  ]
+}

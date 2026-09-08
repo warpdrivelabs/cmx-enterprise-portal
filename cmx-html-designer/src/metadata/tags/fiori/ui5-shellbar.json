@@ -1,0 +1,91 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-shellbar>",
+  "defaults": {
+    "attributes": {
+      "primary-title": "CMX Designer",
+      "secondary-title": "Fiori"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-shellbar",
+  "description": "Fiori ShellBar",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "notifications-count",
+      "label": "notifications-count",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "show-notifications",
+      "label": "show-notifications",
+      "type": "boolean"
+    },
+    {
+      "name": "show-product-switch",
+      "label": "show-product-switch",
+      "type": "boolean"
+    },
+    {
+      "name": "show-search-field",
+      "label": "show-search-field",
+      "type": "boolean"
+    },
+    {
+      "name": "hide-search-button",
+      "label": "hide-search-button",
+      "type": "boolean"
+    },
+    {
+      "name": "disable-search-collapse",
+      "label": "disable-search-collapse",
+      "type": "boolean"
+    },
+    {
+      "name": "primary-title",
+      "label": "primary-title",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "secondary-title",
+      "label": "secondary-title",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [
+    "startButton",
+    "branding",
+    "content",
+    "searchField",
+    "assistant",
+    "",
+    "profile",
+    "logo",
+    "menuItems",
+    "midContent"
+  ],
+  "slotOrientation": "horizontal",
+  "extraEvents": [
+    "notifications-click",
+    "profile-click",
+    "product-switch-click",
+    "logo-click",
+    "menu-item-click",
+    "search-button-click",
+    "search-field-toggle",
+    "search-field-clear",
+    "content-item-visibility-change"
+  ]
+}

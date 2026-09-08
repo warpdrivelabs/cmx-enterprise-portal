@@ -1,0 +1,20 @@
+{
+  "tag": "pre",
+  "group": "default",
+  "label": "<pre>",
+  "description": "预格式化文本",
+  "isVoid": false,
+  "canNest": false,
+  "attrs": [],
+  "defaults": {
+    "text": "function hello() {\n  console.log(\"hi\");\n}"
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

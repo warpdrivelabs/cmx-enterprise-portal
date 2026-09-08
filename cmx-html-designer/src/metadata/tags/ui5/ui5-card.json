@@ -1,0 +1,46 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-card>",
+  "isVoid": false,
+  "tag": "ui5-card",
+  "description": "UI5 卡片",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    },
+    {
+      "name": "loading",
+      "label": "loading",
+      "type": "boolean"
+    },
+    {
+      "name": "loading-delay",
+      "label": "loading-delay",
+      "type": "text",
+      "placeholder": "1000"
+    }
+  ],
+  "slots": [
+    "",
+    "header"
+  ],
+  "extraEvents": []
+}

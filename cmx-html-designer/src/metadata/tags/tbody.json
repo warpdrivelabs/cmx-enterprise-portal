@@ -1,0 +1,17 @@
+{
+  "tag": "tbody",
+  "group": "default",
+  "label": "<tbody>",
+  "description": "表格主体行组",
+  "isVoid": false,
+  "canNest": true,
+  "attrs": [],
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

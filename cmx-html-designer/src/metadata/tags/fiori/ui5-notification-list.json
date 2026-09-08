@@ -1,0 +1,31 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-notification-list>",
+  "isVoid": false,
+  "tag": "ui5-notification-list",
+  "description": "Fiori 通知列表",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "no-data-text",
+      "label": "no-data-text",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "item-click",
+    "item-close",
+    "item-toggle",
+    "load-more"
+  ]
+}

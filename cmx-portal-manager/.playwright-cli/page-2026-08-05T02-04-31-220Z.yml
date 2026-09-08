@@ -1,0 +1,606 @@
+- generic [active] [ref=f15e1]:
+  - generic:
+    - alert
+    - alert
+  - generic [ref=f15e2]:
+    - generic [ref=f15e4]:
+      - banner "外壳栏" [ref=f15e7]:
+        - button [ref=f15e10] [cursor=pointer]
+        - link "Logo" [ref=f15e14] [cursor=pointer]:
+          - generic "Logo" [ref=f15e15]:
+            - img "CMX" [ref=f15e16]
+          - heading "CMX Enterprise Portal" [level=1] [ref=f15e18]
+        - generic [ref=f15e20]:
+          - search [ref=f15e27]:
+            - searchbox "搜索字段" [ref=f15e29]
+          - button [ref=f15e35] [cursor=pointer]
+          - button [ref=f15e40] [cursor=pointer]
+          - button "帮助" [ref=f15e47] [cursor=pointer]
+          - button "欢迎页面" [ref=f15e54] [cursor=pointer]
+          - button "DAM注册中心" [ref=f15e61] [cursor=pointer]
+          - button "集群数据源" [ref=f15e68] [cursor=pointer]
+          - button "菜单管理" [ref=f15e75] [cursor=pointer]
+          - button "切换主题" [ref=f15e82] [cursor=pointer]
+          - button "切换语言 🇨🇳" [ref=f15e89] [cursor=pointer]:
+            - generic [ref=f15e90]: 🇨🇳
+          - button [ref=f15e93] [cursor=pointer]:
+            - button "用户与账号" [ref=f15e97]
+          - button [ref=f15e102] [cursor=pointer]
+      - tooltip
+    - generic [ref=f15e106]:
+      - generic [ref=f15e108]:
+        - button "会计核算" [ref=f15e109] [cursor=pointer]
+        - button "SAP" [ref=f15e110] [cursor=pointer]
+        - button "Oracle EBS" [ref=f15e111] [cursor=pointer]
+        - button "用友" [ref=f15e112] [cursor=pointer]
+        - button "金蝶" [ref=f15e113] [cursor=pointer]
+      - generic [ref=f15e115]:
+        - generic [ref=f15e117]:
+          - generic [ref=f15e119]:
+            - generic [ref=f15e1345] [cursor=pointer]: 会计核算
+            - generic [ref=f15e1350] [cursor=pointer]: 字典列表
+          - region "Workspace explorer" [ref=f15e1355]:
+            - generic [ref=f15e1358]:
+              - generic [ref=f15e1359]:
+                - generic [ref=f15e1360]: 字典定义
+                - generic "刷新" [ref=f15e1361] [cursor=pointer]:
+                  - button "刷新" [ref=f15e1362]
+                - button "新建定义文件" [ref=f15e1366] [cursor=pointer]
+                - button "删除选中定义文件" [ref=f15e1367] [cursor=pointer]
+              - generic [ref=f15e1368]:
+                - generic [ref=f15e1369]:
+                  - generic "域" [ref=f15e1370] [cursor=pointer]:
+                    - combobox [ref=f15e1375]: 全部域
+                    - generic: 全部域
+                    - generic: 财务资源管理（fi）
+                    - generic: 人力资源管理（hr）
+                    - generic: 客户资源管理（cr）
+                    - generic: 数据资源管理（dr）
+                    - generic: 生产资源管理（sc）
+                    - generic: 基础主数据（basic）
+                  - generic "应用" [ref=f15e1380] [cursor=pointer]:
+                    - combobox [ref=f15e1385]: 全部应用
+                    - generic: 全部应用
+                    - generic: 会计核算（cmxfico）
+                    - generic: SAP（sap）
+                    - generic: Oracle EBS（ebs）
+                    - generic: 用友（yonyou）
+                    - generic: 金蝶（kingdee）
+                    - generic: 招聘（recruit）
+                    - generic: 资源浏览（explorer）
+                    - generic: 数据中台（zhili）
+                    - generic: 数据湖（datalake）
+                    - generic: 数据平台（dataplatform）
+                - generic "模块" [ref=f15e1391] [cursor=pointer]:
+                  - combobox [ref=f15e1396]: 全部模块
+                  - generic: 全部模块
+                  - generic: 总账（gl）
+                  - generic: SAP 总账（sap_gl）
+                  - generic: Oracle EBS 总账（ebs_gl）
+                  - generic: 用友总账（yonyou_gl）
+                  - generic: 金蝶总账（kingdee_gl）
+                  - generic: 候选人（candidate）
+                  - generic: Explorer 菜单（explorer-menu）
+                  - generic: 报表（report）
+                  - generic: 主数据（mdm）
+              - generic [ref=f15e1402]:
+                - button "cmx-fico 会计凭证数据字典元数据 3 版本 fi/gl · cmxfico_dct_meta 35 表 · FICO · v3 ★" [ref=f15e1403] [cursor=pointer]:
+                  - generic [ref=f15e1404]:
+                    - text: cmx-fico 会计凭证数据字典元数据
+                    - generic "3 个版本，默认 v3" [ref=f15e1405]: 3 版本
+                  - generic [ref=f15e1407]: fi/gl · cmxfico_dct_meta
+                  - generic [ref=f15e1408]: 35 表 · FICO · v3 ★
+                - button "报表数据字典元数据 fi/report · cmxfico_report_dct_meta 21 表 · REPORT · v1 ★" [ref=f15e1409] [cursor=pointer]:
+                  - generic [ref=f15e1410]: 报表数据字典元数据
+                  - generic [ref=f15e1411]: fi/report · cmxfico_report_dct_meta
+                  - generic [ref=f15e1412]: 21 表 · REPORT · v1 ★
+                - button "Oracle EBS GL 会计凭证数据字典元数据 fi/ebs_gl · ebs_gl_dct_meta 24 表 · ebs_gl · v1" [ref=f15e1413] [cursor=pointer]:
+                  - generic [ref=f15e1414]: Oracle EBS GL 会计凭证数据字典元数据
+                  - generic [ref=f15e1415]: fi/ebs_gl · ebs_gl_dct_meta
+                  - generic [ref=f15e1416]: 24 表 · ebs_gl · v1
+                - button "金蝶 ERP GL 会计凭证数据字典元数据 fi/kingdee_gl · kingdee_gl_dct_meta 27 表 · kingdee_gl · v1" [ref=f15e1417] [cursor=pointer]:
+                  - generic [ref=f15e1418]: 金蝶 ERP GL 会计凭证数据字典元数据
+                  - generic [ref=f15e1419]: fi/kingdee_gl · kingdee_gl_dct_meta
+                  - generic [ref=f15e1420]: 27 表 · kingdee_gl · v1
+                - button "SAP FI 会计凭证数据字典元数据 3 版本 fi/sap_gl · sap_fi_dct_meta 31 表 · sap_gl · v2 ★" [ref=f15e1421] [cursor=pointer]:
+                  - generic [ref=f15e1422]:
+                    - text: SAP FI 会计凭证数据字典元数据
+                    - generic "3 个版本，默认 v2" [ref=f15e1423]: 3 版本
+                  - generic [ref=f15e1425]: fi/sap_gl · sap_fi_dct_meta
+                  - generic [ref=f15e1426]: 31 表 · sap_gl · v2 ★
+                - button "用友 ERP GL 会计凭证数据字典元数据 2 版本 fi/yonyou_gl · yonyou_gl_dct_meta 27 表 · GL · v2" [ref=f15e1427] [cursor=pointer]:
+                  - generic [ref=f15e1428]:
+                    - text: 用友 ERP GL 会计凭证数据字典元数据
+                    - generic "2 个版本，默认 v2" [ref=f15e1429]: 2 版本
+                  - generic [ref=f15e1431]: fi/yonyou_gl · yonyou_gl_dct_meta
+                  - generic [ref=f15e1432]: 27 表 · GL · v2
+              - separator "调整区域高度" [ref=f15e1433]
+              - generic [ref=f15e1434]:
+                - generic [ref=f15e1435]: 字典属性
+                - generic [ref=f15e1437]:
+                  - generic [ref=f15e1438]: 字典分组编码
+                  - textbox "如 FICO" [ref=f15e1439]: FICO
+                  - generic [ref=f15e1440]: 名称
+                  - textbox [ref=f15e1441]: cmx-fico 会计凭证数据字典元数据
+                  - generic [ref=f15e1442]: 版本号
+                  - spinbutton "版本号与文件名绑定，请用标题区「新建版本」创建新版本" [ref=f15e1443]: "3"
+                  - generic [ref=f15e1444]: 版本名称
+                  - textbox "本版本说明" [ref=f15e1445]
+                  - generic [ref=f15e1446]: 说明
+                  - textbox [ref=f15e1447]: cmx-fico 自研总账模块,数据字典完整参考 SAP 会计凭证字典(32个):客户端/组织架构/科目体系/凭证控制/币种期间/税/往来/CO对象。通用列引用 base_dct_meta_v1.json。
+        - generic [ref=f15e866]:
+          - generic [ref=f15e869] [cursor=pointer]:
+            - generic [ref=f15e871]: 数据字典定义
+            - generic "关闭" [ref=f15e872]
+          - generic [ref=f15e880]:
+            - generic [ref=f15e884]:
+              - generic [ref=f15e885]:
+                - generic [ref=f15e886]: cmx-fico 会计凭证数据字典元数据
+                - generic "版本" [ref=f15e887]:
+                  - generic [ref=f15e888]: 版本：
+                  - combobox "选择版本" [ref=f15e889] [cursor=pointer]:
+                    - option "v1"
+                    - option "v2"
+                    - option "★ v3" [selected]
+                  - button "版本管理" [ref=f15e890] [cursor=pointer]
+                  - button "新建版本" [ref=f15e891] [cursor=pointer]
+                - button "导入 JSON" [ref=f15e892] [cursor=pointer]
+                - button "导出 JSON" [ref=f15e893] [cursor=pointer]
+                - button "保存" [ref=f15e894] [cursor=pointer]
+              - generic [ref=f15e895]:
+                - generic [ref=f15e896]:
+                  - generic [ref=f15e897]:
+                    - button "业务字典 22" [ref=f15e898] [cursor=pointer]:
+                      - text: 业务字典
+                      - generic [ref=f15e899]: "22"
+                    - button "分类字典 11" [ref=f15e900] [cursor=pointer]:
+                      - text: 分类字典
+                      - generic [ref=f15e901]: "11"
+                    - button "分组字典 2" [ref=f15e902] [cursor=pointer]:
+                      - text: 分组字典
+                      - generic [ref=f15e903]: "2"
+                    - button "关系字典 0" [ref=f15e904] [cursor=pointer]:
+                      - text: 关系字典
+                      - generic [ref=f15e905]: "0"
+                    - button "枚举字典 0" [ref=f15e906] [cursor=pointer]:
+                      - text: 枚举字典
+                      - generic [ref=f15e907]: "0"
+                    - button "增加业务字典" [ref=f15e908] [cursor=pointer]
+                  - generic [ref=f15e909]:
+                    - generic [ref=f15e910] [cursor=pointer]:
+                      - button "公司(合并主体) company · 17 字段" [ref=f15e911]:
+                        - generic [ref=f15e912]: 公司(合并主体)
+                        - generic [ref=f15e913]: company · 17 字段
+                      - button "上移" [disabled]
+                      - button "下移" [ref=f15e914]
+                      - button "删除字典" [ref=f15e915]
+                    - generic [ref=f15e916] [cursor=pointer]:
+                      - button "公司代码(核算主体) comp_unit · 21 字段" [ref=f15e917]:
+                        - generic [ref=f15e918]: 公司代码(核算主体)
+                        - generic [ref=f15e919]: comp_unit · 21 字段
+                      - button "上移" [ref=f15e920]
+                      - button "下移" [ref=f15e921]
+                      - button "删除字典" [ref=f15e922]
+                    - generic [ref=f15e923] [cursor=pointer]:
+                      - button "业务范围 bus_area · 11 字段" [ref=f15e924]:
+                        - generic [ref=f15e925]: 业务范围
+                        - generic [ref=f15e926]: bus_area · 11 字段
+                      - button "上移" [ref=f15e927]
+                      - button "下移" [ref=f15e928]
+                      - button "删除字典" [ref=f15e929]
+                    - generic [ref=f15e930] [cursor=pointer]:
+                      - button "功能范围 func_area · 11 字段" [ref=f15e931]:
+                        - generic [ref=f15e932]: 功能范围
+                        - generic [ref=f15e933]: func_area · 11 字段
+                      - button "上移" [ref=f15e934]
+                      - button "下移" [ref=f15e935]
+                      - button "删除字典" [ref=f15e936]
+                    - generic [ref=f15e937] [cursor=pointer]:
+                      - button "段 segment · 11 字段" [ref=f15e938]:
+                        - generic [ref=f15e939]: 段
+                        - generic [ref=f15e940]: segment · 11 字段
+                      - button "上移" [ref=f15e941]
+                      - button "下移" [ref=f15e942]
+                      - button "删除字典" [ref=f15e943]
+                    - generic [ref=f15e944] [cursor=pointer]:
+                      - button "成本控制范围 ctrl_area · 13 字段" [ref=f15e945]:
+                        - generic [ref=f15e946]: 成本控制范围
+                        - generic [ref=f15e947]: ctrl_area · 13 字段
+                      - button "上移" [ref=f15e948]
+                      - button "下移" [ref=f15e949]
+                      - button "删除字典" [ref=f15e950]
+                    - generic [ref=f15e951] [cursor=pointer]:
+                      - button "利润中心 profit_ctr · 18 字段" [ref=f15e952]:
+                        - generic [ref=f15e953]: 利润中心
+                        - generic [ref=f15e954]: profit_ctr · 18 字段
+                      - button "上移" [ref=f15e955]
+                      - button "下移" [ref=f15e956]
+                      - button "删除字典" [ref=f15e957]
+                    - generic [ref=f15e958] [cursor=pointer]:
+                      - button "成本中心 cost_center · 20 字段" [ref=f15e959]:
+                        - generic [ref=f15e960]: 成本中心
+                        - generic [ref=f15e961]: cost_center · 20 字段
+                      - button "上移" [ref=f15e962]
+                      - button "下移" [ref=f15e963]
+                      - button "删除字典" [ref=f15e964]
+                    - generic [ref=f15e965] [cursor=pointer]:
+                      - button "会计科目表 coa · 11 字段" [ref=f15e966]:
+                        - generic [ref=f15e967]: 会计科目表
+                        - generic [ref=f15e968]: coa · 11 字段
+                      - button "上移" [ref=f15e969]
+                      - button "下移" [ref=f15e970]
+                      - button "删除字典" [ref=f15e971]
+                    - generic [ref=f15e972] [cursor=pointer]:
+                      - button "总账科目 gl_account · 31 字段" [ref=f15e973]:
+                        - generic [ref=f15e974]: 总账科目
+                        - generic [ref=f15e975]: gl_account · 31 字段
+                      - button "上移" [ref=f15e976]
+                      - button "下移" [ref=f15e977]
+                      - button "删除字典" [ref=f15e978]
+                    - generic [ref=f15e979] [cursor=pointer]:
+                      - button "凭证类型 doc_type · 14 字段" [ref=f15e980]:
+                        - generic [ref=f15e981]: 凭证类型
+                        - generic [ref=f15e982]: doc_type · 14 字段
+                      - button "上移" [ref=f15e983]
+                      - button "下移" [ref=f15e984]
+                      - button "删除字典" [ref=f15e985]
+                    - generic [ref=f15e986] [cursor=pointer]:
+                      - button "记账码 posting_key · 13 字段" [ref=f15e987]:
+                        - generic [ref=f15e988]: 记账码
+                        - generic [ref=f15e989]: posting_key · 13 字段
+                      - button "上移" [ref=f15e990]
+                      - button "下移" [ref=f15e991]
+                      - button "删除字典" [ref=f15e992]
+                    - generic [ref=f15e993] [cursor=pointer]:
+                      - button "货币 currency · 11 字段" [ref=f15e994]:
+                        - generic [ref=f15e995]: 货币
+                        - generic [ref=f15e996]: currency · 11 字段
+                      - button "上移" [ref=f15e997]
+                      - button "下移" [ref=f15e998]
+                      - button "删除字典" [ref=f15e999]
+                    - generic [ref=f15e1000] [cursor=pointer]:
+                      - button "会计年度变式 fy_variant · 11 字段" [ref=f15e1001]:
+                        - generic [ref=f15e1002]: 会计年度变式
+                        - generic [ref=f15e1003]: fy_variant · 11 字段
+                      - button "上移" [ref=f15e1004]
+                      - button "下移" [ref=f15e1005]
+                      - button "删除字典" [ref=f15e1006]
+                    - generic [ref=f15e1007] [cursor=pointer]:
+                      - button "会计期间 fisc_period · 17 字段" [ref=f15e1008]:
+                        - generic [ref=f15e1009]: 会计期间
+                        - generic [ref=f15e1010]: fisc_period · 17 字段
+                      - button "上移" [ref=f15e1011]
+                      - button "下移" [ref=f15e1012]
+                      - button "删除字典" [ref=f15e1013]
+                    - generic [ref=f15e1014] [cursor=pointer]:
+                      - button "分类账 ledger · 15 字段" [ref=f15e1015]:
+                        - generic [ref=f15e1016]: 分类账
+                        - generic [ref=f15e1017]: ledger · 15 字段
+                      - button "上移" [ref=f15e1018]
+                      - button "下移" [ref=f15e1019]
+                      - button "删除字典" [ref=f15e1020]
+                    - generic [ref=f15e1021] [cursor=pointer]:
+                      - button "税码 tax_code · 14 字段" [ref=f15e1022]:
+                        - generic [ref=f15e1023]: 税码
+                        - generic [ref=f15e1024]: tax_code · 14 字段
+                      - button "上移" [ref=f15e1025]
+                      - button "下移" [ref=f15e1026]
+                      - button "删除字典" [ref=f15e1027]
+                    - generic [ref=f15e1028] [cursor=pointer]:
+                      - button "付款条件 pay_terms · 15 字段" [ref=f15e1029]:
+                        - generic [ref=f15e1030]: 付款条件
+                        - generic [ref=f15e1031]: pay_terms · 15 字段
+                      - button "上移" [ref=f15e1032]
+                      - button "下移" [ref=f15e1033]
+                      - button "删除字典" [ref=f15e1034]
+                    - generic [ref=f15e1035] [cursor=pointer]:
+                      - button "业务伙伴(客户/供应商) bus_partner · 22 字段" [ref=f15e1036]:
+                        - generic [ref=f15e1037]: 业务伙伴(客户/供应商)
+                        - generic [ref=f15e1038]: bus_partner · 22 字段
+                      - button "上移" [ref=f15e1039]
+                      - button "下移" [ref=f15e1040]
+                      - button "删除字典" [ref=f15e1041]
+                    - generic [ref=f15e1042] [cursor=pointer]:
+                      - button "开户行/银行 house_bank · 21 字段" [ref=f15e1043]:
+                        - generic [ref=f15e1044]: 开户行/银行
+                        - generic [ref=f15e1045]: house_bank · 21 字段
+                      - button "上移" [ref=f15e1046]
+                      - button "下移" [ref=f15e1047]
+                      - button "删除字典" [ref=f15e1048]
+                    - generic [ref=f15e1049] [cursor=pointer]:
+                      - button "内部订单 int_order · 15 字段" [ref=f15e1050]:
+                        - generic [ref=f15e1051]: 内部订单
+                        - generic [ref=f15e1052]: int_order · 15 字段
+                      - button "上移" [ref=f15e1053]
+                      - button "下移" [ref=f15e1054]
+                      - button "删除字典" [ref=f15e1055]
+                    - generic [ref=f15e1056] [cursor=pointer]:
+                      - button "WBS元素(项目) wbs_element · 17 字段" [ref=f15e1057]:
+                        - generic [ref=f15e1058]: WBS元素(项目)
+                        - generic [ref=f15e1059]: wbs_element · 17 字段
+                      - button "上移" [ref=f15e1060]
+                      - button "下移" [disabled]
+                      - button "删除字典" [ref=f15e1061]
+                - separator "调整区域高度" [ref=f15e1062]
+                - generic [ref=f15e1063]:
+                  - generic [ref=f15e1064]: 字段（17） · 公司(合并主体)
+                  - tablist "字段定义" [ref=f15e1066]:
+                    - tab "字段定义" [selected] [ref=f15e1067] [cursor=pointer]
+                    - tab "JSON源码" [ref=f15e1069] [cursor=pointer]
+                  - generic [ref=f15e1071]:
+                    - generic [ref=f15e1073] [cursor=pointer]:
+                      - generic [ref=f15e1074]: ▸
+                      - generic [ref=f15e1075]: dictionaryCommonFields
+                      - generic [ref=f15e1076]: 引用·可覆盖
+                      - generic [ref=f15e1077]: "5"
+                      - button "整组上移" [disabled] [ref=f15e1078]
+                      - button "整组下移" [ref=f15e1079]
+                      - button "复制本段字段" [ref=f15e1080]
+                      - button "删除引用" [ref=f15e1081]
+                    - generic [ref=f15e1082]:
+                      - generic [ref=f15e1083] [cursor=pointer]:
+                        - generic [ref=f15e1084]: ▾
+                        - generic [ref=f15e1085]: 本表定义字段
+                        - generic [ref=f15e1086]: 可编辑
+                        - generic [ref=f15e1087]: "4"
+                        - combobox "引用模板列" [ref=f15e1088]:
+                          - option "+ 引用模板列…" [selected]
+                          - option "dictionaryCommonNoIDFields"
+                          - option "dictionaryHierarchyFields"
+                          - option "dictionaryHierarchyNoIDFields"
+                          - option "dictionaryScopeFields"
+                          - option "dictionarySystemFields"
+                          - option "hierarchyClosureFields"
+                          - option "relationCommonFields"
+                        - button "整组上移" [ref=f15e1089]
+                        - button "整组下移" [ref=f15e1090]
+                        - button "复制本段字段" [ref=f15e1091]
+                        - button "粘贴字段到本段" [ref=f15e1092]
+                        - button "新增字段" [ref=f15e1093]
+                      - table [ref=f15e1095]:
+                        - rowgroup [ref=f15e1096]:
+                          - row [ref=f15e1097]:
+                            - columnheader "#" [ref=f15e1098]
+                            - columnheader "ID" [ref=f15e1099]
+                            - columnheader "Name" [ref=f15e1100]
+                            - columnheader "标题" [ref=f15e1101]
+                            - columnheader "数据类型" [ref=f15e1102]
+                            - columnheader "长度" [ref=f15e1103]
+                            - columnheader "整数位" [ref=f15e1104]
+                            - columnheader "小数位" [ref=f15e1105]
+                            - columnheader "可空" [ref=f15e1106]
+                            - columnheader "主键" [ref=f15e1107]
+                            - columnheader [ref=f15e1108]
+                        - rowgroup [ref=f15e1109]:
+                          - row [ref=f15e1110] [cursor=pointer]:
+                            - cell "1" [ref=f15e1111]
+                            - cell [ref=f15e1112]:
+                              - textbox [ref=f15e1113]: country_code
+                            - cell [ref=f15e1114]:
+                              - textbox [ref=f15e1115]: country_code
+                            - cell [ref=f15e1116]:
+                              - textbox [ref=f15e1117]: 国家
+                            - cell "VARCHAR" [ref=f15e1118]:
+                              - combobox [ref=f15e1119]:
+                                - option "VARCHAR" [selected]
+                                - option "INT"
+                                - option "BIGINT"
+                                - option "TINYINT"
+                                - option "DECIMAL"
+                                - option "DATE"
+                                - option "DATETIME"
+                                - option "TEXT"
+                                - option "BOOLEAN"
+                            - cell [ref=f15e1120]:
+                              - spinbutton [ref=f15e1121]
+                            - cell [ref=f15e1122]
+                            - cell [ref=f15e1123]
+                            - cell [ref=f15e1124]:
+                              - checkbox [checked] [ref=f15e1125]
+                            - cell [ref=f15e1126]:
+                              - checkbox [ref=f15e1127]
+                            - cell [ref=f15e1128]:
+                              - button "属性" [ref=f15e1129]
+                              - button "上移" [disabled] [ref=f15e1130]
+                              - button "下移" [ref=f15e1131]
+                              - button "删除" [ref=f15e1132]
+                          - row [ref=f15e1133] [cursor=pointer]:
+                            - cell "2" [ref=f15e1134]
+                            - cell [ref=f15e1135]:
+                              - textbox [ref=f15e1136]: currency_code
+                            - cell [ref=f15e1137]:
+                              - textbox [ref=f15e1138]: currency_code
+                            - cell [ref=f15e1139]:
+                              - textbox [ref=f15e1140]: 公司货币
+                            - cell "VARCHAR" [ref=f15e1141]:
+                              - combobox [ref=f15e1142]:
+                                - option "VARCHAR" [selected]
+                                - option "INT"
+                                - option "BIGINT"
+                                - option "TINYINT"
+                                - option "DECIMAL"
+                                - option "DATE"
+                                - option "DATETIME"
+                                - option "TEXT"
+                                - option "BOOLEAN"
+                            - cell [ref=f15e1143]:
+                              - spinbutton [ref=f15e1144]
+                            - cell [ref=f15e1145]
+                            - cell [ref=f15e1146]
+                            - cell [ref=f15e1147]:
+                              - checkbox [checked] [ref=f15e1148]
+                            - cell [ref=f15e1149]:
+                              - checkbox [ref=f15e1150]
+                            - cell [ref=f15e1151]:
+                              - button "属性" [ref=f15e1152]
+                              - button "上移" [ref=f15e1153]
+                              - button "下移" [ref=f15e1154]
+                              - button "删除" [ref=f15e1155]
+                          - row [ref=f15e1156] [cursor=pointer]:
+                            - cell "3" [ref=f15e1157]
+                            - cell [ref=f15e1158]:
+                              - textbox [ref=f15e1159]: trading_partner_id
+                            - cell [ref=f15e1160]:
+                              - textbox [ref=f15e1161]: trading_partner_id
+                            - cell [ref=f15e1162]:
+                              - textbox [ref=f15e1163]: 贸易伙伴
+                            - cell "BIGINT" [ref=f15e1164]:
+                              - combobox [ref=f15e1165]:
+                                - option "VARCHAR"
+                                - option "INT"
+                                - option "BIGINT" [selected]
+                                - option "TINYINT"
+                                - option "DECIMAL"
+                                - option "DATE"
+                                - option "DATETIME"
+                                - option "TEXT"
+                                - option "BOOLEAN"
+                            - cell [ref=f15e1166]
+                            - cell [ref=f15e1167]
+                            - cell [ref=f15e1168]
+                            - cell [ref=f15e1169]:
+                              - checkbox [checked] [ref=f15e1170]
+                            - cell [ref=f15e1171]:
+                              - checkbox [ref=f15e1172]
+                            - cell [ref=f15e1173]:
+                              - button "属性" [ref=f15e1174]
+                              - button "上移" [ref=f15e1175]
+                              - button "下移" [ref=f15e1176]
+                              - button "删除" [ref=f15e1177]
+                          - row [ref=f15e1178] [cursor=pointer]:
+                            - cell "4" [ref=f15e1179]
+                            - cell [ref=f15e1180]:
+                              - textbox [ref=f15e1181]: cons_method
+                            - cell [ref=f15e1182]:
+                              - textbox [ref=f15e1183]: cons_method
+                            - cell [ref=f15e1184]:
+                              - textbox [ref=f15e1185]: 合并方法
+                            - cell "VARCHAR" [ref=f15e1186]:
+                              - combobox [ref=f15e1187]:
+                                - option "VARCHAR" [selected]
+                                - option "INT"
+                                - option "BIGINT"
+                                - option "TINYINT"
+                                - option "DECIMAL"
+                                - option "DATE"
+                                - option "DATETIME"
+                                - option "TEXT"
+                                - option "BOOLEAN"
+                            - cell [ref=f15e1188]:
+                              - spinbutton [ref=f15e1189]
+                            - cell [ref=f15e1190]
+                            - cell [ref=f15e1191]
+                            - cell [ref=f15e1192]:
+                              - checkbox [checked] [ref=f15e1193]
+                            - cell [ref=f15e1194]:
+                              - checkbox [ref=f15e1195]
+                            - cell [ref=f15e1196]:
+                              - button "属性" [ref=f15e1197]
+                              - button "上移" [ref=f15e1198]
+                              - button "下移" [disabled] [ref=f15e1199]
+                              - button "删除" [ref=f15e1200]
+                    - generic [ref=f15e1202] [cursor=pointer]:
+                      - generic [ref=f15e1203]: ▸
+                      - generic [ref=f15e1204]: dictionaryAuditFields
+                      - generic [ref=f15e1205]: 引用·可覆盖
+                      - generic [ref=f15e1206]: "4"
+                      - button "整组上移" [ref=f15e1207]
+                      - button "整组下移" [ref=f15e1208]
+                      - button "复制本段字段" [ref=f15e1209]
+                      - button "删除引用" [ref=f15e1210]
+                    - generic [ref=f15e1212] [cursor=pointer]:
+                      - generic [ref=f15e1213]: ▸
+                      - generic [ref=f15e1214]: dictionaryEffectiveFields
+                      - generic [ref=f15e1215]: 引用·可覆盖
+                      - generic [ref=f15e1216]: "2"
+                      - button "整组上移" [ref=f15e1217]
+                      - button "整组下移" [ref=f15e1218]
+                      - button "复制本段字段" [ref=f15e1219]
+                      - button "删除引用" [ref=f15e1220]
+                    - generic [ref=f15e1222] [cursor=pointer]:
+                      - generic [ref=f15e1223]: ▸
+                      - generic [ref=f15e1224]: dictionaryDisableFields
+                      - generic [ref=f15e1225]: 引用·可覆盖
+                      - generic [ref=f15e1226]: "2"
+                      - button "整组上移" [ref=f15e1227]
+                      - button "整组下移" [disabled] [ref=f15e1228]
+                      - button "复制本段字段" [ref=f15e1229]
+                      - button "删除引用" [ref=f15e1230]
+            - tablist [ref=f15e1232]:
+              - button "设计" [ref=f15e1233] [cursor=pointer]
+              - button "源码" [ref=f15e1235] [cursor=pointer]
+        - generic [ref=f15e1242]:
+          - generic [ref=f15e1243]:
+            - tablist [ref=f15e1448]:
+              - tab "属性" [selected] [ref=f15e1449]
+            - button "关闭属性面板" [ref=f15e1253] [cursor=pointer]
+          - region "Workspace property" [ref=f15e1258]:
+            - generic [ref=f15e1262]:
+              - generic [ref=f15e1263]:
+                - heading "表信息（字典）" [level=3] [ref=f15e1264]
+                - button "→ 维护该字典数据（company）" [ref=f15e1266] [cursor=pointer]
+                - generic [ref=f15e1267]:
+                  - generic [ref=f15e1268]: 字典编码
+                  - textbox [ref=f15e1269]: company
+                  - generic [ref=f15e1270]: 字典名称
+                  - textbox [ref=f15e1271]: 公司(合并主体)
+                  - generic [ref=f15e1272]: 字典类型
+                  - combobox [ref=f15e1273]:
+                    - option "业务字典" [selected]
+                    - option "分类字典"
+                    - option "分组字典"
+                    - option "关系字典"
+                    - option "枚举字典"
+                  - generic [ref=f15e1274]: 物理表
+                  - textbox [ref=f15e1275]: cf_company
+                  - generic [ref=f15e1276]: 主键字段
+                  - textbox "选填，如 id" [ref=f15e1277]: id
+                  - generic [ref=f15e1278]: 编码字段
+                  - textbox "选填，如 code" [ref=f15e1279]: code
+                  - generic [ref=f15e1280]: 显示字段
+                  - textbox "选填，如 name" [ref=f15e1281]: name
+                  - generic [ref=f15e1282]: 数据权限
+                  - combobox [ref=f15e1283]:
+                    - option "不设置" [selected]
+                    - option "组织规则"
+                    - option "角色规则"
+                    - option "用户规则"
+                  - generic [ref=f15e1284]: 是否分级
+                  - checkbox [ref=f15e1285] [cursor=pointer]
+                  - generic [ref=f15e1286]:
+                    - generic [ref=f15e1287]:
+                      - generic [ref=f15e1288]: 编码字段
+                      - textbox "如 code" [ref=f15e1289]: code
+                    - generic [ref=f15e1290]:
+                      - generic [ref=f15e1291]: 编码规则
+                      - combobox [ref=f15e1292]:
+                        - option "手动录入(校验正则)" [selected]
+                        - option "自动生成(段引擎)"
+                    - generic [ref=f15e1293]:
+                      - generic [ref=f15e1294]: 正则
+                      - 'textbox "如 ^[A-Z]{3}\\d{4}$" [ref=f15e1295]'
+              - generic [ref=f15e1296]:
+                - heading "引用字段集" [level=3] [ref=f15e1297]
+                - generic [ref=f15e1298]:
+                  - generic [ref=f15e1299]: dictionaryCommonFields
+                  - generic [ref=f15e1300]: dictionaryAuditFields
+                  - generic [ref=f15e1301]: dictionaryEffectiveFields
+                  - generic [ref=f15e1302]: dictionaryDisableFields
+                - generic [ref=f15e1303]: 这些公共字段集定义在 base 文件，建表时与本表 fields 合并。
+              - generic [ref=f15e1304]:
+                - heading "说明" [level=3] [ref=f15e1305]
+                - generic [ref=f15e1306]: 集团合并主体
+    - generic [ref=f15e1308]:
+      - generic [ref=f15e1309]:
+        - generic "⎇ main" [ref=f15e1310]
+        - generic "⊘ 0" [ref=f15e1315]
+        - generic "⚠ 1" [ref=f15e1320]
+        - generic "● 准备就绪" [ref=f15e1325]
+      - generic [ref=f15e1328]:
+        - generic [ref=f15e1329]:
+          - generic "UTF-8" [ref=f15e1330]
+          - generic "JavaScript" [ref=f15e1332]
+        - generic [ref=f15e1335]:
+          - generic "通知" [ref=f15e1336] [cursor=pointer]
+          - generic "用户" [ref=f15e1340] [cursor=pointer]
+    - button "AI 助手 / 浮动视图" [ref=f15e1344]

@@ -1,0 +1,60 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-segmented-button>",
+  "isVoid": false,
+  "tag": "ui5-segmented-button",
+  "description": "UI5 分段按钮",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    },
+    {
+      "name": "accessible-description",
+      "label": "accessible-description",
+      "type": "text",
+      "placeholder": "无障碍描述"
+    },
+    {
+      "name": "accessible-description-ref",
+      "label": "accessible-description-ref",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "selection-mode",
+      "label": "selection-mode",
+      "type": "select",
+      "options": [
+        "Single",
+        "Multiple"
+      ]
+    },
+    {
+      "name": "items-fit-content",
+      "label": "items-fit-content",
+      "type": "boolean"
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "selection-change"
+  ]
+}

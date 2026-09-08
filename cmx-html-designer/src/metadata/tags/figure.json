@@ -1,0 +1,17 @@
+{
+  "tag": "figure",
+  "group": "default",
+  "label": "<figure>",
+  "description": "媒体及说明容器",
+  "isVoid": false,
+  "canNest": true,
+  "attrs": [],
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

@@ -1,0 +1,34 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-filter-item>",
+  "isVoid": false,
+  "tag": "ui5-filter-item",
+  "description": "UI5 Fiori 视图设置对话框筛选项",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "additional-text",
+      "label": "additional-text",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [
+    "values"
+  ],
+  "extraEvents": []
+}

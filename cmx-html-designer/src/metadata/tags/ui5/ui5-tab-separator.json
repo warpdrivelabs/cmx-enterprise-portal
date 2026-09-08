@@ -1,0 +1,19 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-tab-separator>",
+  "isVoid": true,
+  "tag": "ui5-tab-separator",
+  "description": "UI5 Tab 分隔符",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [],
+  "slots": [],
+  "extraEvents": []
+}

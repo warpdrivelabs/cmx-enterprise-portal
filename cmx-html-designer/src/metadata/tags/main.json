@@ -1,0 +1,20 @@
+{
+  "tag": "main",
+  "group": "default",
+  "label": "<main>",
+  "description": "文档主要内容区域",
+  "isVoid": false,
+  "canNest": true,
+  "attrs": [],
+  "defaults": {
+    "text": "主内容区"
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

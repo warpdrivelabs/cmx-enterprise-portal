@@ -1,0 +1,24 @@
+{
+  "tag": "td",
+  "group": "default",
+  "label": "<td>",
+  "description": "数据单元格",
+  "isVoid": false,
+  "canNest": true,
+  "attrs": [],
+  "defaults": {
+    "text": "数据",
+    "style": {
+      "border": "1px solid #ccc",
+      "padding": "6px 10px"
+    }
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

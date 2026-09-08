@@ -1,0 +1,64 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-user-menu>",
+  "isVoid": false,
+  "tag": "ui5-user-menu",
+  "description": "Fiori 用户菜单",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "open",
+      "label": "open",
+      "type": "boolean"
+    },
+    {
+      "name": "opener",
+      "label": "opener",
+      "type": "text",
+      "placeholder": "元素ID"
+    },
+    {
+      "name": "show-manage-account",
+      "label": "show-manage-account",
+      "type": "boolean"
+    },
+    {
+      "name": "show-other-accounts",
+      "label": "show-other-accounts",
+      "type": "boolean"
+    },
+    {
+      "name": "show-edit-accounts",
+      "label": "show-edit-accounts",
+      "type": "boolean"
+    },
+    {
+      "name": "show-edit-button",
+      "label": "show-edit-button",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "",
+    "accounts",
+    "footer"
+  ],
+  "extraEvents": [
+    "avatar-click",
+    "manage-account-click",
+    "edit-accounts-click",
+    "change-account",
+    "item-click",
+    "sign-out-click",
+    "open",
+    "close"
+  ]
+}

@@ -1,0 +1,377 @@
+- generic [active] [ref=f4e1]:
+  - generic:
+    - alert
+    - alert
+  - generic [ref=f4e2]:
+    - banner "外壳栏" [ref=f4e7]:
+      - button "菜单" [ref=f4e289] [cursor=pointer]
+      - link "Logo" [ref=f4e13] [cursor=pointer]:
+        - generic "Logo" [ref=f4e14]:
+          - img "CMX" [ref=f4e15]
+        - heading "CMX Enterprise Portal" [level=1] [ref=f4e17]
+      - generic [ref=f4e19]:
+        - search [ref=f4e293]:
+          - searchbox "搜索字段" [ref=f4e295]
+        - button "AI 助手" [ref=f4e31] [cursor=pointer]
+        - button "0 个通知" [ref=f4e36] [cursor=pointer]
+        - button "帮助" [ref=f4e43] [cursor=pointer]
+        - button "欢迎页面" [ref=f4e49] [cursor=pointer]
+        - button "DAM注册中心" [ref=f4e55] [cursor=pointer]
+        - button "集群数据源" [ref=f4e61] [cursor=pointer]
+        - button "菜单管理" [ref=f4e67] [cursor=pointer]
+        - button "切换主题" [ref=f4e73] [cursor=pointer]
+        - button "切换语言 🇨🇳" [ref=f4e79] [cursor=pointer]:
+          - generic [ref=f4e80]: 🇨🇳
+        - button [ref=f4e83] [cursor=pointer]:
+          - generic "用户与账号" [ref=f4e86]:
+            - button "用户与账号" [ref=f4e87]
+        - button "资源域切换" [ref=f4e288] [cursor=pointer]
+    - generic [ref=f4e96]:
+      - generic [ref=f4e305]:
+        - button "会计核算" [ref=f4e306] [cursor=pointer]
+        - button "SAP" [ref=f4e307] [cursor=pointer]
+        - button "Oracle EBS" [ref=f4e308] [cursor=pointer]
+        - button "用友" [ref=f4e309] [cursor=pointer]
+        - button "金蝶" [ref=f4e310] [cursor=pointer]
+      - generic [ref=f4e100]:
+        - generic [ref=f4e102]:
+          - generic [ref=f4e103]: 会计核算
+          - generic [ref=f4e317]:
+            - generic [ref=f4e318]:
+              - textbox "搜索菜单…（/ 或 Alt+S 聚焦）" [ref=f4e322]
+              - button "刷新菜单" [ref=f4e324] [cursor=pointer]
+            - generic [ref=f4e329]:
+              - region "总账" [ref=f4e330]:
+                - button "总账" [expanded] [ref=f4e331] [cursor=pointer]
+                - navigation [ref=f4e341]:
+                  - tree "主导航菜单" [ref=f4e342]:
+                    - generic:
+                      - generic [ref=f4e343]:
+                        - treeitem "基础数据管理" [expanded] [ref=f4e344] [cursor=pointer]
+                        - group "基础数据管理" [ref=f4e353]:
+                          - generic:
+                            - treeitem "系统控制" [ref=f4e355] [cursor=pointer]
+                            - treeitem "编辑用户" [ref=f4e370] [cursor=pointer]
+                            - treeitem "部署配置" [ref=f4e376] [cursor=pointer]
+                            - treeitem "页面组装测试" [ref=f4e382] [cursor=pointer]
+                            - treeitem "Outlook邮箱" [ref=f4e391] [cursor=pointer]
+                            - treeitem "主从表单生成测试" [ref=f4e397] [cursor=pointer]
+                            - treeitem "cmx-combo-box 三模式演示" [ref=f4e403] [cursor=pointer]
+                            - treeitem "cmx-tabulator 会计科目树" [ref=f4e412] [cursor=pointer]
+                            - treeitem "cmx-dict-select 数据字典选择演示" [ref=f4e428] [cursor=pointer]
+                            - treeitem "录入控件演示（文本/数字/日期/日期时间）" [ref=f4e437] [cursor=pointer]
+                            - treeitem "grid↔form 联动（四录入组件·模型面板）" [ref=f4e448] [cursor=pointer]
+                            - treeitem "财务会计凭证" [ref=f4e461] [cursor=pointer]
+                            - treeitem "会计凭证（三层·维度选择）" [ref=f4e471] [cursor=pointer]
+                            - treeitem "会计凭证（v1 单表多字典）" [ref=f4e481] [cursor=pointer]
+                            - treeitem "交易单据" [ref=f4e491] [cursor=pointer]
+                            - treeitem "差旅费报销" [ref=f4e502] [cursor=pointer]
+                            - treeitem "交易单据（表单视图）" [ref=f4e510] [cursor=pointer]
+                            - treeitem "会计凭证（弹性组合）" [ref=f4e521] [cursor=pointer]
+                            - treeitem "字典选择编辑器演示" [ref=f4e532] [cursor=pointer]
+                            - treeitem "总账主数据演示" [ref=f4e542] [cursor=pointer]
+                            - treeitem "主数据帮助测试" [ref=f4e554] [cursor=pointer]
+                            - treeitem "主数据帮助实验室" [ref=f4e564] [cursor=pointer]
+                            - treeitem "元数据模型服务测试" [ref=f4e572] [cursor=pointer]
+                            - treeitem "注册表编辑器" [ref=f4e578] [cursor=pointer]
+                            - treeitem "数据字典动态表格" [ref=f4e590] [cursor=pointer]
+                            - treeitem "ERP凭证样例(CNPC)" [ref=f4e596] [cursor=pointer]
+                            - treeitem "ERP凭证样例(MasterSlave模型版)" [ref=f4e602] [cursor=pointer]
+                            - treeitem "ERP凭证(三区工作台)" [ref=f4e608] [cursor=pointer]
+                            - treeitem "报表设计器" [ref=f4e614] [cursor=pointer]
+                            - treeitem "报表设计器（SpreadJS）" [ref=f4e620] [cursor=pointer]
+                            - treeitem "报表设计工作台" [ref=f4e630] [cursor=pointer]
+                            - treeitem "流程设计工作台" [ref=f4e636] [cursor=pointer]
+                            - treeitem "报表应用工作台" [ref=f4e642] [cursor=pointer]
+                            - treeitem "任务中心" [ref=f4e648] [cursor=pointer]
+                            - treeitem "ERP凭证(doc服务版)" [ref=f4e654] [cursor=pointer]
+                            - treeitem "合并组织机构维护" [ref=f4e660] [cursor=pointer]
+                            - treeitem "会计核算管理" [ref=f4e666] [cursor=pointer]
+                            - treeitem "总账科目维护" [ref=f4e672] [cursor=pointer]
+                            - treeitem "币种字典维护(平级)" [ref=f4e678] [cursor=pointer]
+                            - treeitem "总账科目维护(自分级)" [ref=f4e684] [cursor=pointer]
+                            - treeitem "总账科目维护(带分类)" [ref=f4e690] [cursor=pointer]
+                            - treeitem "核算主体分组关系维护" [ref=f4e696] [cursor=pointer]
+                            - treeitem "会计凭证①(html·DataSet)" [ref=f4e702] [cursor=pointer]
+                            - treeitem "会计凭证②(native·DataSet)" [ref=f4e710] [cursor=pointer]
+                            - treeitem "会计凭证③(html·Sqlx二进制)" [ref=f4e718] [cursor=pointer]
+                            - treeitem "会计凭证④(native·tokio二进制)" [ref=f4e726] [cursor=pointer]
+                            - treeitem "会计凭证⑤(native·Zmc→JSON)" [ref=f4e734] [cursor=pointer]
+                            - treeitem "加载服务自检(native)" [ref=f4e742] [cursor=pointer]
+                            - treeitem "加载服务自检(html)" [ref=f4e751] [cursor=pointer]
+                            - treeitem "AI员工信息表单" [ref=f4e760] [cursor=pointer]
+                        - generic: 要导航到导航项目 基础数据管理，请按空格键或 Enter。
+                      - generic [ref=f4e770]:
+                        - treeitem "Ignite 组件演示" [expanded] [ref=f4e771] [cursor=pointer]
+                        - group "Ignite 组件演示" [ref=f4e781]:
+                          - generic:
+                            - treeitem "Ignite 组合框编辑器" [ref=f4e783] [cursor=pointer]
+                            - treeitem "Ignite 列表主从" [ref=f4e792] [cursor=pointer]
+                        - generic: 要导航到导航项目 Ignite 组件演示，请按空格键或 Enter。
+                      - generic [ref=f4e798]:
+                        - treeitem "定义中心" [expanded] [ref=f4e799] [cursor=pointer]
+                        - group "定义中心" [ref=f4e811]:
+                          - generic:
+                            - treeitem "弹性组合管理" [ref=f4e813] [cursor=pointer]
+                            - treeitem "字典数据维护（HTML）" [ref=f4e828] [cursor=pointer]
+                            - treeitem "数据字典定义" [ref=f4e838] [cursor=pointer]
+                            - treeitem "字典数据维护" [ref=f4e847] [cursor=pointer]
+                            - treeitem "业务单据定义" [ref=f4e857] [cursor=pointer]
+                            - treeitem "字典基础元数据" [ref=f4e866] [cursor=pointer]
+                            - treeitem "字典基础元数据(native_pages)" [ref=f4e875] [cursor=pointer]
+                            - treeitem "原生页面联动演示(native_pages·CE+context)" [ref=f4e884] [cursor=pointer]
+                            - treeitem "单据基础元数据" [ref=f4e902] [cursor=pointer]
+                            - treeitem "自定义页面设计" [ref=f4e911] [cursor=pointer]
+                            - treeitem "科目弹性组合" [ref=f4e922] [cursor=pointer]
+                            - treeitem "交易弹性组合" [ref=f4e931] [cursor=pointer]
+                            - treeitem "CCM全属性测试" [ref=f4e946] [cursor=pointer]
+                            - treeitem "工作区节点编辑" [ref=f4e956] [cursor=pointer]
+                        - generic: 要导航到导航项目 定义中心，请按空格键或 Enter。
+                      - generic [ref=f4e966]:
+                        - treeitem "页面管理" [expanded] [ref=f4e967] [cursor=pointer]
+                        - group "页面管理" [ref=f4e975]:
+                          - generic:
+                            - treeitem "首页" [ref=f4e977] [cursor=pointer]
+                            - treeitem "用户管理" [ref=f4e980] [cursor=pointer]
+                            - treeitem "权限配置" [ref=f4e983] [cursor=pointer]
+                            - treeitem "报表中心" [ref=f4e986] [cursor=pointer]
+                        - generic: 要导航到导航项目 页面管理，请按空格键或 Enter。
+                      - treeitem "DAM 注册管理中心" [ref=f4e989] [cursor=pointer]
+                      - generic [ref=f4e994]:
+                        - treeitem "组件库" [ref=f4e995] [cursor=pointer]
+                        - generic: 要导航到导航项目 组件库，请按空格键或 Enter。
+                      - generic [ref=f4e1003]:
+                        - treeitem "服务接入" [ref=f4e1004] [cursor=pointer]
+                        - generic: 要导航到导航项目 服务接入，请按空格键或 Enter。
+                      - generic [ref=f4e1012]:
+                        - treeitem "数据资产" [ref=f4e1013] [cursor=pointer]
+                        - generic: 要导航到导航项目 数据资产，请按空格键或 Enter。
+              - region "报表" [ref=f4e1021]:
+                - button "报表" [ref=f4e1022] [cursor=pointer]
+        - generic [ref=f4e122]:
+          - generic [ref=f4e1030] [cursor=pointer]:
+            - generic [ref=f4e1035]: 字典数据维护（HTML）
+            - generic "关闭" [ref=f4e1036]
+          - generic [ref=f4e1046]:
+            - generic [ref=f4e1047]:
+              - generic [ref=f4e1051]: 字典数据维护
+              - generic [ref=f4e1052]: gl_account · 树形
+              - generic [ref=f4e1053]: 选中节点：资产类（右表显直接子级）
+            - generic [ref=f4e1054]:
+              - generic [ref=f4e1055]: 字典：
+              - generic [ref=f4e1058] [cursor=pointer]:
+                - combobox [ref=f4e1060]: 客户端（client）
+                - generic: 客户端（client）
+                - generic: 公司(合并主体)（company）
+                - generic: 公司代码(核算主体)（comp_unit）
+                - generic: 业务范围（bus_area）
+                - generic: 功能范围（func_area）
+                - generic: 段（segment）
+                - generic: 成本控制范围（ctrl_area）
+                - generic: 利润中心（profit_ctr）
+                - generic: 成本中心（cost_center）
+                - generic: 会计科目表（coa）
+                - generic: 总账科目（gl_account）
+                - generic: 科目组（acct_group）
+                - generic: 账户类型（account_type）
+                - generic: 财务报表版本（fs_version）
+                - generic: 凭证类型（doc_type）
+                - generic: 记账码（posting_key）
+                - generic: 借贷标志（dc_indicator）
+                - generic: 特别总账标识（spl_gl_ind）
+                - generic: 字段状态组（fld_stat_grp）
+                - generic: 货币（currency）
+                - generic: 汇率类型（fx_rate_type）
+                - generic: 会计年度变式（fy_variant）
+                - generic: 会计期间（fisc_period）
+                - generic: 分类账（ledger）
+                - generic: 税码（tax_code）
+                - generic: 付款条件（pay_terms）
+                - generic: 付款方式（pay_method）
+                - generic: 业务伙伴(客户/供应商)（bus_partner）
+                - generic: 开户行/银行（house_bank）
+                - generic: 内部订单（int_order）
+                - generic: WBS元素(项目)（wbs_element）
+                - generic: 国家（country）
+                - generic: 凭证号码范围（number_range）
+                - generic: 会计原则（acct_princ）
+                - generic: 合并组织机构（cons_org）
+              - button "刷新" [ref=f4e1066] [cursor=pointer]
+              - button "新增" [ref=f4e1073] [cursor=pointer]
+              - button "删除" [ref=f4e1080] [cursor=pointer]
+              - button "保存" [ref=f4e1087] [cursor=pointer]
+            - generic [ref=f4e1093]:
+              - textbox "关键字（编码/名称模糊匹配）" [ref=f4e1097]
+              - button "搜索" [ref=f4e1099] [cursor=pointer]
+              - button "清空" [ref=f4e1106] [cursor=pointer]
+            - generic [ref=f4e1112]:
+              - generic [ref=f4e1113]:
+                - generic [ref=f4e1114]: 字典结构
+                - generic [ref=f4e1119]:
+                  - generic [ref=f4e1121] [cursor=pointer]:
+                    - generic [ref=f4e1122]: −
+                    - generic [ref=f4e1123]: 1 资产类
+                  - generic [ref=f4e1399] [cursor=pointer]:
+                    - generic [ref=f4e1400]: •
+                    - generic [ref=f4e1401]: 1001 库存现金
+                  - generic [ref=f4e1404] [cursor=pointer]:
+                    - generic [ref=f4e1405]: •
+                    - generic [ref=f4e1406]: 1002 银行存款
+                  - generic [ref=f4e1409] [cursor=pointer]:
+                    - generic [ref=f4e1410]: •
+                    - generic [ref=f4e1411]: 1122 应收账款
+                  - generic [ref=f4e1414] [cursor=pointer]:
+                    - generic [ref=f4e1415]: •
+                    - generic [ref=f4e1416]: 1123 预付账款
+                  - generic [ref=f4e1419] [cursor=pointer]:
+                    - generic [ref=f4e1420]: •
+                    - generic [ref=f4e1421]: 1221 其他应收款
+                  - generic [ref=f4e1424] [cursor=pointer]:
+                    - generic [ref=f4e1425]: •
+                    - generic [ref=f4e1426]: 1601 固定资产
+                  - generic [ref=f4e1429] [cursor=pointer]:
+                    - generic [ref=f4e1430]: •
+                    - generic [ref=f4e1431]: 1602 累计折旧
+                  - generic [ref=f4e1126] [cursor=pointer]:
+                    - generic [ref=f4e1127]: •
+                    - generic [ref=f4e1128]: 1603 测试3
+                  - generic [ref=f4e1131] [cursor=pointer]:
+                    - generic [ref=f4e1132]: +
+                    - generic [ref=f4e1133]: 2 负债类
+                  - generic [ref=f4e1136] [cursor=pointer]:
+                    - generic [ref=f4e1137]: +
+                    - generic [ref=f4e1138]: 3 权益类
+                  - generic [ref=f4e1141] [cursor=pointer]:
+                    - generic [ref=f4e1142]: +
+                    - generic [ref=f4e1143]: 4 收入类
+                  - generic [ref=f4e1146] [cursor=pointer]:
+                    - generic [ref=f4e1147]: +
+                    - generic [ref=f4e1148]: 5 成本费用类
+              - generic [ref=f4e1150]:
+                - treegrid [ref=f4e1155]:
+                  - generic [ref=f4e1157]:
+                    - generic [ref=f4e1160]:
+                      - generic [ref=f4e1161]: 序号
+                      - generic [ref=f4e1168]:
+                        - row "1" [ref=f4e1169]
+                        - row "2" [ref=f4e1171]
+                        - row "3" [ref=f4e1173]
+                        - row "4" [ref=f4e1175]
+                        - row "5" [ref=f4e1177]
+                        - row "6" [ref=f4e1302]
+                        - row "7" [ref=f4e1304]
+                        - row "8" [ref=f4e1306]
+                    - generic [ref=f4e1180]:
+                      - generic [ref=f4e1183]:
+                        - columnheader "字典项编码" [ref=f4e1184]
+                        - columnheader "字典项名称" [ref=f4e1186]
+                        - columnheader "排序号" [ref=f4e1188]
+                        - columnheader "启用状态(1启用0停用)" [ref=f4e1190]
+                        - columnheader "物化路径(.分隔)" [ref=f4e1192]
+                        - columnheader "层级深度(1~N)" [ref=f4e1194]
+                        - columnheader "是否末级" [ref=f4e1196]
+                        - columnheader "创建人ID" [ref=f4e1198]
+                      - generic [ref=f4e1203]:
+                        - row [ref=f4e1308]:
+                          - gridcell "1603" [ref=f4e1309]
+                          - gridcell "测试3" [ref=f4e1310]
+                          - gridcell "30" [ref=f4e1311]
+                          - gridcell [ref=f4e1208]
+                          - gridcell "1603" [ref=f4e1312]
+                          - gridcell "1" [ref=f4e1213]
+                          - gridcell [ref=f4e1214]
+                          - gridcell [ref=f4e1216]
+                        - row [ref=f4e1316]:
+                          - gridcell "1001" [ref=f4e1317]
+                          - gridcell "库存现金" [ref=f4e1318]
+                          - gridcell "101" [ref=f4e1319]
+                          - gridcell [ref=f4e1221]
+                          - gridcell "1.1001" [ref=f4e1320]
+                          - gridcell "2" [ref=f4e1321]
+                          - gridcell [ref=f4e1227]
+                          - gridcell [ref=f4e1229]
+                        - row [ref=f4e1325]:
+                          - gridcell "1002" [ref=f4e1326]
+                          - gridcell "银行存款" [ref=f4e1327]
+                          - gridcell "102" [ref=f4e1328]
+                          - gridcell [ref=f4e1234]
+                          - gridcell "1.1002" [ref=f4e1329]
+                          - gridcell "2" [ref=f4e1330]
+                          - gridcell [ref=f4e1240]
+                          - gridcell [ref=f4e1242]
+                        - row [ref=f4e1334]:
+                          - gridcell "1122" [ref=f4e1335]
+                          - gridcell "应收账款" [ref=f4e1336]
+                          - gridcell "103" [ref=f4e1337]
+                          - gridcell [ref=f4e1247]
+                          - gridcell "1.1122" [ref=f4e1338]
+                          - gridcell "2" [ref=f4e1339]
+                          - gridcell [ref=f4e1253]
+                          - gridcell [ref=f4e1255]
+                        - row [ref=f4e1343]:
+                          - gridcell "1123" [ref=f4e1344]
+                          - gridcell "预付账款" [ref=f4e1345]
+                          - gridcell "104" [ref=f4e1346]
+                          - gridcell [ref=f4e1260]
+                          - gridcell "1.1123" [ref=f4e1347]
+                          - gridcell "2" [ref=f4e1348]
+                          - gridcell [ref=f4e1266]
+                          - gridcell [ref=f4e1268]
+                        - row [ref=f4e1352]:
+                          - gridcell "1221" [ref=f4e1353]
+                          - gridcell "其他应收款" [ref=f4e1354]
+                          - gridcell "105" [ref=f4e1355]
+                          - gridcell [ref=f4e1356]
+                          - gridcell "1.1221" [ref=f4e1360]
+                          - gridcell "2" [ref=f4e1361]
+                          - gridcell [ref=f4e1362]
+                          - gridcell [ref=f4e1366]
+                        - row [ref=f4e1367]:
+                          - gridcell "1601" [ref=f4e1368]
+                          - gridcell "固定资产" [ref=f4e1369]
+                          - gridcell "106" [ref=f4e1370]
+                          - gridcell [ref=f4e1371]
+                          - gridcell "1.1601" [ref=f4e1375]
+                          - gridcell "2" [ref=f4e1376]
+                          - gridcell [ref=f4e1377]
+                          - gridcell [ref=f4e1381]
+                        - row [ref=f4e1382]:
+                          - gridcell "1602" [ref=f4e1383]
+                          - gridcell "累计折旧" [ref=f4e1384]
+                          - gridcell "107" [ref=f4e1385]
+                          - gridcell [ref=f4e1386]
+                          - gridcell "1.1602" [ref=f4e1390]
+                          - gridcell "2" [ref=f4e1391]
+                          - gridcell [ref=f4e1392]
+                          - gridcell [ref=f4e1396]
+                - generic [ref=f4e1273]:
+                  - generic "首页" [ref=f4e1274]:
+                    - button "‹‹" [disabled] [ref=f4e1275]
+                  - generic "上一页" [ref=f4e1278]:
+                    - button "‹" [disabled] [ref=f4e1279]
+                  - generic [ref=f4e1282]: 第 1 页
+                  - generic "下一页" [ref=f4e1283] [cursor=pointer]:
+                    - button "›" [ref=f4e1284]
+                  - generic "末页" [ref=f4e1287] [cursor=pointer]:
+                    - button "››" [ref=f4e1288]
+                  - generic [ref=f4e1291] [cursor=pointer]:
+                    - combobox [ref=f4e1293]: "50"
+                    - generic: "20"
+                    - generic: "50"
+                    - generic: "100"
+                    - generic: "200"
+                  - generic [ref=f4e1298]: 条/页
+    - generic [ref=f4e254]:
+      - generic [ref=f4e255]:
+        - generic "⎇ main" [ref=f4e256]
+        - generic "⊘ 0" [ref=f4e260]
+        - generic "⚠ 1" [ref=f4e264]
+        - generic "● 准备就绪" [ref=f4e268]
+      - generic [ref=f4e271]:
+        - generic [ref=f4e272]:
+          - generic "UTF-8" [ref=f4e273]
+          - generic "JavaScript" [ref=f4e275]
+        - generic [ref=f4e278]:
+          - generic "通知" [ref=f4e279] [cursor=pointer]
+          - generic "用户" [ref=f4e283] [cursor=pointer]
+    - button "AI 助手 / 浮动视图" [ref=f4e287]

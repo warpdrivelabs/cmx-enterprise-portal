@@ -1,0 +1,407 @@
+[
+  {
+    "id": "layout",
+    "label": "布局",
+    "styles": [
+      {
+        "prop": "display",
+        "label": "显示方式",
+        "type": "select",
+        "options": [
+          "",
+          "block",
+          "flex",
+          "grid",
+          "inline",
+          "inline-block",
+          "inline-flex",
+          "none"
+        ]
+      },
+      {
+        "prop": "width",
+        "label": "宽度",
+        "type": "text",
+        "placeholder": "100px / 50%"
+      },
+      {
+        "prop": "height",
+        "label": "高度",
+        "type": "text",
+        "placeholder": "100px"
+      },
+      {
+        "prop": "minWidth",
+        "label": "最小宽度",
+        "type": "text",
+        "placeholder": "0"
+      },
+      {
+        "prop": "maxWidth",
+        "label": "最大宽度",
+        "type": "text",
+        "placeholder": "none"
+      },
+      {
+        "prop": "minHeight",
+        "label": "最小高度",
+        "type": "text",
+        "placeholder": "0"
+      },
+      {
+        "prop": "padding",
+        "label": "内边距",
+        "type": "text",
+        "placeholder": "8px"
+      },
+      {
+        "prop": "margin",
+        "label": "外边距",
+        "type": "text",
+        "placeholder": "0 auto"
+      },
+      {
+        "prop": "overflow",
+        "label": "溢出处理",
+        "type": "select",
+        "options": [
+          "",
+          "visible",
+          "hidden",
+          "auto",
+          "scroll"
+        ]
+      },
+      {
+        "prop": "boxSizing",
+        "label": "尺寸模式",
+        "type": "select",
+        "options": [
+          "",
+          "content-box",
+          "border-box"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "flex",
+    "label": "弹性盒",
+    "styles": [
+      {
+        "prop": "flexDirection",
+        "label": "Flex 方向",
+        "type": "select",
+        "options": [
+          "",
+          "row",
+          "column",
+          "row-reverse",
+          "column-reverse"
+        ]
+      },
+      {
+        "prop": "justifyContent",
+        "label": "主轴对齐",
+        "type": "select",
+        "options": [
+          "",
+          "flex-start",
+          "center",
+          "flex-end",
+          "space-between",
+          "space-around",
+          "space-evenly"
+        ]
+      },
+      {
+        "prop": "alignItems",
+        "label": "交叉轴对齐",
+        "type": "select",
+        "options": [
+          "",
+          "flex-start",
+          "center",
+          "flex-end",
+          "stretch",
+          "baseline"
+        ]
+      },
+      {
+        "prop": "flexWrap",
+        "label": "Flex 换行",
+        "type": "select",
+        "options": [
+          "",
+          "nowrap",
+          "wrap",
+          "wrap-reverse"
+        ]
+      },
+      {
+        "prop": "gap",
+        "label": "间距",
+        "type": "text",
+        "placeholder": "8px"
+      },
+      {
+        "prop": "flex",
+        "label": "flex",
+        "type": "text",
+        "placeholder": "1 / 0 0 auto"
+      },
+      {
+        "prop": "alignSelf",
+        "label": "自身对齐",
+        "type": "select",
+        "options": [
+          "",
+          "auto",
+          "flex-start",
+          "center",
+          "flex-end",
+          "stretch",
+          "baseline"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "text",
+    "label": "文字",
+    "styles": [
+      {
+        "prop": "color",
+        "label": "文字颜色",
+        "type": "color"
+      },
+      {
+        "prop": "fontSize",
+        "label": "字体大小",
+        "type": "text",
+        "placeholder": "14px"
+      },
+      {
+        "prop": "fontFamily",
+        "label": "字体族",
+        "type": "text",
+        "placeholder": "sans-serif"
+      },
+      {
+        "prop": "fontWeight",
+        "label": "字体粗细",
+        "type": "select",
+        "options": [
+          "",
+          "normal",
+          "bold",
+          "100",
+          "200",
+          "300",
+          "400",
+          "500",
+          "600",
+          "700",
+          "800",
+          "900"
+        ]
+      },
+      {
+        "prop": "fontStyle",
+        "label": "字体风格",
+        "type": "select",
+        "options": [
+          "",
+          "normal",
+          "italic",
+          "oblique"
+        ]
+      },
+      {
+        "prop": "textAlign",
+        "label": "文字对齐",
+        "type": "select",
+        "options": [
+          "",
+          "left",
+          "center",
+          "right",
+          "justify"
+        ]
+      },
+      {
+        "prop": "lineHeight",
+        "label": "行高",
+        "type": "text",
+        "placeholder": "1.5"
+      },
+      {
+        "prop": "letterSpacing",
+        "label": "字间距",
+        "type": "text",
+        "placeholder": "0.05em"
+      },
+      {
+        "prop": "textDecoration",
+        "label": "文字修饰",
+        "type": "select",
+        "options": [
+          "",
+          "none",
+          "underline",
+          "line-through",
+          "overline"
+        ]
+      },
+      {
+        "prop": "textTransform",
+        "label": "大小写转换",
+        "type": "select",
+        "options": [
+          "",
+          "none",
+          "uppercase",
+          "lowercase",
+          "capitalize"
+        ]
+      },
+      {
+        "prop": "whiteSpace",
+        "label": "空白处理",
+        "type": "select",
+        "options": [
+          "",
+          "normal",
+          "nowrap",
+          "pre",
+          "pre-wrap",
+          "pre-line"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "box",
+    "label": "盒模型",
+    "styles": [
+      {
+        "prop": "background",
+        "label": "背景色",
+        "type": "color"
+      },
+      {
+        "prop": "backgroundImage",
+        "label": "背景图",
+        "type": "text",
+        "placeholder": "url(...)"
+      },
+      {
+        "prop": "backgroundSize",
+        "label": "背景尺寸",
+        "type": "select",
+        "options": [
+          "",
+          "auto",
+          "cover",
+          "contain",
+          "100% 100%"
+        ]
+      },
+      {
+        "prop": "border",
+        "label": "边框",
+        "type": "text",
+        "placeholder": "1px solid #ccc"
+      },
+      {
+        "prop": "borderRadius",
+        "label": "圆角",
+        "type": "text",
+        "placeholder": "4px"
+      },
+      {
+        "prop": "boxShadow",
+        "label": "阴影",
+        "type": "text",
+        "placeholder": "0 2px 8px rgba(0,0,0,.1)"
+      },
+      {
+        "prop": "opacity",
+        "label": "不透明度",
+        "type": "text",
+        "placeholder": "1 (0~1)"
+      },
+      {
+        "prop": "cursor",
+        "label": "鼠标指针",
+        "type": "select",
+        "options": [
+          "",
+          "default",
+          "pointer",
+          "text",
+          "move",
+          "not-allowed",
+          "crosshair",
+          "grab",
+          "zoom-in"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "position",
+    "label": "定位",
+    "styles": [
+      {
+        "prop": "position",
+        "label": "定位方式",
+        "type": "select",
+        "options": [
+          "",
+          "static",
+          "relative",
+          "absolute",
+          "fixed",
+          "sticky"
+        ]
+      },
+      {
+        "prop": "top",
+        "label": "top",
+        "type": "text",
+        "placeholder": "0"
+      },
+      {
+        "prop": "right",
+        "label": "right",
+        "type": "text",
+        "placeholder": "0"
+      },
+      {
+        "prop": "bottom",
+        "label": "bottom",
+        "type": "text",
+        "placeholder": "0"
+      },
+      {
+        "prop": "left",
+        "label": "left",
+        "type": "text",
+        "placeholder": "0"
+      },
+      {
+        "prop": "zIndex",
+        "label": "z-index",
+        "type": "number",
+        "placeholder": "1"
+      },
+      {
+        "prop": "transform",
+        "label": "transform",
+        "type": "text",
+        "placeholder": "translateX(0)"
+      }
+    ]
+  }
+]

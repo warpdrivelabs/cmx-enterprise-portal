@@ -1,0 +1,26 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-calendar-legend-item>",
+  "isVoid": true,
+  "tag": "ui5-calendar-legend-item",
+  "description": "UI5 日历图例项",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

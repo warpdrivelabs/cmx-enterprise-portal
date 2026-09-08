@@ -1,0 +1,19 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-dynamic-page-header>",
+  "isVoid": false,
+  "tag": "ui5-dynamic-page-header",
+  "description": "UI5 Fiori 可折叠页面标题头部",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [],
+  "slots": [],
+  "extraEvents": []
+}

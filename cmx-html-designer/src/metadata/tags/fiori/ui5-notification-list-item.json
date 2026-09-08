@@ -1,0 +1,67 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-notification-list-item>",
+  "defaults": {
+    "attributes": {
+      "title-text": "通知标题",
+      "importance": "High"
+    },
+    "text": "通知内容"
+  },
+  "isVoid": false,
+  "tag": "ui5-notification-list-item",
+  "description": "Fiori 通知项",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "wrapping-type",
+      "label": "wrapping-type",
+      "type": "select",
+      "options": [
+        "None",
+        "Normal"
+      ]
+    },
+    {
+      "name": "state",
+      "label": "state",
+      "type": "select",
+      "options": [
+        "None",
+        "Positive",
+        "Critical",
+        "Negative",
+        "Information"
+      ]
+    },
+    {
+      "name": "show-close",
+      "label": "show-close",
+      "type": "boolean"
+    },
+    {
+      "name": "importance",
+      "label": "importance",
+      "type": "select",
+      "options": [
+        "Standard",
+        "Important"
+      ]
+    }
+  ],
+  "slots": [
+    "avatar",
+    "menu",
+    "footnotes",
+    ""
+  ],
+  "extraEvents": []
+}

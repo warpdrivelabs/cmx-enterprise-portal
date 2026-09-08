@@ -1,0 +1,65 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-search-field>",
+  "isVoid": true,
+  "tag": "ui5-search-field",
+  "description": "UI5 Fiori 搜索输入框",
+  "canNest": false,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "field-loading",
+      "label": "field-loading",
+      "type": "boolean"
+    },
+    {
+      "name": "show-clear-icon",
+      "label": "show-clear-icon",
+      "type": "boolean"
+    },
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "placeholder",
+      "label": "placeholder",
+      "type": "text",
+      "placeholder": "请输入..."
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-description",
+      "label": "accessible-description",
+      "type": "text",
+      "placeholder": "无障碍描述"
+    },
+    {
+      "name": "scope-value",
+      "label": "scope-value",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [
+    "scopes",
+    "filterButton"
+  ],
+  "extraEvents": [
+    "scope-change"
+  ]
+}

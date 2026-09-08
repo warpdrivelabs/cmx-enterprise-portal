@@ -1,0 +1,47 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-card-header>",
+  "isVoid": false,
+  "tag": "ui5-card-header",
+  "description": "UI5 卡片头部插槽组件",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "title-text",
+      "label": "title-text",
+      "type": "text",
+      "placeholder": "标题"
+    },
+    {
+      "name": "subtitle-text",
+      "label": "subtitle-text",
+      "type": "text",
+      "placeholder": "副标题"
+    },
+    {
+      "name": "additional-text",
+      "label": "additional-text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "interactive",
+      "label": "interactive",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "avatar",
+    "action"
+  ],
+  "slotOrientation": "horizontal",
+  "extraEvents": []
+}

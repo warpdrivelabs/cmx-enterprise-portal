@@ -1,0 +1,44 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-user-settings-dialog>",
+  "isVoid": false,
+  "tag": "ui5-user-settings-dialog",
+  "description": "UI5 Fiori 用户设置对话框",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "open",
+      "label": "open",
+      "type": "boolean"
+    },
+    {
+      "name": "header-text",
+      "label": "header-text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "show-search-field",
+      "label": "show-search-field",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "",
+    "fixedItems"
+  ],
+  "extraEvents": [
+    "selection-change",
+    "open",
+    "before-close",
+    "close"
+  ]
+}

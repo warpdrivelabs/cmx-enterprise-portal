@@ -1,0 +1,37 @@
+[
+  {
+    "name": "id",
+    "label": "id",
+    "type": "text",
+    "placeholder": "唯一标识符"
+  },
+  {
+    "name": "class",
+    "label": "class",
+    "type": "text",
+    "placeholder": "CSS 类名（空格分隔）"
+  },
+  {
+    "name": "title",
+    "label": "title",
+    "type": "text",
+    "placeholder": "鼠标悬停提示文字"
+  },
+  {
+    "name": "hidden",
+    "label": "hidden",
+    "type": "boolean"
+  },
+  {
+    "name": "tabindex",
+    "label": "tabindex",
+    "type": "number",
+    "placeholder": "0"
+  },
+  {
+    "name": "lang",
+    "label": "lang",
+    "type": "text",
+    "placeholder": "zh-CN"
+  }
+]

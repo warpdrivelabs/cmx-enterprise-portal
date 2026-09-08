@@ -1,0 +1,27 @@
+{
+  "eventPreset": "ui5Form",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-range-slider>",
+  "defaults": {
+    "attributes": {
+      "min": "0",
+      "max": "100",
+      "start-value": "20",
+      "end-value": "80"
+    }
+  },
+  "isVoid": true,
+  "tag": "ui5-range-slider",
+  "description": "UI5 范围滑块",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [],
+  "slots": [],
+  "extraEvents": []
+}

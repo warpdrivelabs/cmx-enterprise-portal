@@ -1,0 +1,131 @@
+{
+  "eventPreset": "ui5Form",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-textarea>",
+  "defaults": {
+    "attributes": {
+      "placeholder": "请输入内容",
+      "rows": "4"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-textarea",
+  "description": "UI5 多行输入",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    },
+    {
+      "name": "readonly",
+      "label": "readonly",
+      "type": "boolean"
+    },
+    {
+      "name": "required",
+      "label": "required",
+      "type": "boolean"
+    },
+    {
+      "name": "placeholder",
+      "label": "placeholder",
+      "type": "text",
+      "placeholder": "请输入..."
+    },
+    {
+      "name": "value-state",
+      "label": "value-state",
+      "type": "select",
+      "options": [
+        "None",
+        "Positive",
+        "Critical",
+        "Negative",
+        "Information"
+      ]
+    },
+    {
+      "name": "rows",
+      "label": "rows",
+      "type": "text",
+      "placeholder": "0"
+    },
+    {
+      "name": "maxlength",
+      "label": "maxlength",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "show-exceeded-text",
+      "label": "show-exceeded-text",
+      "type": "boolean"
+    },
+    {
+      "name": "growing",
+      "label": "growing",
+      "type": "boolean"
+    },
+    {
+      "name": "growing-max-rows",
+      "label": "growing-max-rows",
+      "type": "text",
+      "placeholder": "0"
+    },
+    {
+      "name": "name",
+      "label": "name",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    },
+    {
+      "name": "accessible-description",
+      "label": "accessible-description",
+      "type": "text",
+      "placeholder": "无障碍描述"
+    },
+    {
+      "name": "accessible-description-ref",
+      "label": "accessible-description-ref",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [
+    "valueStateMessage"
+  ],
+  "extraEvents": [
+    "change",
+    "input",
+    "select",
+    "scroll",
+    "value-changed"
+  ]
+}

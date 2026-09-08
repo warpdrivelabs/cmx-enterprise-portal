@@ -1,0 +1,28 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-table-cell>",
+  "defaults": {
+    "text": "内容"
+  },
+  "isVoid": false,
+  "tag": "ui5-table-cell",
+  "description": "UI5 表格单元格",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "merged",
+      "label": "merged",
+      "type": "boolean"
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

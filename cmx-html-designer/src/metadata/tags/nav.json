@@ -1,0 +1,17 @@
+{
+  "tag": "nav",
+  "group": "default",
+  "label": "<nav>",
+  "description": "导航区域",
+  "isVoid": false,
+  "canNest": true,
+  "attrs": [],
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

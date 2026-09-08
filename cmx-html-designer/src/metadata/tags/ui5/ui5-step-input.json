@@ -1,0 +1,111 @@
+{
+  "eventPreset": "ui5Form",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-step-input>",
+  "defaults": {
+    "attributes": {
+      "value": "1",
+      "step": "1"
+    }
+  },
+  "isVoid": true,
+  "tag": "ui5-step-input",
+  "description": "UI5 步进输入",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": "0"
+    },
+    {
+      "name": "min",
+      "label": "min",
+      "type": "text",
+      "placeholder": "0"
+    },
+    {
+      "name": "max",
+      "label": "max",
+      "type": "text",
+      "placeholder": "100"
+    },
+    {
+      "name": "step",
+      "label": "step",
+      "type": "text",
+      "placeholder": "1"
+    },
+    {
+      "name": "value-state",
+      "label": "value-state",
+      "type": "select",
+      "options": [
+        "None",
+        "Positive",
+        "Critical",
+        "Negative",
+        "Information"
+      ]
+    },
+    {
+      "name": "required",
+      "label": "required",
+      "type": "boolean"
+    },
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    },
+    {
+      "name": "readonly",
+      "label": "readonly",
+      "type": "boolean"
+    },
+    {
+      "name": "placeholder",
+      "label": "placeholder",
+      "type": "text",
+      "placeholder": "请输入..."
+    },
+    {
+      "name": "name",
+      "label": "name",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "value-precision",
+      "label": "value-precision",
+      "type": "text",
+      "placeholder": "0"
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    }
+  ],
+  "slots": [
+    "valueStateMessage"
+  ],
+  "extraEvents": [
+    "value-state-change"
+  ]
+}

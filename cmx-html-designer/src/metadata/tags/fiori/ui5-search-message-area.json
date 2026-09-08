@@ -1,0 +1,32 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-search-message-area>",
+  "isVoid": true,
+  "tag": "ui5-search-message-area",
+  "description": "UI5 Fiori 搜索空/错误状态提示",
+  "canNest": false,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "description",
+      "label": "description",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

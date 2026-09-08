@@ -1,0 +1,62 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-media-gallery>",
+  "isVoid": false,
+  "tag": "ui5-media-gallery",
+  "description": "Fiori 媒体画廊",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "show-all-thumbnails",
+      "label": "show-all-thumbnails",
+      "type": "boolean"
+    },
+    {
+      "name": "interactive-display-area",
+      "label": "interactive-display-area",
+      "type": "boolean"
+    },
+    {
+      "name": "layout",
+      "label": "layout",
+      "type": "select",
+      "options": [
+        "Auto",
+        "Vertical",
+        "Horizontal"
+      ]
+    },
+    {
+      "name": "menu-horizontal-align",
+      "label": "menu-horizontal-align",
+      "type": "select",
+      "options": [
+        "Left",
+        "Right"
+      ]
+    },
+    {
+      "name": "menu-vertical-align",
+      "label": "menu-vertical-align",
+      "type": "select",
+      "options": [
+        "Top",
+        "Bottom"
+      ]
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "selection-change",
+    "overflow-click",
+    "display-area-click"
+  ]
+}

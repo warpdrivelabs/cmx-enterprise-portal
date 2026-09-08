@@ -1,0 +1,22 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-toolbar-select-option>",
+  "defaults": {
+    "text": "选项"
+  },
+  "isVoid": false,
+  "tag": "ui5-toolbar-select-option",
+  "description": "UI5 工具栏选择选项",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [],
+  "slots": [],
+  "extraEvents": []
+}

@@ -1,0 +1,72 @@
+{
+  "common": [
+    "click",
+    "dblclick",
+    "mouseover",
+    "mouseout",
+    "mouseenter",
+    "mouseleave",
+    "contextmenu",
+    "keydown",
+    "keyup",
+    "focus",
+    "blur"
+  ],
+  "form": [
+    "click",
+    "dblclick",
+    "mouseover",
+    "mouseout",
+    "mouseenter",
+    "mouseleave",
+    "contextmenu",
+    "keydown",
+    "keyup",
+    "focus",
+    "blur",
+    "input",
+    "change",
+    "submit",
+    "reset",
+    "invalid",
+    "select"
+  ],
+  "media": [
+    "click",
+    "dblclick",
+    "mouseover",
+    "mouseout",
+    "mouseenter",
+    "mouseleave",
+    "contextmenu",
+    "keydown",
+    "keyup",
+    "focus",
+    "blur",
+    "play",
+    "pause",
+    "ended",
+    "loadeddata",
+    "timeupdate",
+    "volumechange",
+    "error",
+    "canplay"
+  ],
+  "ui5": [
+    "click",
+    "focusin",
+    "focusout",
+    "keydown",
+    "keyup"
+  ],
+  "ui5Form": [
+    "click",
+    "focusin",
+    "focusout",
+    "keydown",
+    "keyup",
+    "input",
+    "change",
+    "selection-change"
+  ]
+}

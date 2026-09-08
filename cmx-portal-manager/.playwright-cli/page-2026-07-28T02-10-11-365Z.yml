@@ -1,0 +1,47 @@
+- generic [ref=f1e2]:
+  - complementary [ref=f1e3]:
+    - generic [ref=f1e9]:
+      - img "CMX" [ref=f1e10]
+      - generic [ref=f1e11]: CloudMatrix
+    - generic [ref=f1e12]:
+      - generic [ref=f1e13]: DEVELOPMENT SUITE
+      - heading "Enterprise Portal" [level=1] [ref=f1e15]
+      - paragraph [ref=f1e17]: 新一代企业级高性能应用平台Rust 驱动内核，极致运行速度，重塑企业软件体验
+      - list [ref=f1e18]:
+        - listitem [ref=f1e19]:
+          - generic [ref=f1e20]: "01"
+          - generic [ref=f1e21]:
+            - strong [ref=f1e22]: 统一门户工作台
+            - emphasis [ref=f1e23]: 多模块协同，一站式业务入口
+        - listitem [ref=f1e24]:
+          - generic [ref=f1e25]: "02"
+          - generic [ref=f1e26]:
+            - strong [ref=f1e27]: 可视化建模
+            - emphasis [ref=f1e28]: 拖拽式页面与流程编排
+        - listitem [ref=f1e29]:
+          - generic [ref=f1e30]: "03"
+          - generic [ref=f1e31]:
+            - strong [ref=f1e32]: 企业级安全
+            - emphasis [ref=f1e33]: 内存安全与细粒度权限防护
+    - generic [ref=f1e36]:
+      - text: © 2026
+      - link "Warp Drive Labs" [ref=f1e37] [cursor=pointer]:
+        - /url: https://warpdrive.run
+  - main [ref=f1e39]:
+    - generic [ref=f1e41]:
+      - generic [ref=f1e42]:
+        - heading "欢迎回来" [level=2] [ref=f1e43]
+        - paragraph [ref=f1e44]: 登录 CMX Enterprise Portal 开启你的工作
+      - generic [ref=f1e45]:
+        - generic [ref=f1e46]:
+          - generic [ref=f1e47]: 用户名
+          - textbox "用户名" [ref=f1e48]:
+            - /placeholder: 请输入用户名
+            - text: admin
+        - generic [ref=f1e49]:
+          - generic [ref=f1e50]: 密码
+          - textbox "密码" [active] [ref=f1e51]:
+            - /placeholder: 请输入密码
+            - text: cmxadmin
+        - button "登录中…" [disabled] [ref=f1e54]
+        - alert [ref=f1e53]

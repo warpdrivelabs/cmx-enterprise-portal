@@ -1,0 +1,78 @@
+- generic [active] [ref=f3e1]:
+  - generic:
+    - alert
+    - alert
+  - generic [ref=f3e2]:
+    - generic [ref=f3e4]:
+      - banner "外壳栏" [ref=f3e7]:
+        - button [ref=f3e10] [cursor=pointer]
+        - link "Logo" [ref=f3e14] [cursor=pointer]:
+          - generic "Logo" [ref=f3e15]:
+            - img "CMX" [ref=f3e16]
+          - heading "CMX Enterprise Portal" [level=1] [ref=f3e18]
+        - generic [ref=f3e20]:
+          - search [ref=f3e27]:
+            - searchbox "搜索字段" [ref=f3e29]
+          - button [ref=f3e35] [cursor=pointer]
+          - button [ref=f3e40] [cursor=pointer]
+          - button "帮助" [ref=f3e47] [cursor=pointer]
+          - button "欢迎页面" [ref=f3e54] [cursor=pointer]
+          - button "DAM注册中心" [ref=f3e61] [cursor=pointer]
+          - button "集群数据源" [ref=f3e68] [cursor=pointer]
+          - button "菜单管理" [ref=f3e75] [cursor=pointer]
+          - button "切换主题" [ref=f3e82] [cursor=pointer]
+          - button "切换语言 🇨🇳" [ref=f3e89] [cursor=pointer]:
+            - generic [ref=f3e90]: 🇨🇳
+          - button [ref=f3e93] [cursor=pointer]:
+            - button "用户与账号" [ref=f3e97]
+          - button [ref=f3e102] [cursor=pointer]
+      - tooltip
+    - generic [ref=f3e106]:
+      - generic [ref=f3e108]:
+        - button "会计核算" [ref=f3e109] [cursor=pointer]
+        - button "SAP" [ref=f3e110] [cursor=pointer]
+        - button "Oracle EBS" [ref=f3e111] [cursor=pointer]
+        - button "用友" [ref=f3e112] [cursor=pointer]
+        - button "金蝶" [ref=f3e113] [cursor=pointer]
+      - generic [ref=f3e115]:
+        - generic [ref=f3e117]:
+          - generic [ref=f3e119]:
+            - generic [ref=f3e1107] [cursor=pointer]: 会计核算
+            - generic [ref=f3e1112] [cursor=pointer]: 规则列表
+          - region "Workspace explorer" [ref=f3e1117]:
+            - generic [ref=f3e1121]:
+              - generic [ref=f3e1122]:
+                - generic [ref=f3e1123]: 编码规则
+                - button "⟳" [ref=f3e1124] [cursor=pointer]
+                - button "＋ 新建" [ref=f3e1125] [cursor=pointer]
+              - generic [ref=f3e1126]: 暂无规则
+        - generic [ref=f3e874]:
+          - generic [ref=f3e876]:
+            - generic [ref=f3e1128] [cursor=pointer]:
+              - generic [ref=f3e1133]: 欢迎
+              - generic "关闭" [ref=f3e1134]
+            - generic [ref=f3e1139] [cursor=pointer]:
+              - generic [ref=f3e1141]: 段序列
+              - generic "关闭" [ref=f3e1142]
+          - generic [ref=f3e888]: 请在左侧选择或新建规则
+        - generic [ref=f3e1154]:
+          - generic [ref=f3e1155]:
+            - tablist [ref=f3e1157]:
+              - tab "规则属性" [selected] [ref=f3e1158]
+            - button "关闭属性面板" [ref=f3e1165] [cursor=pointer]
+          - region "Workspace property" [ref=f3e1170]:
+            - generic [ref=f3e1171]: 未选择规则
+    - generic [ref=f3e1070]:
+      - generic [ref=f3e1071]:
+        - generic "⎇ main" [ref=f3e1072]
+        - generic "⊘ 0" [ref=f3e1077]
+        - generic "⚠ 1" [ref=f3e1082]
+        - generic "● 准备就绪" [ref=f3e1087]
+      - generic [ref=f3e1090]:
+        - generic [ref=f3e1091]:
+          - generic "UTF-8" [ref=f3e1092]
+          - generic "JavaScript" [ref=f3e1094]
+        - generic [ref=f3e1097]:
+          - generic "通知" [ref=f3e1098] [cursor=pointer]
+          - generic "用户" [ref=f3e1102] [cursor=pointer]
+    - button "AI 助手 / 浮动视图" [ref=f3e1106]

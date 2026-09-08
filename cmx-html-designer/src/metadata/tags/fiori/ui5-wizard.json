@@ -1,0 +1,31 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-wizard>",
+  "isVoid": false,
+  "tag": "ui5-wizard",
+  "description": "Fiori 向导",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "content-layout",
+      "label": "content-layout",
+      "type": "select",
+      "options": [
+        "MultipleSteps",
+        "SingleStep"
+      ]
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "step-change"
+  ]
+}

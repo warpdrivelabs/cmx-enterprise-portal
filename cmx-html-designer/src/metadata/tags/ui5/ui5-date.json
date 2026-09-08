@@ -1,0 +1,26 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-date>",
+  "isVoid": true,
+  "tag": "ui5-date",
+  "description": "UI5 日历日期子项",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

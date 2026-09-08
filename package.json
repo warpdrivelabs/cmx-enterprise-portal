@@ -1,0 +1,38 @@
+{
+  "name": "cmx-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CMX 系列项目根（workspaces）。数据与表格组件统一在 packages/cmx-data-comp，由 CMXHTMLDesigner、CMXPortalManager 等子项目复用。",
+  "workspaces": [
+    "packages/*",
+    "CMXHTMLDesigner",
+    "CMXPortalManager"
+  ],
+  "overrides": {
+    "graphql": "16.14.0",
+    "vitest": "4.1.10",
+    "@vitest/coverage-v8": "4.1.10"
+  },
+  "scripts": {
+    "test": "npm test -w cmx-data-comp && npm test -w cmx-html-designer",
+    "test:data-comp": "npm test -w cmx-data-comp",
+    "lint": "npm run lint -w cmx-data-comp && npm run lint -w cmx-portal-manager",
+    "dev:portal": "npm run dev -w cmx-portal-manager",
+    "dev:html": "npm run dev -w cmx-html-designer",
+    "build:runtime": "npm run build -w cmx-ui5-runtime",
+    "build:portal": "npm run build -w cmx-ui5-runtime && npm run build -w cmx-portal-manager",
+    "build:html": "npm run build -w cmx-ui5-runtime && npm run build -w cmx-html-designer",
+    "build:apps": "npm run build:runtime && npm run build -w cmx-portal-manager && npm run build -w cmx-html-designer"
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true,
+    "protobufjs@7.6.1": true
+  },
+  "dependencies": {
+    "@infragistics/igniteui-webcomponents-core": "^7.1.0",
+    "@infragistics/igniteui-webcomponents-excel": "^7.1.0",
+    "@infragistics/igniteui-webcomponents-gauges": "^7.1.0",
+    "@infragistics/igniteui-webcomponents-spreadsheet": "^7.1.0",
+    "bpmn-moddle": "^10.1.0"
+  }
+}

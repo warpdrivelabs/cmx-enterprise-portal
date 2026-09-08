@@ -1,0 +1,17 @@
+{
+  "tag": "thead",
+  "group": "default",
+  "label": "<thead>",
+  "description": "表头行组",
+  "isVoid": false,
+  "canNest": true,
+  "attrs": [],
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

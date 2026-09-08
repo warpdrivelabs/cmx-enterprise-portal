@@ -1,0 +1,72 @@
+/**
+ * 全页壳层：外边距与滚动条收口到各面板内部滚动区。
+ */
+@import url('./lib/portal-neo-theme.css');
+
+:root,
+html {
+  height: 100%;
+  /*
+   * Mobile Safari：100% 链条稳定；avoid 单靠 100vh 被地址栏/工具栏拉高导致裁切状态栏。
+   */
+  height: -webkit-fill-available;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  height: -webkit-fill-available;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: var(--sapFontFamily, 'Helvetica Neue', Arial, sans-serif);
+  background: var(--portal-workspace-bg, var(--sapBackgroundColor, #f5f6f7));
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--neo-cyan, #00b4d8) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--neo-cyan, #00b4d8) 6%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 40%, #000 20%, transparent 75%);
+}
+
+cmx-portal-app {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  align-self: stretch;
+  min-height: 0;
+  /*
+   * flex: 1 1 auto 会按内部内容推导 basis，易出现「整块太高遮住状态栏 / 太矮状态栏在中间」。
+   * display 不在外部设置：外部 author 规则优先级高于 shadow :host，若在此写 display:block
+   * 会覆盖 :host{display:grid}，导致三行网格失效、状态栏高度漂移。
+   */
+  flex: 1 1 0%;
+  overflow: hidden;
+}
+
+/*
+ * 工作区「准备」对话框使用 portal-prepare-dialog 自定义元素承载（dialog workspace 模式），
+ * 样式由 portal-dialog-workspace-shell 中的 DIALOG_WORKSPACE_STYLES 在其 shadow root 中提供。
+ */

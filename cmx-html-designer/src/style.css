@@ -1,0 +1,16 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--sapBackgroundColor, #0f172a);
+  color: var(--sapTextColor, #e2e8f0);
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+designer-app {
+  display: block;
+  height: 100%;
+}

@@ -1,0 +1,56 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-expandable-text>",
+  "defaults": {
+    "attributes": {
+      "text": "这是一段较长的文本内容，点击展开可以查看更多内容...",
+      "max-characters": "50"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-expandable-text",
+  "description": "UI5 可展开文本",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "max-characters",
+      "label": "max-characters",
+      "type": "text",
+      "placeholder": "100"
+    },
+    {
+      "name": "overflow-mode",
+      "label": "overflow-mode",
+      "type": "select",
+      "options": [
+        "InPlace",
+        "Popover"
+      ]
+    },
+    {
+      "name": "empty-indicator-mode",
+      "label": "empty-indicator-mode",
+      "type": "select",
+      "options": [
+        "Off",
+        "On"
+      ]
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

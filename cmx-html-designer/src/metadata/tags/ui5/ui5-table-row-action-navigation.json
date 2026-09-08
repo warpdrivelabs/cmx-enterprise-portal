@@ -1,0 +1,25 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-table-row-action-navigation>",
+  "isVoid": true,
+  "tag": "ui5-table-row-action-navigation",
+  "description": "UI5 表格行导航操作",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "interactive",
+      "label": "interactive",
+      "type": "boolean"
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

@@ -1,0 +1,94 @@
+{
+  "eventPreset": "ui5Form",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-switch>",
+  "defaults": {},
+  "isVoid": true,
+  "tag": "ui5-switch",
+  "description": "UI5 开关",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "design",
+      "label": "design",
+      "type": "select",
+      "options": [
+        "Textual",
+        "Graphical"
+      ]
+    },
+    {
+      "name": "readonly",
+      "label": "readonly",
+      "type": "boolean"
+    },
+    {
+      "name": "checked",
+      "label": "checked",
+      "type": "boolean"
+    },
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    },
+    {
+      "name": "text-on",
+      "label": "text-on",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "text-off",
+      "label": "text-off",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    },
+    {
+      "name": "tooltip",
+      "label": "tooltip",
+      "type": "text",
+      "placeholder": "提示文本"
+    },
+    {
+      "name": "required",
+      "label": "required",
+      "type": "boolean"
+    },
+    {
+      "name": "name",
+      "label": "name",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "value-changed"
+  ]
+}

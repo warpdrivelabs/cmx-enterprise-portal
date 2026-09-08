@@ -1,0 +1,59 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-option>",
+  "defaults": {
+    "text": "选项",
+    "attributes": {
+      "value": "item"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-option",
+  "description": "UI5 下拉选项",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "icon",
+      "label": "icon",
+      "type": "text",
+      "placeholder": "sap-icon://add"
+    },
+    {
+      "name": "additional-text",
+      "label": "additional-text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "tooltip",
+      "label": "tooltip",
+      "type": "text",
+      "placeholder": "提示文本"
+    },
+    {
+      "name": "selected",
+      "label": "selected",
+      "type": "boolean"
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "request-tabindex-change",
+    "forward-after",
+    "forward-before"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "tag": "header",
+  "group": "default",
+  "label": "<header>",
+  "description": "页面或区块页眉",
+  "isVoid": false,
+  "canNest": true,
+  "attrs": [],
+  "defaults": {
+    "text": "页眉内容"
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

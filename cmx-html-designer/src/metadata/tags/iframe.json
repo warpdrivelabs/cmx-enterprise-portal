@@ -1,0 +1,50 @@
+{
+  "tag": "iframe",
+  "group": "default",
+  "label": "<iframe>",
+  "description": "内嵌框架",
+  "isVoid": false,
+  "canNest": false,
+  "attrs": [
+    {
+      "name": "src",
+      "label": "src",
+      "type": "url",
+      "placeholder": "https://..."
+    },
+    {
+      "name": "width",
+      "label": "width",
+      "type": "number",
+      "placeholder": "400"
+    },
+    {
+      "name": "height",
+      "label": "height",
+      "type": "number",
+      "placeholder": "200"
+    }
+  ],
+  "defaults": {
+    "attributes": {
+      "src": "about:blank",
+      "width": "400",
+      "height": "200"
+    },
+    "style": {
+      "border": "1px solid #ccc"
+    }
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common",
+  "extraEvents": [
+    "load",
+    "error"
+  ]
+}

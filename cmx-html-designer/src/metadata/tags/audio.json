@@ -1,0 +1,22 @@
+{
+  "tag": "audio",
+  "group": "default",
+  "label": "<audio>",
+  "description": "音频元素",
+  "isVoid": false,
+  "canNest": false,
+  "attrs": [],
+  "defaults": {
+    "attributes": {
+      "controls": ""
+    }
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "media"
+}

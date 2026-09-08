@@ -1,0 +1,31 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-color-palette-item>",
+  "isVoid": true,
+  "tag": "ui5-color-palette-item",
+  "description": "UI5 颜色调色板颜色项",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "selected",
+      "label": "selected",
+      "type": "boolean"
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

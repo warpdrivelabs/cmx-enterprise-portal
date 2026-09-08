@@ -1,0 +1,39 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-token>",
+  "defaults": {
+    "text": "Token"
+  },
+  "isVoid": false,
+  "tag": "ui5-token",
+  "description": "UI5 Token 标签（用于Tokenizer/MultiInput）",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "selected",
+      "label": "selected",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "closeIcon"
+  ],
+  "extraEvents": [
+    "select",
+    "delete"
+  ]
+}

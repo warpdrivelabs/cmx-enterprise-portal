@@ -1,0 +1,61 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-busy-indicator>",
+  "defaults": {
+    "attributes": {
+      "active": ""
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-busy-indicator",
+  "description": "UI5 忙碌指示器",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "size",
+      "label": "size",
+      "type": "select",
+      "options": [
+        "S",
+        "M",
+        "L"
+      ]
+    },
+    {
+      "name": "active",
+      "label": "active",
+      "type": "boolean"
+    },
+    {
+      "name": "delay",
+      "label": "delay",
+      "type": "text",
+      "placeholder": "1000"
+    },
+    {
+      "name": "text-placement",
+      "label": "text-placement",
+      "type": "select",
+      "options": [
+        "Top",
+        "Bottom"
+      ]
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

@@ -1,0 +1,77 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-menu>",
+  "isVoid": false,
+  "tag": "ui5-menu",
+  "description": "UI5 菜单",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "header-text",
+      "label": "header-text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "open",
+      "label": "open",
+      "type": "boolean"
+    },
+    {
+      "name": "placement",
+      "label": "placement",
+      "type": "select",
+      "options": [
+        "Start",
+        "End",
+        "Top",
+        "Bottom"
+      ]
+    },
+    {
+      "name": "horizontal-align",
+      "label": "horizontal-align",
+      "type": "select",
+      "options": [
+        "Center",
+        "Start",
+        "End",
+        "Stretch"
+      ]
+    },
+    {
+      "name": "loading",
+      "label": "loading",
+      "type": "boolean"
+    },
+    {
+      "name": "loading-delay",
+      "label": "loading-delay",
+      "type": "text",
+      "placeholder": "1000"
+    },
+    {
+      "name": "opener",
+      "label": "opener",
+      "type": "text",
+      "placeholder": "元素ID"
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "item-click",
+    "before-open",
+    "open",
+    "before-close",
+    "close",
+    "close-menu"
+  ]
+}

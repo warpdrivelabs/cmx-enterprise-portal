@@ -1,0 +1,34 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-notification-list-group-item>",
+  "isVoid": false,
+  "tag": "ui5-notification-list-group-item",
+  "description": "UI5 Fiori 通知列表分组项",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "collapsed",
+      "label": "collapsed",
+      "type": "boolean"
+    },
+    {
+      "name": "growing",
+      "label": "growing",
+      "type": "select",
+      "options": [
+        "Button",
+        "None"
+      ]
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

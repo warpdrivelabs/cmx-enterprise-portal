@@ -1,0 +1,26 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-table-selection-single>",
+  "isVoid": true,
+  "tag": "ui5-table-selection-single",
+  "description": "UI5 表格单选扩展",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "selected",
+      "label": "selected",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

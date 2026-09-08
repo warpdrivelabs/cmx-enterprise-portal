@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cmx-message-dialog 预览 · 信息/警告/错误 × light/dark</title>
+<style>
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif; background:#f0f2f7; color:#1a1d27; }
+  header { padding:20px 24px; border-bottom:1px solid #dfe3ec; background:#fff; }
+  header h1 { margin:0 0 4px; font-size:18px; }
+  header p { margin:0; font-size:13px; color:#5b6478; }
+  .bar { display:flex; gap:10px; flex-wrap:wrap; padding:18px 24px; align-items:center; }
+  .bar .group { display:flex; gap:8px; align-items:center; padding:6px 10px; border:1px solid #dfe3ec; border-radius:10px; background:#fff; }
+  .bar .group b { font-size:12px; color:#5b6478; margin-right:2px; }
+  button { font-size:13px; padding:7px 14px; border-radius:8px; border:1px solid #d0d5e2; background:#f4f5f9; cursor:pointer; }
+  button:hover { filter:brightness(.97); }
+  button.info { border-color:#0a6ed1; color:#0a6ed1; }
+  button.warning { border-color:#e9730c; color:#b7590a; }
+  button.error { border-color:#bb0000; color:#bb0000; }
+  .theme-toggle { margin-left:auto; }
+  .note { padding:0 24px 24px; font-size:12.5px; color:#5b6478; line-height:1.7; }
+  .note code { background:#e9edf5; padding:1px 5px; border-radius:4px; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>专业信息提示对话框 · cmx-message-dialog</h1>
+    <p>三级别（信息 / 警告 / 错误）· light/dark 自适应 · 居中适中 · 警告/错误带「获取帮助」→ 帮助中心。点按钮试。</p>
+  </header>
+
+  <div class="bar">
+    <div class="group">
+      <b>基础</b>
+      <button class="info"    data-demo="info">信息</button>
+      <button class="warning" data-demo="warning">警告</button>
+      <button class="error"   data-demo="error">错误</button>
+    </div>
+    <div class="group">
+      <b>贴近真实</b>
+      <button class="error" data-demo="save-fail">保存失败（含校验明细 + 获取帮助）</button>
+      <button class="warning" data-demo="block-delete">非空保护（无法删除）</button>
+    </div>
+    <div class="group">
+      <b>DCT/DOC 存储错误 · presentDocError</b>
+      <button class="warning" data-demo="doc-conflict">乐观锁冲突(409)</button>
+      <button class="error" data-demo="doc-validation">列校验失败(422)</button>
+      <button class="error" data-demo="doc-generic">保存失败(500)</button>
+    </div>
+    <button class="theme-toggle" id="theme">切换 深色/浅色（当前：浅色）</button>
+  </div>
+
+  <div class="note">
+    · 主题跟随门户键 <code>localStorage['__portal_ui5_theme__']</code>；此预览用右上角按钮模拟切换，已打开的对话框会实时跟随。<br>
+    · 「获取帮助」派发 <code>cmx-help-request</code> 事件（门户 <code>portal-app</code> 已接管 → 打开帮助中心）；此预览仅在下方打印事件明细。<br>
+    · 「DCT/DOC 存储错误」组走真实 <code>presentDocError(err)</code>，err 用 <code>saveDocData</code> 实际抛出的形态（<code>err.conflict</code> / <code>err.validation+violations</code>）。<br>
+    · <code>id="help-log"</code> 事件回显：<span id="help-log" style="color:#0a6ed1"></span>
+  </div>
+
+<script type="module">
+  import { showCmxMessage } from '/src/lib/cmx-message-dialog.js'
+  import { presentDocError } from '/src/lib/cmx-doc-error-presenter.js'
+
+  const THEME_KEY = '__portal_ui5_theme__'
+  const themeBtn = document.getElementById('theme')
+  function setTheme (dark) {
+    try { localStorage.setItem(THEME_KEY, dark ? 'sap_horizon_dark' : 'sap_horizon') } catch {}
+    themeBtn.textContent = `切换 深色/浅色（当前：${dark ? '深色' : '浅色'}）`
+    document.body.style.background = dark ? '#0e1119' : '#f0f2f7'
+    document.body.style.color = dark ? '#e6e9f0' : '#1a1d27'
+    // 通知已打开的对话框跟随（组件监听 storage 事件；同页需手动派发）
+    try { window.dispatchEvent(new StorageEvent('storage', { key: THEME_KEY })) } catch {}
+  }
+  let dark = false
+  setTheme(false)
+  themeBtn.addEventListener('click', () => { dark = !dark; setTheme(dark) })
+
+  // 模拟门户帮助中心接管
+  window.addEventListener('cmx-help-request', (e) => {
+    e.preventDefault()
+    document.getElementById('help-log').textContent =
+      `已接管 → 打开帮助中心（code=${e.detail.code}, level=${e.detail.level}, title=${e.detail.title}） @ ${new Date().toLocaleTimeString()}`
+  })
+
+  const demos = {
+    info:    () => showCmxMessage({ level:'info', title:'已保存', message:'定义文件已成功保存到服务器。' }),
+    warning: () => showCmxMessage({ level:'warning', title:'版本号已存在', message:'版本号 3 已存在（fi_gl_v3.json），请换一个版本号。', helpCode:'DEF_VERSION_DUP' }),
+    error:   () => showCmxMessage({ level:'error', title:'新建失败', message:'服务器返回 HTTP 500：内部错误。', helpCode:'DEF_CREATE_FAILED' }),
+    'save-fail': () => showCmxMessage({
+      level:'error', title:'保存失败',
+      message:'数据校验未通过，请修正以下字段后重试：',
+      details:[
+        '• [cv_batch.batch_name] 「凭证批名称」长度超限：最多 50 个字符，实际 60 个',
+        '• [cv_line.amount] 「金额」精度超限：最多 2 位小数',
+        '• [cv_line.account] 「科目」为必填项，不能为空',
+      ],
+      helpCode:'VALUE_TOO_LONG',
+    }),
+    'block-delete': () => showCmxMessage({
+      level:'warning', title:'无法删除',
+      message:'单据「记账凭证」已定义 3 个层级，不能删除。请先删除其所有层级。',
+      helpCode:'DEF_DELETE_BLOCKED',
+    }),
+    // DCT/DOC 存储错误：构造 saveDocData 实际抛出的错误形态 → 真实 presentDocError
+    'doc-conflict': () => {
+      const err = Object.assign(new Error('[saveDocData] 保存冲突: 409'), { conflict: true })
+      return presentDocError(err, { action: 'save' }).then((r) => {
+        if (r && r.kind === 'conflict' && r.choice === 'ok') {
+          document.getElementById('help-log').textContent = '（示例）冲突确认 → 此处应触发页面刷新到最新版'
+        }
+      })
+    },
+    'doc-validation': () => {
+      const violations = [
+        { table:'cv_batch', column:'batch_name', code:'VALUE_TOO_LONG', message:'「凭证批名称」长度超限：最多 50 个字符，实际 60 个' },
+        { table:'cv_line', column:'amount', code:'PRECISION', message:'「金额」精度超限：最多 2 位小数' },
+        { table:'cv_line', column:'account', code:'REQUIRED', message:'「科目」为必填项，不能为空' },
+      ]
+      const err = Object.assign(new Error('数据校验未通过'), { validation: true, violations })
+      return presentDocError(err, { action: 'save', tableNames: { cv_batch:'凭证批', cv_line:'凭证行' } })
+    },
+    'doc-generic': () => {
+      const err = new Error('[saveDocData] 保存失败: 服务器 500 内部错误')
+      return presentDocError(err, { action: 'save' })
+    },
+  }
+  document.querySelectorAll('[data-demo]').forEach((b) => {
+    b.addEventListener('click', () => demos[b.getAttribute('data-demo')]())
+  })
+</script>
+</body>
+</html>

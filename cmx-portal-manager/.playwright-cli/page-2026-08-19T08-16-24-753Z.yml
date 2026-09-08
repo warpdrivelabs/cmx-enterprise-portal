@@ -1,0 +1,263 @@
+- generic [active] [ref=f3e1]:
+  - generic:
+    - alert
+    - alert
+  - generic [ref=f3e2]:
+    - generic [ref=f3e4]:
+      - banner "外壳栏" [ref=f3e7]:
+        - button [ref=f3e10] [cursor=pointer]
+        - link "Logo" [ref=f3e14] [cursor=pointer]:
+          - generic "Logo" [ref=f3e15]:
+            - img "CMX" [ref=f3e16]
+          - heading "CMX Enterprise Portal" [level=1] [ref=f3e18]
+        - generic [ref=f3e20]:
+          - search [ref=f3e27]:
+            - searchbox "搜索字段" [ref=f3e29]
+          - button [ref=f3e35] [cursor=pointer]
+          - button [ref=f3e40] [cursor=pointer]
+          - button "帮助" [ref=f3e47] [cursor=pointer]
+          - button "欢迎页面" [ref=f3e54] [cursor=pointer]
+          - button "DAM注册中心" [ref=f3e61] [cursor=pointer]
+          - button "集群数据源" [ref=f3e68] [cursor=pointer]
+          - button "菜单管理" [ref=f3e75] [cursor=pointer]
+          - button "切换主题" [ref=f3e82] [cursor=pointer]
+          - button "切换语言 🇨🇳" [ref=f3e89] [cursor=pointer]:
+            - generic [ref=f3e90]: 🇨🇳
+          - button [ref=f3e93] [cursor=pointer]:
+            - button "用户与账号" [ref=f3e97]
+          - button [ref=f3e102] [cursor=pointer]
+      - tooltip
+    - generic [ref=f3e106]:
+      - button "数据平台" [ref=f3e109] [cursor=pointer]
+      - generic [ref=f3e111]:
+        - generic [ref=f3e113]:
+          - generic [ref=f3e115]:
+            - generic [ref=f3e116] [cursor=pointer]: 数据平台
+            - generic [ref=f3e121] [cursor=pointer]: 规则列表
+          - region "Workspace explorer" [ref=f3e127]:
+            - generic [ref=f3e310]:
+              - generic [ref=f3e311]:
+                - generic [ref=f3e315]: 编码规则（17/17）
+                - button "⟳" [ref=f3e316] [cursor=pointer]
+                - button "＋ 新建" [ref=f3e317] [cursor=pointer]
+              - textbox "搜索名称 / 编码…" [ref=f3e319]
+              - generic [ref=f3e320]:
+                - generic "MDM_BM" [ref=f3e321] [cursor=pointer]:
+                  - generic "已启用" [ref=f3e322]
+                  - generic [ref=f3e323]:
+                    - generic [ref=f3e324]: 部门编码（取部门编码）
+                    - generic [ref=f3e325]: MDM_BM
+                - generic "MDM_BZ" [ref=f3e326] [cursor=pointer]:
+                  - generic "已启用" [ref=f3e327]
+                  - generic [ref=f3e328]:
+                    - generic [ref=f3e329]: 币种编码（取 ISO 币种码）
+                    - generic [ref=f3e330]: MDM_BZ
+                - generic "MDM_CBZX" [ref=f3e331] [cursor=pointer]:
+                  - generic "已启用" [ref=f3e332]
+                  - generic [ref=f3e333]:
+                    - generic [ref=f3e334]: 成本中心编码（取中心编码）
+                    - generic [ref=f3e335]: MDM_CBZX
+                - generic "MDM_GS" [ref=f3e336] [cursor=pointer]:
+                  - generic "已启用" [ref=f3e337]
+                  - generic [ref=f3e338]:
+                    - generic [ref=f3e339]: 公司编码（取公司编码）
+                    - generic [ref=f3e340]: MDM_GS
+                - generic "MDM_GW" [ref=f3e341] [cursor=pointer]:
+                  - generic "已启用" [ref=f3e342]
+                  - generic [ref=f3e343]:
+                    - generic [ref=f3e344]: 岗位编码（取岗位编码）
+                    - generic [ref=f3e345]: MDM_GW
+                - generic "MDM_JLDW" [ref=f3e346] [cursor=pointer]:
+                  - generic "已启用" [ref=f3e347]
+                  - generic [ref=f3e348]:
+                    - generic [ref=f3e349]: 计量单位编码（取单位编码）
+                    - generic [ref=f3e350]: MDM_JLDW
+                - generic "MDM_KH" [ref=f3e351] [cursor=pointer]:
+                  - generic "已启用" [ref=f3e352]
+                  - generic [ref=f3e353]:
+                    - generic [ref=f3e354]: 客户主数据编码（CUS+日期+流水）
+                    - generic [ref=f3e355]: MDM_KH
+                - generic "MDM_KJ" [ref=f3e356] [cursor=pointer]:
+                  - generic "已启用" [ref=f3e357]
+                  - generic [ref=f3e358]:
+                    - generic [ref=f3e359]: 会计科目编码（取科目号 acct_no 原值）
+                    - generic [ref=f3e360]: MDM_KJ
+                - generic "MDM_LRZX" [ref=f3e361] [cursor=pointer]:
+                  - generic "已启用" [ref=f3e362]
+                  - generic [ref=f3e363]:
+                    - generic [ref=f3e364]: 利润中心编码（取中心编码）
+                    - generic [ref=f3e365]: MDM_LRZX
+                - generic "MDM_WL" [ref=f3e366] [cursor=pointer]:
+                  - generic "已启用" [ref=f3e367]
+                  - generic [ref=f3e368]:
+                    - generic [ref=f3e369]: 物料主数据编码（MAT+日期+流水）
+                    - generic [ref=f3e370]: MDM_WL
+                - generic "MDM_WLDL" [ref=f3e371] [cursor=pointer]:
+                  - generic "已启用" [ref=f3e372]
+                  - generic [ref=f3e373]:
+                    - generic [ref=f3e374]: 物料分类编码（取分类编码）
+                    - generic [ref=f3e375]: MDM_WLDL
+                - generic "MDM_YG" [ref=f3e376] [cursor=pointer]:
+                  - generic "已启用" [ref=f3e377]
+                  - generic [ref=f3e378]:
+                    - generic [ref=f3e379]: 员工编码（取工号）
+                    - generic [ref=f3e380]: MDM_YG
+                - generic "MDM_ZZ" [ref=f3e381] [cursor=pointer]:
+                  - generic "已启用" [ref=f3e382]
+                  - generic [ref=f3e383]:
+                    - generic [ref=f3e384]: 组织编码（取组织编码）
+                    - generic [ref=f3e385]: MDM_ZZ
+                - generic "voucher_batch_daily" [ref=f3e386] [cursor=pointer]:
+                  - generic "已启用" [ref=f3e387]
+                  - generic [ref=f3e388]:
+                    - generic [ref=f3e389]: 凭证批号(日)
+                    - generic [ref=f3e390]: voucher_batch_daily
+                - generic "CLINENT_RULE" [ref=f3e391] [cursor=pointer]:
+                  - generic "已启用" [ref=f3e392]
+                  - generic [ref=f3e393]:
+                    - generic [ref=f3e394]: 客户端编号
+                    - generic [ref=f3e395]: CLINENT_RULE
+                - generic "MDM_BILL" [ref=f3e396] [cursor=pointer]:
+                  - generic "已启用" [ref=f3e397]
+                  - generic [ref=f3e398]:
+                    - generic [ref=f3e399]: 主数据单据(类型+日期+流水)
+                    - generic [ref=f3e400]: MDM_BILL
+                - generic "MDM_GYS" [ref=f3e401] [cursor=pointer]:
+                  - generic "已启用" [ref=f3e402]
+                  - generic [ref=f3e403]:
+                    - generic [ref=f3e404]: MDM供应商编码
+                    - generic [ref=f3e405]: MDM_GYS
+        - generic [ref=f3e230]:
+          - generic [ref=f3e233] [cursor=pointer]:
+            - generic [ref=f3e235]: 段序列
+            - generic "关闭" [ref=f3e236]
+          - generic [ref=f3e406]:
+            - generic [ref=f3e407]:
+              - generic [ref=f3e408]: 段序列
+              - generic [ref=f3e409]: 自动生成
+              - button "保存" [ref=f3e410] [cursor=pointer]
+              - button "删除" [ref=f3e411] [cursor=pointer]
+            - generic [ref=f3e412]:
+              - generic [ref=f3e413]: 预览
+              - code [ref=f3e414]: CUS202608190001
+              - generic "流水/随机号为示例值，实际生成时按反查max+1" [ref=f3e415]: ⓘ 示例号
+            - generic [ref=f3e416]:
+              - generic [ref=f3e417]:
+                - generic [ref=f3e418]: "1"
+                - generic "段类型" [ref=f3e419]:
+                  - generic [ref=f3e420]: 类型
+                  - combobox "类型" [ref=f3e421]:
+                    - option "固定段" [selected]
+                    - option "流水段"
+                    - option "日期段"
+                    - option "日期流水"
+                    - option "引用段"
+                    - option "随机段"
+                    - option "自定义"
+                - generic "固定文本，直接拼进编码" [ref=f3e423]:
+                  - generic [ref=f3e424]: 值
+                  - textbox "值" [ref=f3e425]:
+                    - /placeholder: 固定文本
+                    - text: CUS
+                - generic [ref=f3e426]:
+                  - button "↑" [disabled] [ref=f3e427]
+                  - button "↓" [ref=f3e428] [cursor=pointer]
+                  - button "🗑" [ref=f3e429] [cursor=pointer]
+              - generic [ref=f3e430]:
+                - generic [ref=f3e431]: "2"
+                - generic "段类型" [ref=f3e432]:
+                  - generic [ref=f3e433]: 类型
+                  - combobox "类型" [ref=f3e434]:
+                    - option "固定段"
+                    - option "流水段"
+                    - option "日期段"
+                    - option "日期流水" [selected]
+                    - option "引用段"
+                    - option "随机段"
+                    - option "自定义"
+                - generic [ref=f3e435]:
+                  - generic "日期格式，如 YYYYMMDD 表示年月日" [ref=f3e436]:
+                    - generic [ref=f3e437]: 格式
+                    - combobox "格式" [ref=f3e438]:
+                      - option "YYYYMMDD" [selected]
+                      - option "YYMMDD"
+                      - option "YYYYMM"
+                      - option "YYMM"
+                  - generic "数字长度，不足时左侧补零（如 width=4 → 0001）" [ref=f3e439]:
+                    - generic [ref=f3e440]: 位数
+                    - spinbutton "位数" [ref=f3e441]: "4"
+                  - generic "流水起始值" [ref=f3e442]:
+                    - generic [ref=f3e443]: 起始
+                    - spinbutton "起始" [ref=f3e444]: "1"
+                  - generic "每次递增量" [ref=f3e445]:
+                    - generic [ref=f3e446]: 步长
+                    - spinbutton "步长" [ref=f3e447]: "1"
+                  - generic "流水归零周期：全局/按日/按分类/按组织" [ref=f3e448]:
+                    - generic [ref=f3e449]: 重置
+                    - combobox "重置" [ref=f3e450]:
+                      - option "全局" [selected]
+                      - option "按日"
+                      - option "按分类"
+                      - option "按组织"
+                - generic [ref=f3e451]:
+                  - button "↑" [ref=f3e452] [cursor=pointer]
+                  - button "↓" [disabled] [ref=f3e453]
+                  - button "🗑" [ref=f3e454] [cursor=pointer]
+              - button "＋ 添加段" [ref=f3e455] [cursor=pointer]
+        - generic [ref=f3e250]:
+          - generic [ref=f3e251]:
+            - tablist [ref=f3e253]:
+              - tab "规则属性" [selected] [ref=f3e254]
+            - button "关闭属性面板" [ref=f3e261] [cursor=pointer]
+          - region "Workspace property" [ref=f3e266]:
+            - generic [ref=f3e456]:
+              - generic [ref=f3e457]:
+                - generic [ref=f3e459]: 规则属性
+                - generic [ref=f3e460]: MDM_KH
+                - generic [ref=f3e461]: 启用
+              - generic [ref=f3e462]:
+                - heading "基本信息" [level=3] [ref=f3e463]
+                - generic [ref=f3e465]:
+                  - generic [ref=f3e466]: 规则编码*
+                  - textbox "如 DOC_NO_RULE，字母开头+字母数字下划线" [ref=f3e467]: MDM_KH
+                  - generic [ref=f3e468]: 规则名称*
+                  - textbox "规则中文名" [ref=f3e469]: 客户主数据编码（CUS+日期+流水）
+                  - generic [ref=f3e470]: 模式
+                  - combobox [ref=f3e471]:
+                    - option "自动生成（段引擎）" [selected]
+                    - option "手动录入（正则校验）"
+                  - generic [ref=f3e472]: 优先级
+                  - spinbutton [ref=f3e473]: "100"
+                  - generic [ref=f3e474]: 组织范围
+                  - textbox "如 * 或指定组织编码" [ref=f3e475]
+                  - generic [ref=f3e476]: 启用
+                  - generic [ref=f3e477]:
+                    - checkbox "规则生效" [checked] [ref=f3e478]
+                    - text: 规则生效
+                  - generic [ref=f3e479]: 允许跳号
+                  - generic [ref=f3e480]:
+                    - checkbox "流水允许产生间隔（gap）" [ref=f3e481]
+                    - text: 流水允许产生间隔（gap）
+              - generic [ref=f3e482]:
+                - heading "拼接与模板" [level=3] [ref=f3e483]
+                - generic [ref=f3e485]:
+                  - generic [ref=f3e486]: 连接符
+                  - textbox "段间分隔符，可空" [ref=f3e487]
+                  - generic [ref=f3e488]: 模板
+                  - 'textbox "pattern 模式下的模板，如 {date}-{serial}" [ref=f3e489]'
+                  - generic [ref=f3e490]: 条件
+                  - textbox "启用条件表达式（可选）" [ref=f3e491]
+    - generic [ref=f3e273]:
+      - generic [ref=f3e274]:
+        - generic "⎇ main" [ref=f3e275]
+        - generic "⊘ 0" [ref=f3e280]
+        - generic "⚠ 1" [ref=f3e285]
+        - generic "● 准备就绪" [ref=f3e290]
+      - generic [ref=f3e293]:
+        - generic [ref=f3e294]:
+          - generic "UTF-8" [ref=f3e295]
+          - generic "JavaScript" [ref=f3e297]
+        - generic [ref=f3e300]:
+          - generic "通知" [ref=f3e301] [cursor=pointer]
+          - generic "用户" [ref=f3e305] [cursor=pointer]
+    - button "AI 助手 / 浮动视图" [ref=f3e309]

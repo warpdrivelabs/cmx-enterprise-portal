@@ -1,0 +1,22 @@
+{
+  "tag": "video",
+  "group": "default",
+  "label": "<video>",
+  "description": "视频元素",
+  "isVoid": false,
+  "canNest": false,
+  "attrs": [],
+  "defaults": {
+    "attributes": {
+      "controls": ""
+    }
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "media"
+}

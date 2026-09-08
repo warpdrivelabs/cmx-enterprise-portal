@@ -1,0 +1,20 @@
+{
+  "tag": "strong",
+  "group": "default",
+  "label": "<strong>",
+  "description": "重要文本",
+  "isVoid": false,
+  "canNest": false,
+  "attrs": [],
+  "defaults": {
+    "text": "重要文本"
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

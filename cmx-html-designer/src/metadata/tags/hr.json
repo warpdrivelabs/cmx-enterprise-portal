@@ -1,0 +1,22 @@
+{
+  "tag": "hr",
+  "group": "default",
+  "label": "<hr>",
+  "description": "水平分隔线",
+  "isVoid": true,
+  "canNest": false,
+  "attrs": [],
+  "defaults": {
+    "style": {
+      "margin": "12px 0"
+    }
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

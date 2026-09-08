@@ -1,0 +1,657 @@
+- generic [ref=f2e1]:
+  - generic:
+    - alert
+    - alert
+  - generic [ref=f2e2]:
+    - banner "外壳栏" [ref=f2e7]:
+      - button "菜单" [ref=f2e10] [cursor=pointer]
+      - link "Logo" [ref=f2e14] [cursor=pointer]:
+        - generic "Logo" [ref=f2e15]:
+          - img "CMX" [ref=f2e16]
+        - heading "CMX Enterprise Portal" [level=1] [ref=f2e18]
+      - generic [ref=f2e20]:
+        - search [ref=f2e27]:
+          - searchbox "搜索字段" [ref=f2e29]
+        - button "AI 助手" [ref=f2e35] [cursor=pointer]
+        - button "0 个通知" [ref=f2e40] [cursor=pointer]
+        - button "帮助" [ref=f2e47] [cursor=pointer]
+        - button "欢迎页面" [ref=f2e54] [cursor=pointer]
+        - button "DAM注册中心" [ref=f2e61] [cursor=pointer]
+        - button "集群数据源" [ref=f2e68] [cursor=pointer]
+        - button "菜单管理" [ref=f2e75] [cursor=pointer]
+        - button "切换主题" [ref=f2e82] [cursor=pointer]
+        - button "切换语言 🇨🇳" [ref=f2e89] [cursor=pointer]:
+          - generic [ref=f2e90]: 🇨🇳
+        - button [ref=f2e93] [cursor=pointer]:
+          - generic "用户与账号" [ref=f2e96]:
+            - button "用户与账号" [ref=f2e97]
+        - button "资源域切换" [ref=f2e102] [cursor=pointer]
+    - generic [ref=f2e106]:
+      - generic [ref=f2e108]:
+        - button "会计核算" [ref=f2e109] [cursor=pointer]
+        - button "SAP" [ref=f2e110] [cursor=pointer]
+        - button "Oracle EBS" [ref=f2e111] [cursor=pointer]
+        - button "用友" [ref=f2e112] [cursor=pointer]
+        - button "金蝶" [ref=f2e113] [cursor=pointer]
+      - generic [ref=f2e115]:
+        - generic [ref=f2e117]:
+          - generic [ref=f2e118]: 会计核算
+          - generic [ref=f2e126]:
+            - generic [ref=f2e127]:
+              - textbox "搜索菜单…（/ 或 Alt+S 聚焦）" [ref=f2e131]
+              - button "刷新菜单" [ref=f2e133] [cursor=pointer]
+            - generic [ref=f2e138]:
+              - region "总账" [ref=f2e139]:
+                - button "总账" [expanded] [ref=f2e140] [cursor=pointer]
+                - navigation [ref=f2e150]:
+                  - tree "主导航菜单" [ref=f2e151]:
+                    - generic:
+                      - generic [ref=f2e152]:
+                        - treeitem "基础数据管理" [expanded] [ref=f2e153] [cursor=pointer]
+                        - group "基础数据管理" [ref=f2e162]:
+                          - generic:
+                            - treeitem "系统控制" [ref=f2e164] [cursor=pointer]
+                            - treeitem "编辑用户" [ref=f2e179] [cursor=pointer]
+                            - treeitem "部署配置" [ref=f2e185] [cursor=pointer]
+                            - treeitem "页面组装测试" [ref=f2e191] [cursor=pointer]
+                            - treeitem "Outlook邮箱" [ref=f2e200] [cursor=pointer]
+                            - treeitem "主从表单生成测试" [ref=f2e206] [cursor=pointer]
+                            - treeitem "cmx-combo-box 三模式演示" [ref=f2e212] [cursor=pointer]
+                            - treeitem "cmx-tabulator 会计科目树" [ref=f2e221] [cursor=pointer]
+                            - treeitem "cmx-dict-select 数据字典选择演示" [ref=f2e237] [cursor=pointer]
+                            - treeitem "录入控件演示（文本/数字/日期/日期时间）" [ref=f2e246] [cursor=pointer]
+                            - treeitem "grid↔form 联动（四录入组件·模型面板）" [ref=f2e257] [cursor=pointer]
+                            - treeitem "财务会计凭证" [ref=f2e270] [cursor=pointer]
+                            - treeitem "会计凭证（三层·维度选择）" [ref=f2e280] [cursor=pointer]
+                            - treeitem "会计凭证（v1 单表多字典）" [ref=f2e290] [cursor=pointer]
+                            - treeitem "交易单据" [ref=f2e300] [cursor=pointer]
+                            - treeitem "差旅费报销" [ref=f2e311] [cursor=pointer]
+                            - treeitem "交易单据（表单视图）" [ref=f2e319] [cursor=pointer]
+                            - treeitem "会计凭证（弹性组合）" [ref=f2e330] [cursor=pointer]
+                            - treeitem "字典选择编辑器演示" [ref=f2e341] [cursor=pointer]
+                            - treeitem "总账主数据演示" [ref=f2e351] [cursor=pointer]
+                            - treeitem "主数据帮助测试" [ref=f2e363] [cursor=pointer]
+                            - treeitem "主数据帮助实验室" [ref=f2e373] [cursor=pointer]
+                            - treeitem "元数据模型服务测试" [ref=f2e381] [cursor=pointer]
+                            - treeitem "注册表编辑器" [ref=f2e387] [cursor=pointer]
+                            - treeitem "数据字典动态表格" [ref=f2e399] [cursor=pointer]
+                            - treeitem "ERP凭证样例(CNPC)" [ref=f2e405] [cursor=pointer]
+                            - treeitem "ERP凭证样例(MasterSlave模型版)" [ref=f2e411] [cursor=pointer]
+                            - treeitem "ERP凭证(三区工作台)" [ref=f2e417] [cursor=pointer]
+                            - treeitem "报表设计器" [ref=f2e423] [cursor=pointer]
+                            - treeitem "报表设计器（SpreadJS）" [ref=f2e429] [cursor=pointer]
+                            - treeitem "报表设计工作台" [ref=f2e439] [cursor=pointer]
+                            - treeitem "流程设计工作台" [ref=f2e445] [cursor=pointer]
+                            - treeitem "报表应用工作台" [ref=f2e451] [cursor=pointer]
+                            - treeitem "任务中心" [ref=f2e457] [cursor=pointer]
+                            - treeitem "ERP凭证(doc服务版)" [ref=f2e463] [cursor=pointer]
+                            - treeitem "合并组织机构维护" [ref=f2e469] [cursor=pointer]
+                            - treeitem "会计核算管理" [ref=f2e475] [cursor=pointer]
+                            - treeitem "总账科目维护" [ref=f2e481] [cursor=pointer]
+                            - treeitem "币种字典维护(平级)" [ref=f2e487] [cursor=pointer]
+                            - treeitem "总账科目维护(自分级)" [ref=f2e493] [cursor=pointer]
+                            - treeitem "总账科目维护(带分类)" [ref=f2e499] [cursor=pointer]
+                            - treeitem "核算主体分组关系维护" [ref=f2e505] [cursor=pointer]
+                            - treeitem "会计凭证①(html·DataSet)" [ref=f2e511] [cursor=pointer]
+                            - treeitem "会计凭证②(native·DataSet)" [ref=f2e519] [cursor=pointer]
+                            - treeitem "会计凭证③(html·Sqlx二进制)" [ref=f2e527] [cursor=pointer]
+                            - treeitem "会计凭证④(native·tokio二进制)" [ref=f2e535] [cursor=pointer]
+                            - treeitem "会计凭证⑤(native·Zmc→JSON)" [ref=f2e543] [cursor=pointer]
+                            - treeitem "加载服务自检(native)" [ref=f2e551] [cursor=pointer]
+                            - treeitem "加载服务自检(html)" [ref=f2e560] [cursor=pointer]
+                            - treeitem "AI员工信息表单" [ref=f2e569] [cursor=pointer]
+                        - generic: 要导航到导航项目 基础数据管理，请按空格键或 Enter。
+                      - generic [ref=f2e579]:
+                        - treeitem "Ignite 组件演示" [expanded] [ref=f2e580] [cursor=pointer]
+                        - group "Ignite 组件演示" [ref=f2e590]:
+                          - generic:
+                            - treeitem "Ignite 组合框编辑器" [ref=f2e592] [cursor=pointer]
+                            - treeitem "Ignite 列表主从" [ref=f2e601] [cursor=pointer]
+                        - generic: 要导航到导航项目 Ignite 组件演示，请按空格键或 Enter。
+                      - generic [ref=f2e607]:
+                        - treeitem "定义中心" [expanded] [ref=f2e608] [cursor=pointer]
+                        - group "定义中心" [ref=f2e620]:
+                          - generic:
+                            - treeitem "弹性组合管理" [ref=f2e622] [cursor=pointer]
+                            - treeitem "字典数据维护（HTML）" [ref=f2e637] [cursor=pointer]
+                            - treeitem "数据字典定义" [ref=f2e647] [cursor=pointer]
+                            - treeitem "字典数据维护" [ref=f2e656] [cursor=pointer]
+                            - treeitem "业务单据定义" [ref=f2e666] [cursor=pointer]
+                            - treeitem "字典基础元数据" [ref=f2e675] [cursor=pointer]
+                            - treeitem "字典基础元数据(native_pages)" [ref=f2e684] [cursor=pointer]
+                            - treeitem "原生页面联动演示(native_pages·CE+context)" [ref=f2e693] [cursor=pointer]
+                            - treeitem "单据基础元数据" [ref=f2e711] [cursor=pointer]
+                            - treeitem "自定义页面设计" [ref=f2e720] [cursor=pointer]
+                            - treeitem "科目弹性组合" [ref=f2e731] [cursor=pointer]
+                            - treeitem "交易弹性组合" [ref=f2e740] [cursor=pointer]
+                            - treeitem "CCM全属性测试" [ref=f2e755] [cursor=pointer]
+                            - treeitem "工作区节点编辑" [ref=f2e765] [cursor=pointer]
+                        - generic: 要导航到导航项目 定义中心，请按空格键或 Enter。
+                      - generic [ref=f2e775]:
+                        - treeitem "页面管理" [expanded] [ref=f2e776] [cursor=pointer]
+                        - group "页面管理" [ref=f2e784]:
+                          - generic:
+                            - treeitem "首页" [ref=f2e786] [cursor=pointer]
+                            - treeitem "用户管理" [ref=f2e789] [cursor=pointer]
+                            - treeitem "权限配置" [ref=f2e792] [cursor=pointer]
+                            - treeitem "报表中心" [ref=f2e795] [cursor=pointer]
+                        - generic: 要导航到导航项目 页面管理，请按空格键或 Enter。
+                      - treeitem "DAM 注册管理中心" [ref=f2e798] [cursor=pointer]
+                      - generic [ref=f2e803]:
+                        - treeitem "组件库" [ref=f2e804] [cursor=pointer]
+                        - generic: 要导航到导航项目 组件库，请按空格键或 Enter。
+                      - generic [ref=f2e812]:
+                        - treeitem "服务接入" [ref=f2e813] [cursor=pointer]
+                        - generic: 要导航到导航项目 服务接入，请按空格键或 Enter。
+                      - generic [ref=f2e821]:
+                        - treeitem "数据资产" [ref=f2e822] [cursor=pointer]
+                        - generic: 要导航到导航项目 数据资产，请按空格键或 Enter。
+              - region "报表" [ref=f2e830]:
+                - button "报表" [ref=f2e831] [cursor=pointer]
+        - generic [ref=f2e842]:
+          - generic [ref=f2e845] [cursor=pointer]:
+            - generic [ref=f2e850]: 会计凭证业务单据（html_pages · sqlx ZmcDataSet + 二进制）
+            - generic "关闭" [ref=f2e851]
+          - generic [ref=f2e863]:
+            - toolbar "Header" [ref=f2e865]:
+              - generic [ref=f2e867]: 会计凭证（cmx-fico 总账 · html · Sqlx 二进制）
+              - generic [ref=f2e868]:
+                - generic:
+                  - button "新增" [ref=f2e870] [cursor=pointer]
+                  - button "刷新" [ref=f2e877] [cursor=pointer]
+                  - button "保存" [ref=f2e881] [cursor=pointer]
+            - generic [ref=f2e884]:
+              - generic [ref=f2e885]:
+                - generic [ref=f2e886]:
+                  - heading [level=5] [ref=f2e888]
+                  - generic [ref=f2e891]:
+                    - generic "首页" [ref=f2e892]:
+                      - button "‹‹" [disabled] [ref=f2e893]
+                    - generic "上一页" [ref=f2e896]:
+                      - button "‹" [disabled] [ref=f2e897]
+                    - generic [ref=f2e900]: 第 1 / 2 页（共 8 条）
+                    - generic "下一页" [ref=f2e901] [cursor=pointer]:
+                      - button "›" [ref=f2e902]
+                    - generic "末页" [ref=f2e905] [cursor=pointer]:
+                      - button "››" [ref=f2e906]
+                    - generic [ref=f2e909] [cursor=pointer]:
+                      - combobox [ref=f2e911]: "5"
+                      - generic: "5"
+                      - generic: "10"
+                      - generic: "20"
+                      - generic: "50"
+                    - generic [ref=f2e916]: 条/页
+                - treegrid [ref=f2e920]:
+                  - generic [ref=f2e922]:
+                    - generic [ref=f2e925]:
+                      - generic [ref=f2e926]: 序号
+                      - generic [ref=f2e933]:
+                        - row "1" [ref=f2e934]
+                        - row "2" [ref=f2e936]
+                        - row "3" [ref=f2e938]
+                        - row "4" [ref=f2e940]
+                        - row "5" [ref=f2e942]
+                    - generic [ref=f2e945]:
+                      - generic [ref=f2e948]:
+                        - columnheader "行号" [ref=f2e949]
+                        - columnheader "客户端" [ref=f2e951]
+                        - columnheader "公司代码" [ref=f2e953]
+                        - columnheader "账本" [ref=f2e955]
+                        - columnheader "会计期间" [ref=f2e957]
+                        - columnheader "凭证来源" [ref=f2e959]
+                        - columnheader "余额类型(A实际)" [ref=f2e961]
+                        - columnheader "凭证批名称" [ref=f2e963]
+                        - columnheader "过账日期" [ref=f2e965]
+                        - columnheader "批状态(U/P)" [ref=f2e967]
+                        - columnheader "控制总额" [ref=f2e969]
+                      - generic [ref=f2e974]:
+                        - row [ref=f2e975]:
+                          - gridcell "1" [ref=f2e976]
+                          - gridcell "800" [ref=f2e977]
+                          - gridcell "1" [ref=f2e978]
+                          - gridcell "0L" [ref=f2e979]
+                          - gridcell "2026" [ref=f2e980]
+                          - gridcell "Manual" [ref=f2e981]
+                          - gridcell "A" [ref=f2e982]
+                          - gridcell "case2026年江苏销售凭证2026年江苏销售23批987批987" [ref=f2e983]
+                          - gridcell "2026-12-31" [ref=f2e984]
+                          - gridcell "P" [ref=f2e985]
+                          - gridcell "481,500.00" [ref=f2e986]
+                        - row [ref=f2e987]:
+                          - gridcell "1" [ref=f2e988]
+                          - gridcell "800" [ref=f2e989]
+                          - gridcell "1200010" [ref=f2e990]
+                          - gridcell "0L" [ref=f2e991]
+                          - gridcell "2026" [ref=f2e992]
+                          - gridcell "Manual" [ref=f2e993]
+                          - gridcell "A" [ref=f2e994]
+                          - gridcell "2026年江苏销售凭证批987" [ref=f2e995]
+                          - gridcell "2026-12-31" [ref=f2e996]
+                          - gridcell "P" [ref=f2e997]
+                          - gridcell "415,800.00" [ref=f2e998]
+                        - row [ref=f2e999]:
+                          - gridcell "1" [ref=f2e1000]
+                          - gridcell "800" [ref=f2e1001]
+                          - gridcell "1200009" [ref=f2e1002]
+                          - gridcell "0L" [ref=f2e1003]
+                          - gridcell "2026" [ref=f2e1004]
+                          - gridcell "Manual" [ref=f2e1005]
+                          - gridcell "A" [ref=f2e1006]
+                          - gridcell "2026年渤海钻探凭证批22" [ref=f2e1007]
+                          - gridcell "2026-12-31" [ref=f2e1008]
+                          - gridcell "P" [ref=f2e1009]
+                          - gridcell "3,142,719.00" [ref=f2e1010]
+                        - row [ref=f2e1011]:
+                          - gridcell "1" [ref=f2e1012]
+                          - gridcell "800" [ref=f2e1013]
+                          - gridcell "1200008" [ref=f2e1014]
+                          - gridcell "0L" [ref=f2e1015]
+                          - gridcell "2026" [ref=f2e1016]
+                          - gridcell "Manual" [ref=f2e1017]
+                          - gridcell "A" [ref=f2e1018]
+                          - gridcell "2026年国家管网凭证批333" [ref=f2e1019]
+                          - gridcell "2026-12-31" [ref=f2e1020]
+                          - gridcell "P" [ref=f2e1021]
+                          - gridcell "429,100.00" [ref=f2e1022]
+                        - row [ref=f2e1023]:
+                          - gridcell "1" [ref=f2e1024]
+                          - gridcell "800" [ref=f2e1025]
+                          - gridcell "1200005" [ref=f2e1026]
+                          - gridcell "0L" [ref=f2e1027]
+                          - gridcell "2026" [ref=f2e1028]
+                          - gridcell "Manual" [ref=f2e1029]
+                          - gridcell "A" [ref=f2e1030]
+                          - gridcell "2026年兰州石化凭证批" [ref=f2e1031]
+                          - gridcell "2026-12-31" [ref=f2e1032]
+                          - gridcell "P" [ref=f2e1033]
+                          - gridcell "439,000.00" [ref=f2e1034]
+              - generic [ref=f2e1039]:
+                - generic [ref=f2e1040]:
+                  - heading [level=5] [ref=f2e1042]
+                  - button "新增凭证头" [ref=f2e1045] [cursor=pointer]
+                - treegrid [ref=f2e1054]:
+                  - generic [ref=f2e1056]:
+                    - generic [ref=f2e1059]:
+                      - generic [ref=f2e1060]: 序号
+                      - generic [ref=f2e1067]:
+                        - row "1" [ref=f2e1068]
+                        - row "2" [ref=f2e1070]
+                        - row "3" [ref=f2e1072]
+                        - row "4" [ref=f2e1074]
+                      - row "1" [ref=f2e1078]
+                    - generic [ref=f2e1081]:
+                      - generic [ref=f2e1084]:
+                        - columnheader "单据日期" [ref=f2e1085]
+                        - columnheader "单据编码/单据号" [ref=f2e1087]
+                        - columnheader "来源单据号" [ref=f2e1089]
+                        - columnheader "引用/关联单据号" [ref=f2e1091]
+                        - columnheader "单据状态" [ref=f2e1093]
+                        - columnheader "业务状态/处理状态" [ref=f2e1095]
+                        - columnheader "附件张数" [ref=f2e1097]
+                        - columnheader "备注说明" [ref=f2e1099]
+                        - columnheader "公司代码" [ref=f2e1101]
+                        - columnheader "会计年度" [ref=f2e1103]
+                        - columnheader "记账期间" [ref=f2e1105]
+                      - generic [ref=f2e1110]:
+                        - row [ref=f2e1111]:
+                          - gridcell "2026-06-15" [ref=f2e1112]
+                          - gridcell "PZ1000000001" [ref=f2e1113]
+                          - gridcell [ref=f2e1114]
+                          - gridcell [ref=f2e1115]
+                          - gridcell "已过账" [ref=f2e1116]
+                          - gridcell [ref=f2e1118]
+                          - gridcell [ref=f2e1119]
+                          - gridcell [ref=f2e1120]
+                          - gridcell "1200007" [ref=f2e1121]
+                          - gridcell "2026" [ref=f2e1122]
+                          - gridcell "2" [ref=f2e1123]
+                        - row [ref=f2e1124]:
+                          - gridcell "2026-06-15" [ref=f2e1125]
+                          - gridcell "PZ1000000009" [ref=f2e1126]
+                          - gridcell [ref=f2e1127]
+                          - gridcell [ref=f2e1128]
+                          - gridcell "已过账" [ref=f2e1129]
+                          - gridcell [ref=f2e1131]
+                          - gridcell [ref=f2e1132]
+                          - gridcell [ref=f2e1133]
+                          - gridcell "1200007" [ref=f2e1134]
+                          - gridcell "2026" [ref=f2e1135]
+                          - gridcell "10" [ref=f2e1136]
+                        - row [ref=f2e1137]:
+                          - gridcell "2026-06-15" [ref=f2e1138]
+                          - gridcell "PZ1000000017" [ref=f2e1139]
+                          - gridcell [ref=f2e1140]
+                          - gridcell [ref=f2e1141]
+                          - gridcell "已过账" [ref=f2e1142]
+                          - gridcell [ref=f2e1144]
+                          - gridcell [ref=f2e1145]
+                          - gridcell [ref=f2e1146]
+                          - gridcell "1200007" [ref=f2e1147]
+                          - gridcell "2026" [ref=f2e1148]
+                          - gridcell "6" [ref=f2e1149]
+                        - row [ref=f2e1150]:
+                          - gridcell "2026-06-15" [ref=f2e1151]
+                          - gridcell "PZ1000000025" [ref=f2e1152]
+                          - gridcell [ref=f2e1153]
+                          - gridcell [ref=f2e1154]
+                          - gridcell "已过账" [ref=f2e1155]
+                          - gridcell [ref=f2e1157]
+                          - gridcell [ref=f2e1158]
+                          - gridcell [ref=f2e1159]
+                          - gridcell "1200007" [ref=f2e1160]
+                          - gridcell "2026" [ref=f2e1161]
+                          - gridcell "2" [ref=f2e1162]
+                      - row [ref=f2e1166]:
+                        - gridcell "合计" [ref=f2e1167]
+                        - gridcell [ref=f2e1168]
+                        - gridcell [ref=f2e1169]
+                        - gridcell [ref=f2e1170]
+                        - gridcell [ref=f2e1171]
+                        - gridcell [ref=f2e1172]
+                        - gridcell "0" [ref=f2e1173]
+                        - gridcell [ref=f2e1174]
+                        - gridcell [ref=f2e1175]
+                        - gridcell [ref=f2e1176]
+                        - gridcell "74" [ref=f2e1177]
+              - generic [ref=f2e1182]:
+                - generic [ref=f2e1183]:
+                  - heading [level=5] [ref=f2e1185]
+                  - button "新增科目行" [ref=f2e1188] [cursor=pointer]
+                - treegrid [ref=f2e1197]:
+                  - generic [ref=f2e1199]:
+                    - generic [ref=f2e1202]:
+                      - generic [ref=f2e1203]: 序号
+                      - generic [ref=f2e1210]:
+                        - row "1" [ref=f2e1211]
+                        - row "2" [ref=f2e1213]
+                        - row "3" [ref=f2e1215]
+                      - row "1" [ref=f2e1219]
+                    - generic [ref=f2e1222]:
+                      - generic [ref=f2e1225]:
+                        - columnheader "公司代码" [ref=f2e1226]
+                        - columnheader "总账科目" [ref=f2e1228]
+                        - columnheader "记账码" [ref=f2e1230]
+                        - columnheader "借贷标志" [ref=f2e1232]
+                        - columnheader "税码" [ref=f2e1234]
+                        - columnheader "特别总账标识" [ref=f2e1236]
+                        - columnheader "行项目文本" [ref=f2e1238]
+                        - columnheader "输入币借方" [ref=f2e1240]
+                        - columnheader "输入币贷方" [ref=f2e1242]
+                        - columnheader "公司代码本位币借方" [ref=f2e1244]
+                        - columnheader "公司代码本位币贷方" [ref=f2e1246]
+                      - generic [ref=f2e1251]:
+                        - row [ref=f2e1252]:
+                          - gridcell "1200007" [ref=f2e1253]
+                          - gridcell "2000028" [ref=f2e1254]
+                          - gridcell "40" [ref=f2e1255]
+                          - gridcell "D" [ref=f2e1256]
+                          - gridcell [ref=f2e1257]
+                          - gridcell [ref=f2e1258]
+                          - gridcell "采购入库111222" [ref=f2e1259]
+                          - gridcell "47,000.00" [ref=f2e1260]
+                          - gridcell [ref=f2e1261]
+                          - gridcell "6,543.21" [ref=f2e1262]
+                          - gridcell [ref=f2e1263]
+                        - row [ref=f2e1264]:
+                          - gridcell "1200007" [ref=f2e1265]
+                          - gridcell "2000067" [ref=f2e1266]
+                          - gridcell "40" [ref=f2e1267]
+                          - gridcell "D" [ref=f2e1268]
+                          - gridcell "V1" [ref=f2e1269]
+                          - gridcell [ref=f2e1270]
+                          - gridcell "托尔斯泰" [ref=f2e1271]
+                          - gridcell "6,110.00" [ref=f2e1272]
+                          - gridcell [ref=f2e1273]
+                          - gridcell "6,110.00" [ref=f2e1274]
+                          - gridcell [ref=f2e1275]
+                        - row [ref=f2e1276]:
+                          - gridcell "1200007" [ref=f2e1277]
+                          - gridcell "2000058" [ref=f2e1278]
+                          - gridcell "50" [ref=f2e1279]
+                          - gridcell "C" [ref=f2e1280]
+                          - gridcell [ref=f2e1281]
+                          - gridcell [ref=f2e1282]
+                          - gridcell "应付货款" [ref=f2e1283]
+                          - gridcell [ref=f2e1284]
+                          - gridcell "53,110.00" [ref=f2e1285]
+                          - gridcell [ref=f2e1286]
+                          - gridcell "53,110.00" [ref=f2e1287]
+                      - row [ref=f2e1291]:
+                        - gridcell "合计" [ref=f2e1292]
+                        - gridcell [ref=f2e1293]
+                        - gridcell [ref=f2e1294]
+                        - gridcell [ref=f2e1295]
+                        - gridcell [ref=f2e1296]
+                        - gridcell [ref=f2e1297]
+                        - gridcell [ref=f2e1298]
+                        - gridcell "53,110.00" [ref=f2e1299]
+                        - gridcell "53,110.00" [ref=f2e1300]
+                        - gridcell "12,653.21" [ref=f2e1301]
+                        - gridcell "53,110.00" [ref=f2e1302]
+              - generic [ref=f2e1307]:
+                - generic [ref=f2e1308]:
+                  - heading [level=5] [ref=f2e1310]
+                  - button "新增辅助核算行" [ref=f2e1313] [cursor=pointer]
+                - treegrid [ref=f2e1322]:
+                  - generic [ref=f2e1324]:
+                    - generic [ref=f2e1327]:
+                      - generic [ref=f2e1328]: 序号
+                      - generic [ref=f2e1335]:
+                        - row "1" [ref=f2e1336]
+                        - row "2" [ref=f2e1338]
+                        - row "3" [ref=f2e1340]
+                        - row "4" [ref=f2e1342]
+                      - row "1" [ref=f2e1346]
+                    - generic [ref=f2e1349]:
+                      - generic [ref=f2e1352]:
+                        - columnheader "公司代码" [ref=f2e1353]
+                        - columnheader "分类账" [ref=f2e1355]
+                        - columnheader "成本控制范围" [ref=f2e1357]
+                        - columnheader "利润中心" [ref=f2e1359]
+                        - columnheader "成本中心" [ref=f2e1361]
+                        - columnheader "段" [ref=f2e1363]
+                        - columnheader "业务范围" [ref=f2e1365]
+                        - columnheader "功能范围" [ref=f2e1367]
+                        - columnheader "贸易伙伴" [ref=f2e1369]
+                        - columnheader "内部订单" [ref=f2e1371]
+                        - columnheader "WBS元素" [ref=f2e1373]
+                        - columnheader "业务伙伴" [ref=f2e1375]
+                        - columnheader "客户" [ref=f2e1377]
+                        - columnheader "供应商" [ref=f2e1379]
+                      - generic [ref=f2e1384]:
+                        - row [ref=f2e1385]:
+                          - gridcell "1200007" [ref=f2e1386]
+                          - gridcell "0L" [ref=f2e1387]
+                          - gridcell [ref=f2e1388]
+                          - gridcell [ref=f2e1389]
+                          - gridcell "1800002" [ref=f2e1390]
+                          - gridcell [ref=f2e1391]
+                          - gridcell [ref=f2e1392]
+                          - gridcell [ref=f2e1393]
+                          - gridcell [ref=f2e1394]
+                          - gridcell [ref=f2e1395]
+                          - gridcell [ref=f2e1396]
+                          - gridcell [ref=f2e1397]
+                          - gridcell [ref=f2e1398]
+                          - gridcell [ref=f2e1399]
+                        - row [ref=f2e1400]:
+                          - gridcell "1200007" [ref=f2e1401]
+                          - gridcell "0L" [ref=f2e1402]
+                          - gridcell [ref=f2e1403]
+                          - gridcell "1700002" [ref=f2e1404]
+                          - gridcell [ref=f2e1405]
+                          - gridcell [ref=f2e1406]
+                          - gridcell [ref=f2e1407]
+                          - gridcell [ref=f2e1408]
+                          - gridcell [ref=f2e1409]
+                          - gridcell [ref=f2e1410]
+                          - gridcell [ref=f2e1411]
+                          - gridcell [ref=f2e1412]
+                          - gridcell [ref=f2e1413]
+                          - gridcell [ref=f2e1414]
+                        - row [ref=f2e1415]:
+                          - gridcell "1200007" [ref=f2e1416]
+                          - gridcell "0L" [ref=f2e1417]
+                          - gridcell [ref=f2e1418]
+                          - gridcell [ref=f2e1419]
+                          - gridcell [ref=f2e1420]
+                          - gridcell "1500002" [ref=f2e1421]
+                          - gridcell [ref=f2e1422]
+                          - gridcell [ref=f2e1423]
+                          - gridcell [ref=f2e1424]
+                          - gridcell [ref=f2e1425]
+                          - gridcell [ref=f2e1426]
+                          - gridcell [ref=f2e1427]
+                          - gridcell [ref=f2e1428]
+                          - gridcell [ref=f2e1429]
+                        - row [ref=f2e1430]:
+                          - gridcell "1200007" [ref=f2e1431]
+                          - gridcell "0L" [ref=f2e1432]
+                          - gridcell [ref=f2e1433]
+                          - gridcell [ref=f2e1434]
+                          - gridcell [ref=f2e1435]
+                          - gridcell [ref=f2e1436]
+                          - gridcell [ref=f2e1437]
+                          - gridcell [ref=f2e1438]
+                          - gridcell [ref=f2e1439]
+                          - gridcell [ref=f2e1440]
+                          - gridcell [ref=f2e1441]
+                          - gridcell "3700122" [ref=f2e1442]
+                          - gridcell [ref=f2e1443]
+                          - gridcell "3700122" [ref=f2e1444]
+                      - row [ref=f2e1448]:
+                        - gridcell "合计" [ref=f2e1449]
+                        - gridcell [ref=f2e1450]
+                        - gridcell [ref=f2e1451]
+                        - gridcell [ref=f2e1452]
+                        - gridcell [ref=f2e1453]
+                        - gridcell [ref=f2e1454]
+                        - gridcell [ref=f2e1455]
+                        - gridcell [ref=f2e1456]
+                        - gridcell [ref=f2e1457]
+                        - gridcell [ref=f2e1458]
+                        - gridcell [ref=f2e1459]
+                        - gridcell [ref=f2e1460]
+                        - gridcell [ref=f2e1461]
+                        - gridcell [ref=f2e1462]
+    - generic [ref=f2e1468]:
+      - generic [ref=f2e1469]:
+        - generic "⎇ main" [ref=f2e1470]
+        - generic "⊘ 0" [ref=f2e1475]
+        - generic "⚠ 1" [ref=f2e1480]
+        - generic "● 准备就绪" [ref=f2e1485]
+      - generic [ref=f2e1488]:
+        - generic [ref=f2e1489]:
+          - generic "UTF-8" [ref=f2e1490]
+          - generic "JavaScript" [ref=f2e1492]
+        - generic [ref=f2e1495]:
+          - generic "通知" [ref=f2e1496] [cursor=pointer]
+          - generic "用户" [ref=f2e1500] [cursor=pointer]
+    - button "AI 助手 / 浮动视图" [ref=f2e1504]
+  - generic [ref=f2e1507]:
+    - toolbar "Header" [ref=f2e1509]:
+      - generic [ref=f2e1511]: 新增凭证批
+      - generic "关闭" [ref=f2e1516] [cursor=pointer]:
+        - button "拒绝" [ref=f2e1517]
+    - form "表单" [ref=f2e1524]:
+      - generic [ref=f2e1527]:
+        - generic [ref=f2e1531]:
+          - term [ref=f2e1532]:
+            - generic [ref=f2e1534]:
+              - generic [ref=f2e1535]: 凭证批名称
+              - generic [ref=f2e1536]: ：*
+          - definition [ref=f2e1537]:
+            - textbox [ref=f2e1543]
+        - generic [ref=f2e1547]:
+          - term [ref=f2e1548]:
+            - generic [ref=f2e1550]:
+              - generic [ref=f2e1551]: 客户端
+              - generic [ref=f2e1552]: ：
+          - definition [ref=f2e1553]:
+            - generic [ref=f2e1555]:
+              - generic [ref=f2e1556]:
+                - generic [ref=f2e1559]:
+                  - textbox [ref=f2e1560]
+                  - generic: 有可用建议
+                  - status
+                  - generic: 已折叠
+                - button "查询" [ref=f2e1563] [cursor=pointer]
+              - dialog [ref=f2e1729]:
+                - generic [ref=f2e1732]:
+                  - generic:
+                    - generic [ref=f2e1733]:
+                      - generic [ref=f2e1734]: 最近选过
+                      - button "清除全部" [ref=f2e1740] [cursor=pointer]
+                    - generic [ref=f2e1746]: 无匹配项
+        - generic [ref=f2e1570]:
+          - term [ref=f2e1571]:
+            - generic [ref=f2e1573]:
+              - generic [ref=f2e1574]: 公司代码
+              - generic [ref=f2e1575]: ：
+          - definition [ref=f2e1576]:
+            - generic [ref=f2e1579]:
+              - generic [ref=f2e1582]:
+                - textbox [ref=f2e1583]
+                - generic: 有可用建议
+                - status
+                - generic: 已折叠
+              - button "查询" [ref=f2e1586] [cursor=pointer]
+        - generic [ref=f2e1593]:
+          - term [ref=f2e1594]:
+            - generic [ref=f2e1596]:
+              - generic [ref=f2e1597]: 账本
+              - generic [ref=f2e1598]: ：
+          - definition [ref=f2e1599]:
+            - generic [ref=f2e1602]:
+              - generic [ref=f2e1605]:
+                - textbox [ref=f2e1606]
+                - generic: 有可用建议
+                - status
+                - generic: 已折叠
+              - button "查询" [ref=f2e1609] [cursor=pointer]
+        - generic [ref=f2e1616]:
+          - term [ref=f2e1617]:
+            - generic [ref=f2e1619]:
+              - generic [ref=f2e1620]: 会计期间
+              - generic [ref=f2e1621]: ：
+          - definition [ref=f2e1622]:
+            - generic [ref=f2e1625]:
+              - generic [ref=f2e1628]:
+                - textbox [ref=f2e1629]
+                - generic: 有可用建议
+                - status
+                - generic: 已折叠
+              - button "查询" [ref=f2e1632] [cursor=pointer]
+        - generic [ref=f2e1639]:
+          - term [ref=f2e1640]:
+            - generic [ref=f2e1642]:
+              - generic [ref=f2e1643]: 过账日期
+              - generic [ref=f2e1644]: ：
+          - definition [ref=f2e1645]:
+            - textbox "例如 2026-12-31" [ref=f2e1653]
+        - generic [ref=f2e1661]:
+          - term [ref=f2e1662]:
+            - generic [ref=f2e1664]:
+              - generic [ref=f2e1665]: 凭证来源
+              - generic [ref=f2e1666]: ：
+          - definition [ref=f2e1667]:
+            - textbox [ref=f2e1673]
+        - generic [ref=f2e1677]:
+          - term [ref=f2e1678]:
+            - generic [ref=f2e1680]:
+              - generic [ref=f2e1681]: 批状态
+              - generic [ref=f2e1682]: ：
+          - definition [ref=f2e1683]:
+            - textbox [ref=f2e1689]: draft
+        - generic [ref=f2e1693]:
+          - term [ref=f2e1694]:
+            - generic [ref=f2e1696]:
+              - generic [ref=f2e1697]: 控制总额
+              - generic [ref=f2e1698]: ：
+          - definition [ref=f2e1699]:
+            - generic [ref=f2e1704]:
+              - textbox [ref=f2e1705]
+              - button "计算器" [ref=f2e1708] [cursor=pointer]
+    - toolbar "Footer" [ref=f2e1713]:
+      - button "取消" [ref=f2e1717] [cursor=pointer]
+      - button "确认新增" [ref=f2e1722] [cursor=pointer]

@@ -1,0 +1,19 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-suggestion-item-group>",
+  "isVoid": false,
+  "tag": "ui5-suggestion-item-group",
+  "description": "UI5 输入建议项分组",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [],
+  "slots": [],
+  "extraEvents": []
+}

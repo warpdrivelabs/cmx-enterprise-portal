@@ -1,0 +1,20 @@
+{
+  "tag": "summary",
+  "group": "default",
+  "label": "<summary>",
+  "description": "details摘要行",
+  "isVoid": false,
+  "canNest": false,
+  "attrs": [],
+  "defaults": {
+    "text": "摘要标题"
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

@@ -1,0 +1,112 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-file-uploader>",
+  "isVoid": false,
+  "tag": "ui5-file-uploader",
+  "description": "UI5 文件上传按钮",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "accept",
+      "label": "accept",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "hide-input",
+      "label": "hide-input",
+      "type": "boolean"
+    },
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    },
+    {
+      "name": "multiple",
+      "label": "multiple",
+      "type": "boolean"
+    },
+    {
+      "name": "name",
+      "label": "name",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "placeholder",
+      "label": "placeholder",
+      "type": "text",
+      "placeholder": "请输入..."
+    },
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "max-file-size",
+      "label": "max-file-size",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "value-state",
+      "label": "value-state",
+      "type": "select",
+      "options": [
+        "None",
+        "Positive",
+        "Critical",
+        "Negative",
+        "Information"
+      ]
+    },
+    {
+      "name": "required",
+      "label": "required",
+      "type": "boolean"
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    },
+    {
+      "name": "accessible-description",
+      "label": "accessible-description",
+      "type": "text",
+      "placeholder": "无障碍描述"
+    },
+    {
+      "name": "accessible-description-ref",
+      "label": "accessible-description-ref",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [
+    "",
+    "valueStateMessage"
+  ],
+  "extraEvents": [
+    "change",
+    "file-size-exceed"
+  ]
+}

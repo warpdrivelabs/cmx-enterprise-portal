@@ -1,0 +1,31 @@
+/** 逻辑层用到的文案与代码生成注释（与原先字面量一致） */
+export const PAGE_DATA_STRINGS = {
+  testSelectPlaceholder: '— 请选择 —',
+  testPickTargetFirst: '请先选择目标',
+  testJsonParseErrorPrefix: '参数 JSON 解析失败：',
+  testStatusRunning: '运行中…',
+  testStatusReady: '就绪',
+  testStatusSuccess: '成功',
+  testStatusFail: '失败',
+  testErrorPrefix: '错误：',
+  testFnNotFound: (name) => `函数 "${name}" 不存在`,
+  testSvcNotFound: (name) => `服务 "${name}" 不存在`,
+  testWsNotSupported: 'WebSocket 服务不支持一键测试，请在运行窗口中使用',
+  testResultNone: '（无返回值）',
+  testResultNotRun: '（尚未运行）',
+  unknownSvcType: (t) => `未知服务类型：${t}`,
+  sourcePreviewBanner:
+    '/* 设计时脚本预览：以下为直接函数/说明；导出/预览/运行时会由设计器注入 Web Component 封装。 */',
+  commentPageData: '// --- 页面数据（运行时在组件内注入 $data，见「数据」面板）---',
+  commentPageFns: '// --- 页面函数 ---',
+  commentPageSvcs:
+    '// --- 页面服务（导出时自动生成 host.服务名 与请求逻辑，见「服务」面板）---',
+  codegenBlockHeader: '// === CMX 页面 Web Component（#cmx-page-template-<页slug> → Shadow + 实例方法）===',
+  codegenPageFnsComment: '      // --- 页面函数（组件实例方法）---',
+  codegenPageSvcsComment: '      // --- 页面服务（组件实例方法）---',
+  flowEmptyHint: '暂无数据 — 请先添加变量、函数或服务',
+  flowColSvcFn: '服务 / 函数',
+  flowColData: '数据变量',
+  flowColBind: '组件绑定',
+  cmDetailPageVar: (n) => `页面变量 $data.${n}`,
+};

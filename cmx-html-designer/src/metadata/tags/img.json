@@ -1,0 +1,44 @@
+{
+  "tag": "img",
+  "group": "default",
+  "label": "<img>",
+  "description": "图片元素",
+  "isVoid": true,
+  "canNest": false,
+  "attrs": [
+    {
+      "name": "src",
+      "label": "src",
+      "type": "url",
+      "placeholder": "https://..."
+    },
+    {
+      "name": "alt",
+      "label": "alt",
+      "type": "text",
+      "placeholder": "图片描述"
+    }
+  ],
+  "defaults": {
+    "attributes": {
+      "alt": "示例图片",
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='120'%3E%3Crect width='100%25' height='100%25' fill='%23e2e8f0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%2364748b' font-size='14'%3EImage%3C/text%3E%3C/svg%3E"
+    },
+    "style": {
+      "maxWidth": "220px",
+      "display": "block"
+    }
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common",
+  "extraEvents": [
+    "load",
+    "error"
+  ]
+}

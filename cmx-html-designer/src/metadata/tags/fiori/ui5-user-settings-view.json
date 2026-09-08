@@ -1,0 +1,36 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-user-settings-view>",
+  "isVoid": false,
+  "tag": "ui5-user-settings-view",
+  "description": "UI5 Fiori 用户设置自定义视图",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "selected",
+      "label": "selected",
+      "type": "boolean"
+    },
+    {
+      "name": "secondary",
+      "label": "secondary",
+      "type": "boolean"
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

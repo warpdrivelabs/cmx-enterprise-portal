@@ -1,0 +1,144 @@
+{
+  "eventPreset": "ui5Form",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-input>",
+  "defaults": {
+    "attributes": {
+      "placeholder": "请输入内容"
+    }
+  },
+  "isVoid": true,
+  "tag": "ui5-input",
+  "description": "UI5 输入框",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    },
+    {
+      "name": "placeholder",
+      "label": "placeholder",
+      "type": "text",
+      "placeholder": "请输入..."
+    },
+    {
+      "name": "readonly",
+      "label": "readonly",
+      "type": "boolean"
+    },
+    {
+      "name": "required",
+      "label": "required",
+      "type": "boolean"
+    },
+    {
+      "name": "no-typeahead",
+      "label": "no-typeahead",
+      "type": "boolean"
+    },
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "value-state",
+      "label": "value-state",
+      "type": "select",
+      "options": [
+        "None",
+        "Positive",
+        "Critical",
+        "Negative",
+        "Information"
+      ]
+    },
+    {
+      "name": "name",
+      "label": "name",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "show-suggestions",
+      "label": "show-suggestions",
+      "type": "boolean"
+    },
+    {
+      "name": "maxlength",
+      "label": "maxlength",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    },
+    {
+      "name": "accessible-description",
+      "label": "accessible-description",
+      "type": "text",
+      "placeholder": "无障碍描述"
+    },
+    {
+      "name": "accessible-description-ref",
+      "label": "accessible-description-ref",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "show-clear-icon",
+      "label": "show-clear-icon",
+      "type": "boolean"
+    },
+    {
+      "name": "open",
+      "label": "open",
+      "type": "boolean"
+    },
+    {
+      "name": "filter",
+      "label": "filter",
+      "type": "select",
+      "options": [
+        "StartsWithPerTerm",
+        "StartsWith",
+        "Contains",
+        "None"
+      ]
+    }
+  ],
+  "slots": [
+    "",
+    "icon",
+    "valueStateMessage"
+  ],
+  "extraEvents": [
+    "change",
+    "input",
+    "select",
+    "selection-change",
+    "type-ahead",
+    "suggestion-scroll",
+    "open",
+    "close"
+  ]
+}

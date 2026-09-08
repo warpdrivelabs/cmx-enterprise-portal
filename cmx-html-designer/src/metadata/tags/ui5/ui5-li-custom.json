@@ -1,0 +1,31 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-li-custom>",
+  "isVoid": false,
+  "tag": "ui5-li-custom",
+  "description": "UI5 自定义列表项",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "movable",
+      "label": "movable",
+      "type": "boolean"
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

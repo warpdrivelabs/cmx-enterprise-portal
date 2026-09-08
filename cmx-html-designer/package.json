@@ -1,0 +1,39 @@
+{
+  "name": "cmx-html-designer",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/run-vite.mjs",
+    "build": "npm run build -w cmx-ui5-runtime && node scripts/run-vite.mjs build",
+    "preview": "node scripts/run-vite.mjs preview",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "_comment_build": "多环境构建示例：新建 .env.<mode> 文件（如 .env.docker），用 --mode 指定。vite 按模式自动加载对应 .env 文件。例：\"build:docker\": \"node scripts/run-vite.mjs build --mode docker\""
+  },
+  "dependencies": {
+    "@codemirror/lang-html": "^6.4.11",
+    "@codemirror/lang-json": "^6.0.2",
+    "@codemirror/theme-one-dark": "^6.1.3",
+    "@ui5/webcomponents": "^2.23.2",
+    "@ui5/webcomponents-base": "^2.23.2",
+    "@ui5/webcomponents-fiori": "^2.23.2",
+    "@ui5/webcomponents-icons": "^2.23.2",
+    "@ui5/webcomponents-icons-business-suite": "^2.23.2",
+    "@ui5/webcomponents-icons-tnt": "^2.23.2",
+    "@ui5/webcomponents-localization": "^2.23.2",
+    "@ui5/webcomponents-theming": "^2.23.2",
+    "cmx-data-comp": "*",
+    "cmx-icon-resource": "*",
+    "cmx-shared": "*",
+    "cmx-ui5-runtime": "*",
+    "codemirror": "^6.0.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^4.1.10",
+    "jsdom": "^29.1.0",
+    "vite": "^8.0.0",
+    "vitest": "^4.1.10"
+  }
+}

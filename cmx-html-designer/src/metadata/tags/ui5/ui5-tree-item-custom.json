@@ -1,0 +1,27 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-tree-item-custom>",
+  "isVoid": false,
+  "tag": "ui5-tree-item-custom",
+  "description": "UI5 自定义树形节点",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "hide-selection-element",
+      "label": "hide-selection-element",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "content"
+  ],
+  "extraEvents": []
+}

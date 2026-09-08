@@ -1,0 +1,124 @@
+{
+  "eventPreset": "ui5Form",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-combobox>",
+  "isVoid": false,
+  "tag": "ui5-combobox",
+  "description": "UI5 组合框",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "selected-value",
+      "label": "selected-value",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "name",
+      "label": "name",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "no-typeahead",
+      "label": "no-typeahead",
+      "type": "boolean"
+    },
+    {
+      "name": "placeholder",
+      "label": "placeholder",
+      "type": "text",
+      "placeholder": "请输入..."
+    },
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    },
+    {
+      "name": "value-state",
+      "label": "value-state",
+      "type": "select",
+      "options": [
+        "None",
+        "Positive",
+        "Critical",
+        "Negative",
+        "Information"
+      ]
+    },
+    {
+      "name": "readonly",
+      "label": "readonly",
+      "type": "boolean"
+    },
+    {
+      "name": "required",
+      "label": "required",
+      "type": "boolean"
+    },
+    {
+      "name": "loading",
+      "label": "loading",
+      "type": "boolean"
+    },
+    {
+      "name": "filter",
+      "label": "filter",
+      "type": "select",
+      "options": [
+        "StartsWithPerTerm",
+        "StartsWith",
+        "Contains",
+        "None"
+      ]
+    },
+    {
+      "name": "show-clear-icon",
+      "label": "show-clear-icon",
+      "type": "boolean"
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    },
+    {
+      "name": "open",
+      "label": "open",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "",
+    "valueStateMessage",
+    "icon"
+  ],
+  "extraEvents": [
+    "change",
+    "input",
+    "open",
+    "close",
+    "selection-change"
+  ]
+}

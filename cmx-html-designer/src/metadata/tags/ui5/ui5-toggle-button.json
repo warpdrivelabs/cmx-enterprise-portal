@@ -1,0 +1,31 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-toggle-button>",
+  "defaults": {
+    "text": "切换",
+    "attributes": {
+      "design": "Default"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-toggle-button",
+  "description": "UI5 切换按钮",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "pressed",
+      "label": "pressed",
+      "type": "boolean"
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

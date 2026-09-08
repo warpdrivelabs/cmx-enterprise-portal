@@ -1,0 +1,44 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-breadcrumbs-item>",
+  "defaults": {
+    "text": "面包屑项",
+    "attributes": {
+      "href": "#"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-breadcrumbs-item",
+  "description": "UI5 面包屑项",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "href",
+      "label": "href",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "target",
+      "label": "target",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

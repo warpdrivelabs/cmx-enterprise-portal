@@ -1,0 +1,67 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-dialog>",
+  "defaults": {
+    "attributes": {
+      "header-text": "对话框"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-dialog",
+  "description": "UI5 对话框",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "header-text",
+      "label": "header-text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "stretch",
+      "label": "stretch",
+      "type": "boolean"
+    },
+    {
+      "name": "draggable",
+      "label": "draggable",
+      "type": "boolean"
+    },
+    {
+      "name": "resizable",
+      "label": "resizable",
+      "type": "boolean"
+    },
+    {
+      "name": "state",
+      "label": "state",
+      "type": "select",
+      "options": [
+        "None",
+        "Positive",
+        "Critical",
+        "Negative",
+        "Information"
+      ]
+    }
+  ],
+  "slots": [
+    "header",
+    "footer"
+  ],
+  "extraEvents": [
+    "before-open",
+    "open",
+    "before-close",
+    "close",
+    "scroll"
+  ]
+}

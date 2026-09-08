@@ -1,0 +1,61 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-flexible-column-layout>",
+  "defaults": {
+    "attributes": {
+      "layout": "OneColumn"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-flexible-column-layout",
+  "description": "Fiori 弹性列布局",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "layout",
+      "label": "layout",
+      "type": "select",
+      "options": [
+        "OneColumn",
+        "TwoColumnsStartExpanded",
+        "TwoColumnsMidExpanded",
+        "ThreeColumnsMidExpanded",
+        "ThreeColumnsEndExpanded",
+        "ThreeColumnsStartExpandedEndHidden",
+        "ThreeColumnsMidExpandedEndHidden",
+        "ThreeColumnsStartHiddenMidExpanded",
+        "ThreeColumnsStartHiddenEndExpanded",
+        "MidColumnFullScreen",
+        "EndColumnFullScreen"
+      ]
+    },
+    {
+      "name": "disable-resizing",
+      "label": "disable-resizing",
+      "type": "boolean"
+    },
+    {
+      "name": "layouts-configuration",
+      "label": "layouts-configuration",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [
+    "startColumn",
+    "midColumn",
+    "endColumn"
+  ],
+  "extraEvents": [
+    "layout-change",
+    "layout-configuration-change"
+  ]
+}

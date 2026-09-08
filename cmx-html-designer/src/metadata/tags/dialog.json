@@ -1,0 +1,26 @@
+{
+  "tag": "dialog",
+  "group": "default",
+  "label": "<dialog>",
+  "description": "对话框元素",
+  "isVoid": false,
+  "canNest": true,
+  "attrs": [],
+  "defaults": {
+    "attributes": {
+      "open": ""
+    }
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common",
+  "extraEvents": [
+    "close",
+    "cancel"
+  ]
+}

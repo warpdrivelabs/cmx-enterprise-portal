@@ -1,0 +1,71 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-dynamic-side-content>",
+  "isVoid": false,
+  "tag": "ui5-dynamic-side-content",
+  "description": "UI5 Fiori 侧边内容布局",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "hide-main-content",
+      "label": "hide-main-content",
+      "type": "boolean"
+    },
+    {
+      "name": "hide-side-content",
+      "label": "hide-side-content",
+      "type": "boolean"
+    },
+    {
+      "name": "side-content-position",
+      "label": "side-content-position",
+      "type": "select",
+      "options": [
+        "End",
+        "Start"
+      ]
+    },
+    {
+      "name": "side-content-visibility",
+      "label": "side-content-visibility",
+      "type": "select",
+      "options": [
+        "AlwaysShow",
+        "ShowAboveL",
+        "ShowAboveM",
+        "ShowAboveS",
+        "NeverShow"
+      ]
+    },
+    {
+      "name": "side-content-fall-down",
+      "label": "side-content-fall-down",
+      "type": "select",
+      "options": [
+        "BelowXL",
+        "BelowL",
+        "BelowM",
+        "OnMinimumWidth"
+      ]
+    },
+    {
+      "name": "equal-split",
+      "label": "equal-split",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "sideContent"
+  ],
+  "extraEvents": [
+    "layout-change"
+  ]
+}

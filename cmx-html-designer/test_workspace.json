@@ -1,0 +1,61 @@
+{ 
+          "id": "portal-overview", 
+          "name": "overview", 
+          "caption": "页面组装测试", 
+          "type": "workspace-node",
+          "permissionId": null,
+          "dirty": true,
+          "workspace": {
+            "id":"test_workspace",
+            "name":"test",
+            "caption":"测试",
+            "prepare": {
+              "caption": "准备页面组装测试",
+              "icon": "home",
+              "height": "500px",
+              "width": "600px",
+              "views": [
+                { "id":"pre_view1","tabLabel": "概览", "icon": "detail-view", "type": "html_pages", "html_page": "pre_view1" },
+                { "id":"pre_view2","tabLabel": "快捷", "icon": "detail-view", "type": "html_pages", "html_page": "pre_view2" }
+              ]
+            },
+            "content": {
+              "caption": "系统概览-页面模式",
+              "icon": "edit",
+              "views": [
+                { "id":"ctn_view1","tabLabel": "概览", "icon": "detail-view", "type": "html_pages", "html_page": "ctn_view1" },
+                { "id":"ctn_view2","tabLabel": "快捷", "icon": "detail-view", "type": "html_pages", "html_page": "ctn_view2" }
+              ]
+            },
+            "explorer": {
+              "caption": "导航",
+              "icon": "detail-view",
+              "views": [
+                { "id":"exp_view1","tabLabel": "概览", "icon": "detail-view", "type": "html_pages", "html_page": "exp_view1" },
+                { "id":"exp_view2","tabLabel": "模型", "icon": "source-code", "type": "html_pages", "html_page": "exp_view2" }
+              ]
+            },
+            "property": {
+              "caption": "智能体",
+              "icon": "documents",
+              "views": [
+                { "id":"pro_view1","tabLabel": "页面", "icon": "document", "type": "html_pages", "html_page": "pro_view1" },
+                { "tabLabel": "说明", "icon": "information", "type": "html_pages", "html_page": "pro_view2" }
+              ]
+            },
+            "bottom": {
+              "caption": "日志",
+              "icon": "log",
+              "views": [
+                { "id":"btm_view1","tabLabel": "状态", "icon": "log", "type": "html_pages", "html_page": "btm_view1" },
+                { "id":"btm_view2","tabLabel": "概览", "icon": "detail-view", "type": "html_pages", "html_page": "btm_view2" }
+              ]
+            },
+            "float": {
+              "views": [
+                { "id":"flt_view1","tabLabel": "快捷", "icon": "detail-view", "type": "html_pages", "html_page": "flt_view1" },
+                { "id":"flt_view2","tabLabel": "快捷", "icon": "detail-view", "type": "html_pages", "html_page": "flt_view2" }
+              ]
+            }
+          }
+        }

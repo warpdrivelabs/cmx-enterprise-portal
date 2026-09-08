@@ -1,0 +1,29 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-form-item>",
+  "isVoid": false,
+  "tag": "ui5-form-item",
+  "description": "UI5 表单项",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "column-span",
+      "label": "column-span",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [
+    "labelContent",
+    ""
+  ],
+  "extraEvents": []
+}

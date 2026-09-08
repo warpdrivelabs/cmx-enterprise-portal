@@ -1,0 +1,64 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-table-header-cell>",
+  "defaults": {
+    "text": "表头"
+  },
+  "isVoid": false,
+  "tag": "ui5-table-header-cell",
+  "description": "UI5 表头单元格",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "width",
+      "label": "width",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "min-width",
+      "label": "min-width",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "importance",
+      "label": "importance",
+      "type": "text",
+      "placeholder": "0"
+    },
+    {
+      "name": "popin-text",
+      "label": "popin-text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "sort-indicator",
+      "label": "sort-indicator",
+      "type": "select",
+      "options": [
+        "None",
+        "Ascending",
+        "Descending"
+      ]
+    },
+    {
+      "name": "popin-hidden",
+      "label": "popin-hidden",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "action"
+  ],
+  "extraEvents": []
+}

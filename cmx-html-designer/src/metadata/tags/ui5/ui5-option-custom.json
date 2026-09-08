@@ -1,0 +1,47 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-option-custom>",
+  "isVoid": false,
+  "tag": "ui5-option-custom",
+  "description": "UI5 自定义选择项",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "display-text",
+      "label": "display-text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "tooltip",
+      "label": "tooltip",
+      "type": "text",
+      "placeholder": "提示文本"
+    },
+    {
+      "name": "selected",
+      "label": "selected",
+      "type": "boolean"
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "request-tabindex-change",
+    "forward-after",
+    "forward-before"
+  ]
+}

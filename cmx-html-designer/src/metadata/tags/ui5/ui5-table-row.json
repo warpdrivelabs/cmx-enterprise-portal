@@ -1,0 +1,50 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-table-row>",
+  "isVoid": false,
+  "tag": "ui5-table-row",
+  "description": "UI5 表格行",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "row-key",
+      "label": "row-key",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "position",
+      "label": "position",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "interactive",
+      "label": "interactive",
+      "type": "boolean"
+    },
+    {
+      "name": "navigated",
+      "label": "navigated",
+      "type": "boolean"
+    },
+    {
+      "name": "movable",
+      "label": "movable",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "",
+    "actions"
+  ],
+  "extraEvents": []
+}

@@ -1,0 +1,22 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-cb-item-group>",
+  "isVoid": false,
+  "tag": "ui5-cb-item-group",
+  "description": "UI5 下拉框项目组",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [],
+  "slots": [],
+  "extraEvents": [
+    "move-over",
+    "move"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "tag": "ui5-notification-action",
+  "group": "fiori",
+  "label": "<ui5-notification-action>",
+  "description": "Fiori 通知动作",
+  "isVoid": false,
+  "canNest": false,
+  "attrs": [
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text"
+    },
+    {
+      "name": "icon",
+      "label": "icon",
+      "type": "text"
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    },
+    {
+      "name": "tooltip",
+      "label": "tooltip",
+      "type": "text",
+      "placeholder": "提示文本"
+    }
+  ],
+  "defaults": {
+    "attributes": {
+      "text": "处理"
+    }
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "ui5",
+  "extraEvents": [],
+  "slots": []
+}

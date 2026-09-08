@@ -1,0 +1,42 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-search>",
+  "isVoid": false,
+  "tag": "ui5-search",
+  "description": "UI5 Fiori 搜索组件",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "loading",
+      "label": "loading",
+      "type": "boolean"
+    },
+    {
+      "name": "no-typeahead",
+      "label": "no-typeahead",
+      "type": "boolean"
+    },
+    {
+      "name": "open",
+      "label": "open",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "",
+    "action",
+    "illustration",
+    "messageArea"
+  ],
+  "extraEvents": [
+    "scope-change"
+  ]
+}

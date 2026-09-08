@@ -1,0 +1,35 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-table-selection-multi>",
+  "isVoid": true,
+  "tag": "ui5-table-selection-multi",
+  "description": "UI5 表格多选扩展",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "selected",
+      "label": "selected",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "header-selector",
+      "label": "header-selector",
+      "type": "select",
+      "options": [
+        "SelectAll",
+        "ClearAll"
+      ]
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

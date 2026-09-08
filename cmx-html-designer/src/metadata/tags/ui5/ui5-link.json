@@ -1,0 +1,116 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-link>",
+  "defaults": {
+    "text": "UI5 链接",
+    "attributes": {
+      "href": "#"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-link",
+  "description": "UI5 链接",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    },
+    {
+      "name": "tooltip",
+      "label": "tooltip",
+      "type": "text",
+      "placeholder": "提示文本"
+    },
+    {
+      "name": "href",
+      "label": "href",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "target",
+      "label": "target",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "design",
+      "label": "design",
+      "type": "select",
+      "options": [
+        "Default",
+        "Subtle",
+        "Emphasized"
+      ]
+    },
+    {
+      "name": "interactive-area-size",
+      "label": "interactive-area-size",
+      "type": "select",
+      "options": [
+        "Normal",
+        "Large"
+      ]
+    },
+    {
+      "name": "wrapping-type",
+      "label": "wrapping-type",
+      "type": "select",
+      "options": [
+        "None",
+        "Normal"
+      ]
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    },
+    {
+      "name": "accessible-role",
+      "label": "accessible-role",
+      "type": "select",
+      "options": [
+        "Link",
+        "Button"
+      ]
+    },
+    {
+      "name": "accessible-description",
+      "label": "accessible-description",
+      "type": "text",
+      "placeholder": "无障碍描述"
+    },
+    {
+      "name": "icon",
+      "label": "icon",
+      "type": "text",
+      "placeholder": "sap-icon://add"
+    },
+    {
+      "name": "end-icon",
+      "label": "end-icon",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

@@ -1,0 +1,57 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-message-strip>",
+  "defaults": {
+    "text": "这是一条消息提示",
+    "attributes": {
+      "design": "Information"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-message-strip",
+  "description": "UI5 消息条",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "design",
+      "label": "design",
+      "type": "select",
+      "options": [
+        "Information",
+        "Positive",
+        "Negative",
+        "Critical",
+        "ColorSet1",
+        "ColorSet2"
+      ]
+    },
+    {
+      "name": "color-scheme",
+      "label": "color-scheme",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "hide-icon",
+      "label": "hide-icon",
+      "type": "boolean"
+    },
+    {
+      "name": "hide-close-button",
+      "label": "hide-close-button",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "icon"
+  ],
+  "extraEvents": []
+}

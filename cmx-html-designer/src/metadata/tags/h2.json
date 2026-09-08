@@ -1,0 +1,20 @@
+{
+  "tag": "h2",
+  "group": "default",
+  "label": "<h2>",
+  "description": "二级标题",
+  "isVoid": false,
+  "canNest": false,
+  "attrs": [],
+  "defaults": {
+    "text": "二级标题"
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

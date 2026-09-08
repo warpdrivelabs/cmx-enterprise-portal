@@ -1,0 +1,42 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-multi-input>",
+  "isVoid": false,
+  "tag": "ui5-multi-input",
+  "description": "UI5 多值输入框（带Token）",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "show-value-help-icon",
+      "label": "show-value-help-icon",
+      "type": "boolean"
+    },
+    {
+      "name": "name",
+      "label": "name",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [
+    "tokens"
+  ],
+  "extraEvents": [
+    "change",
+    "input",
+    "select",
+    "selection-change",
+    "type-ahead",
+    "suggestion-scroll",
+    "open",
+    "close"
+  ]
+}

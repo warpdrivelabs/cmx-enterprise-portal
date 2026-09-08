@@ -1,0 +1,17 @@
+{
+  "tag": "ul",
+  "group": "default",
+  "label": "<ul>",
+  "description": "无序列表",
+  "isVoid": false,
+  "canNest": true,
+  "attrs": [],
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

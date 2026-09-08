@@ -1,0 +1,33 @@
+{
+  "tag": "canvas",
+  "group": "default",
+  "label": "<canvas>",
+  "description": "绘图画布",
+  "isVoid": false,
+  "canNest": false,
+  "attrs": [],
+  "defaults": {
+    "attributes": {
+      "width": "300",
+      "height": "150"
+    },
+    "style": {
+      "border": "1px solid #ccc",
+      "background": "#fff"
+    }
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common",
+  "extraEvents": [
+    "mousemove",
+    "touchstart",
+    "touchmove",
+    "touchend"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-rating-indicator>",
+  "defaults": {
+    "attributes": {
+      "value": "3",
+      "max": "5"
+    }
+  },
+  "isVoid": true,
+  "tag": "ui5-rating-indicator",
+  "description": "UI5 星级评分",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": "0"
+    },
+    {
+      "name": "max",
+      "label": "max",
+      "type": "text",
+      "placeholder": "5"
+    },
+    {
+      "name": "size",
+      "label": "size",
+      "type": "select",
+      "options": [
+        "S",
+        "M",
+        "L"
+      ]
+    },
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    },
+    {
+      "name": "readonly",
+      "label": "readonly",
+      "type": "boolean"
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    },
+    {
+      "name": "required",
+      "label": "required",
+      "type": "boolean"
+    },
+    {
+      "name": "tooltip",
+      "label": "tooltip",
+      "type": "text",
+      "placeholder": "提示文本"
+    },
+    {
+      "name": "rated-icon",
+      "label": "rated-icon",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "unrated-icon",
+      "label": "unrated-icon",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

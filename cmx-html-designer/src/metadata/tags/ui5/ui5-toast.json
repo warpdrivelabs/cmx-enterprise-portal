@@ -1,0 +1,56 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-toast>",
+  "defaults": {
+    "text": "操作成功",
+    "attributes": {
+      "placement": "BottomCenter",
+      "duration": "3000"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-toast",
+  "description": "UI5 轻提示通知",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "duration",
+      "label": "duration",
+      "type": "text",
+      "placeholder": "3000"
+    },
+    {
+      "name": "placement",
+      "label": "placement",
+      "type": "select",
+      "options": [
+        "TopStart",
+        "TopCenter",
+        "TopEnd",
+        "MiddleStart",
+        "MiddleCenter",
+        "MiddleEnd",
+        "BottomStart",
+        "BottomCenter",
+        "BottomEnd"
+      ]
+    },
+    {
+      "name": "open",
+      "label": "open",
+      "type": "boolean"
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "close"
+  ]
+}

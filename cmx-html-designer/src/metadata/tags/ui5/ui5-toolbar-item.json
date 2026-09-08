@@ -1,0 +1,20 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-toolbar-item>",
+  "defaults": {},
+  "isVoid": false,
+  "tag": "ui5-toolbar-item",
+  "description": "UI5 工具栏自定义内容包装器",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [],
+  "slots": [],
+  "extraEvents": []
+}

@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CMXPortalManager 工程项目评估报告</title>
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --panel: #fff;
+      --ink: #182230;
+      --muted: #667085;
+      --line: #d7dee8;
+      --blue: #176b87;
+      --blue2: #0f4c5c;
+      --good: #16794c;
+      --warn: #9a6700;
+      --risk: #b42318;
+      --soft-blue: #e9f4f7;
+      --soft-good: #e8f5ee;
+      --soft-warn: #fff4df;
+      --soft-risk: #fdecec;
+      --code: #253142;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.65;
+    }
+    header {
+      padding: 38px 28px 32px;
+      color: #fff;
+      background: linear-gradient(135deg, #123748 0%, #176b87 68%, #28866f 100%);
+    }
+    header .wrap, main { max-width: 1160px; margin: 0 auto; }
+    h1 { margin: 0 0 10px; font-size: 32px; line-height: 1.25; letter-spacing: 0; }
+    h2 { margin: 0 0 14px; font-size: 22px; line-height: 1.35; }
+    h3 { margin: 22px 0 10px; font-size: 17px; }
+    p { margin: 8px 0; }
+    .subtitle { max-width: 900px; margin: 0; color: rgba(255,255,255,.86); font-size: 15px; }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .meta span {
+      padding: 3px 10px;
+      min-height: 28px;
+      border: 1px solid rgba(255,255,255,.32);
+      border-radius: 6px;
+      color: rgba(255,255,255,.92);
+      background: rgba(255,255,255,.10);
+      font-size: 13px;
+    }
+    main { padding: 26px 22px 54px; }
+    section {
+      margin-top: 22px;
+      padding: 24px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(24,34,48,.05);
+    }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 14px; }
+    th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: #eef4f7; color: #183344; }
+    ul { margin: 8px 0 0 20px; padding: 0; }
+    li { margin: 6px 0; }
+    code {
+      padding: 1px 5px;
+      border-radius: 4px;
+      background: #eef2f5;
+      color: var(--code);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .92em;
+    }
+    pre {
+      overflow-x: auto;
+      padding: 14px;
+      border-radius: 8px;
+      color: #eef7fb;
+      background: #172033;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .metric {
+      min-height: 108px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfd;
+    }
+    .metric .num { display: block; margin-bottom: 4px; color: var(--blue2); font-size: 30px; line-height: 1.15; font-weight: 800; }
+    .metric .label { display: block; color: var(--muted); font-size: 13px; }
+    .score { display: grid; grid-template-columns: 180px 1fr; gap: 18px; align-items: center; margin-top: 16px; }
+    .score-badge {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 164px;
+      height: 164px;
+      border-radius: 50%;
+      background: conic-gradient(var(--blue) 0 72%, #d8e4ea 72% 100%);
+    }
+    .score-badge::after { content: ""; position: absolute; inset: 13px; border-radius: 50%; background: #fff; }
+    .score-badge strong, .score-badge span { position: relative; z-index: 1; }
+    .score-badge strong { font-size: 38px; line-height: 1; color: var(--blue2); }
+    .score-badge span { color: var(--muted); font-size: 13px; }
+    .tag {
+      display: inline-block;
+      margin: 2px 5px 2px 0;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      border: 1px solid var(--line);
+      background: #f7fafc;
+      color: #314253;
+    }
+    .good { background: var(--soft-good); color: var(--good); border-color: #b9dfcb; }
+    .warn { background: var(--soft-warn); color: var(--warn); border-color: #f2d69c; }
+    .risk { background: var(--soft-risk); color: var(--risk); border-color: #f4b8b3; }
+    .blue { background: var(--soft-blue); color: var(--blue2); border-color: #b8dce8; }
+    .note { padding: 12px 14px; border-left: 4px solid var(--blue); background: #f2f8fb; border-radius: 6px; color: #274050; }
+    .small { color: var(--muted); font-size: 13px; }
+    @media (max-width: 860px) {
+      header { padding: 30px 18px; }
+      main { padding: 20px 14px 42px; }
+      section { padding: 18px; }
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .score { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+      .grid { grid-template-columns: 1fr; }
+      h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>CMXPortalManager 工程项目评估报告</h1>
+      <p class="subtitle">面向门户管理前端的架构、质量、构建、性能、复用规范与风险治理评估。结论基于本地仓库扫描、前端规范读取、生产构建与 ESLint 验证。</p>
+      <div class="meta">
+        <span>评估日期：2026-07-20</span>
+        <span>路径：/Users/nanomesh/Workspace/presentation/CMXPortalManager</span>
+        <span>归属：根仓库 cmx-rpt-flow</span>
+        <span>技术栈：原生 JS / Vite / UI5 / Lit</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>一、执行摘要</h2>
+      <div class="score">
+        <div class="score-badge"><strong>72</strong><span>综合评分 / 100</span></div>
+        <div>
+          <p><strong>总体判断：</strong><code>CMXPortalManager</code> 是一个功能密度较高的门户管理前端，承担门户 Shell、工作区、多标签、菜单管理、HTML/native 页面承载、定义中心、弹性组合、AI 工作台等管理能力。项目已迁移为前端为主、后端能力对接 <code>cmx-container</code> 的形态，生产构建能够通过。</p>
+          <p><strong>关键风险：</strong>当前源码级 ESLint 检查存在 5 个 error，集中在 <code>src/lib/workspace-native-pages.js</code> 的动态 HTML 注入与字符串脚本执行路径；构建产物存在多个超大 chunk，最大 JS 约 6.2 MB，性能和首屏加载风险较高。</p>
+          <p>
+            <span class="tag good">生产构建通过</span>
+            <span class="tag blue">UI5/Lit 体系明确</span>
+            <span class="tag blue">复用规范完整</span>
+            <span class="tag risk">ESLint 有 5 个 error</span>
+            <span class="tag warn">bundle 体积偏大</span>
+            <span class="tag warn">大组件可维护性压力高</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>二、关键量化指标</h2>
+      <div class="grid">
+        <div class="metric"><span class="num">113</span><span class="label">src 下 JS/CSS/HTML 文件数</span></div>
+        <div class="metric"><span class="num">34,989</span><span class="label">src 前端源码行数</span></div>
+        <div class="metric"><span class="num">41</span><span class="label">src/lib 文件数</span></div>
+        <div class="metric"><span class="num">38</span><span class="label">src/components 文件数</span></div>
+        <div class="metric"><span class="num">19</span><span class="label">AI 工作台源码文件数</span></div>
+        <div class="metric"><span class="num">98 MB</span><span class="label">dist 构建产物目录大小</span></div>
+        <div class="metric"><span class="num">21.7 MB</span><span class="label">dist/assets JS/CSS 体积合计</span></div>
+        <div class="metric"><span class="num">5</span><span class="label">ESLint error 数量</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>三、架构评估</h2>
+      <table>
+        <thead><tr><th>层次</th><th>代表文件/模块</th><th>评价</th></tr></thead>
+        <tbody>
+          <tr><td>应用入口</td><td><code>src/main.js</code>、<code>src/import-ui5-and-app.js</code>、<code>index.html</code>、<code>login.html</code></td><td>入口清晰，Vite 双页面构建；UI5 runtime 通过 workspace 包统一引入，方向正确。</td></tr>
+          <tr><td>Shell / 工作区</td><td><code>portal-app*</code>、<code>portal-content-area*</code>、<code>workspace-*.js</code></td><td>门户工作区能力完整，支持多区域、多标签、浮窗、dock、HTML/native 页面预览，功能复杂度较高。</td></tr>
+          <tr><td>业务管理组件</td><td><code>portal-definition-manager.js</code>、<code>portal-flexible-combination-manager.js</code>、<code>portal-menu-manager.js</code></td><td>核心管理页面聚合了较多职责，两个最大组件均超过 4000 行，是后续维护的主要压力点。</td></tr>
+          <tr><td>API 层</td><td><code>src/api/*.js</code>、<code>src/lib/api-client.js</code></td><td>已形成 API 模块和统一 api-client，符合前端规范；仍需持续减少裸 fetch 分散错误处理。</td></tr>
+          <tr><td>AI 工作台</td><td><code>src/ai-workbench/**</code></td><td>采用 Lit 组件体系，结构相对独立；ESLint 对该目录有特定豁免，需在安全边界上单独审查。</td></tr>
+        </tbody>
+      </table>
+
+      <h3>架构优势</h3>
+      <ul>
+        <li>门户管理能力齐全，已经形成 Shell、导航、工作区、属性面板、日志面板、菜单管理、页面承载等完整前端平台结构。</li>
+        <li>与 <code>packages/cmx-data-comp</code>、<code>packages/cmx-ui5-runtime</code> 共享封装，符合“复用优先”的工程方向。</li>
+        <li>文档资产充足，已有主应用 Workspace API、字典服务、弹性组合、质量评估等说明文档。</li>
+      </ul>
+
+      <h3>架构隐患</h3>
+      <ul>
+        <li>Native Pages 运行时允许动态 HTML 与脚本执行，能力强但安全边界敏感，必须强化来源可信、沙箱、权限与审计策略。</li>
+        <li>Legacy Node 后端已停用但仍残留在 <code>package.json</code> 脚本中，且 lint 脚本引用不存在目录，说明迁移后清理不彻底。</li>
+        <li>部分组件过大，业务状态、DOM 拼接、API 调用、交互逻辑混合在单文件内，长期会拖慢迭代和代码审查。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>四、构建与质量验证</h2>
+      <table>
+        <thead><tr><th>验证项</th><th>结果</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td><code>npm run build</code></td><td><span class="tag good">通过</span></td><td>先构建 <code>cmx-ui5-runtime</code>，再以 <code>CMX_APP_BASE=/portal/</code> 构建门户应用。构建成功，但有大 chunk 警告。</td></tr>
+          <tr><td><code>npm run lint</code></td><td><span class="tag risk">失败</span></td><td>脚本包含 <code>cmx-node-server/**/*.js</code>，当前目录不存在，ESLint 直接报 “No files matching”。</td></tr>
+          <tr><td><code>npx eslint "src/**/*.js" vite.config.js</code></td><td><span class="tag risk">失败</span></td><td>发现 5 个 error、7 个 warning。error 集中于 <code>workspace-native-pages.js</code> 的 <code>innerHTML</code> 与 <code>new Function</code>。</td></tr>
+          <tr><td>Git 状态</td><td><span class="tag good">无 CMXPortalManager 跟踪变更</span></td><td>构建产物未造成可见跟踪文件变更；本报告为新增文件。</td></tr>
+        </tbody>
+      </table>
+
+      <h3>ESLint 关键错误</h3>
+      <ul>
+        <li><code>src/lib/workspace-native-pages.js:135</code>、<code>141</code>、<code>199</code>、<code>206</code>：触发禁止裸 <code>innerHTML =</code> 规则。</li>
+        <li><code>src/lib/workspace-native-pages.js:189</code>：触发禁止 <code>new Function(...)</code> 规则。</li>
+        <li><code>src/lib/workspace-native-pages.js:188</code>：存在未生效的 <code>eslint-disable</code>，注释位置或规则名与实际不匹配。</li>
+      </ul>
+      <p class="note">这些错误并不阻止 Vite 构建，但它们正好命中前端规范中的安全红线。建议优先处理，而不是仅调整 lint 配置绕过。</p>
+    </section>
+
+    <section>
+      <h2>五、性能与体积评估</h2>
+      <p>生产构建成功，但产物体积偏大，Vite 明确提示多个 chunk 超过 1500 kB。当前 <code>dist/assets</code> 中 JS/CSS 合计约 21.7 MB，超过 1.5 MB 的资源 3 个。</p>
+      <table>
+        <thead><tr><th>资源</th><th>大小</th><th>风险</th></tr></thead>
+        <tbody>
+          <tr><td><code>vendor-ignite-spreadsheet-*.js</code></td><td>约 5.9 MB</td><td>电子表格/SpreadJS 类能力重，若首屏加载会显著影响启动时间。</td></tr>
+          <tr><td><code>index-*.js</code></td><td>约 5.7 MB</td><td>业务主包偏大，说明部分重型页面或依赖未充分延迟加载。</td></tr>
+          <tr><td><code>vendor-ignite-*.js</code></td><td>约 2.4 MB</td><td>Ignite 组件库体积高，应确保只在需要的页面动态加载。</td></tr>
+          <tr><td><code>vendor-shiki-*.js</code></td><td>约 1.4 MB</td><td>代码高亮可考虑按需加载或弱化首屏依赖。</td></tr>
+        </tbody>
+      </table>
+      <h3>优化建议</h3>
+      <ul>
+        <li>将定义中心、弹性组合、HTML 预览、Spreadsheet、AI 工作台等重功能按路由/工作区视图动态导入。</li>
+        <li>检查 <code>cmx-data-comp</code> 导入路径，避免因顶层 barrel export 拉入过多组件。</li>
+        <li>为 Vite 配置更明确的 <code>manualChunks</code>，把 UI5、Ignite、Shiki、Markdown、Grid 等重依赖分包，并配合懒加载。</li>
+        <li>建立构建体积预算，例如主入口 gzip 不超过指定阈值，超过则 CI 警告或阻断。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>六、复用规范符合度</h2>
+      <table>
+        <thead><tr><th>规范项</th><th>现状</th><th>评价</th></tr></thead>
+        <tbody>
+          <tr><td>UI5 统一 runtime</td><td>依赖 <code>cmx-ui5-runtime</code>，构建时先构建 runtime workspace。</td><td><span class="tag good">较好</span></td></tr>
+          <tr><td>HTTP 请求封装</td><td>存在 <code>src/lib/api-client.js</code> 与 <code>src/api/*.js</code>，同时源码中仍有 fetch 相关命中。</td><td><span class="tag warn">需收敛</span></td></tr>
+          <tr><td>HTML 转义</td><td>已有 <code>escape.js</code>；但 Native Pages 运行时使用动态 HTML 注入。</td><td><span class="tag risk">需专项审查</span></td></tr>
+          <tr><td>消息/对话框复用</td><td>规范明确要求使用 <code>showCmxMessage</code>、<code>CmxFloatingDialog</code>。</td><td><span class="tag blue">需持续执行</span></td></tr>
+          <tr><td>禁止原生弹窗/动态执行</td><td>ESLint 对源码发现 <code>new Function</code> error。</td><td><span class="tag risk">不达标</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>七、主要问题与优先级</h2>
+      <table>
+        <thead><tr><th>优先级</th><th>问题</th><th>影响</th><th>建议动作</th></tr></thead>
+        <tbody>
+          <tr><td><span class="tag risk">P0</span></td><td>Native Pages 动态 HTML/脚本执行触发安全红线</td><td>潜在 XSS、代码注入、权限逃逸风险；同时阻断源码级 ESLint。</td><td>明确 native page 信任模型；优先使用 iframe sandbox；对片段路径引入 Sanitizer/白名单；必须执行脚本时做显式豁免和安全设计文档。</td></tr>
+          <tr><td><span class="tag risk">P0</span></td><td><code>npm run lint</code> 脚本不可用</td><td>团队无法用标准命令获得质量门禁。</td><td>移除不存在的 <code>cmx-node-server/**/*.js</code> 模式，或改为 <code>--no-error-on-unmatched-pattern</code>，并确保 CI 使用同一命令。</td></tr>
+          <tr><td><span class="tag warn">P1</span></td><td>构建产物体积过大</td><td>首屏慢、缓存压力大、弱网体验差。</td><td>按工作区视图动态导入重模块；拆分 Ignite/Spreadsheet/Shiki；建立 bundle 预算。</td></tr>
+          <tr><td><span class="tag warn">P1</span></td><td>核心组件文件超过 4000 行</td><td>维护难、回归风险高、多人协作冲突多。</td><td>拆分 <code>portal-flexible-combination-manager.js</code> 与 <code>portal-definition-manager.js</code>，抽出 API、状态机、表单构建、对话框、校验逻辑。</td></tr>
+          <tr><td><span class="tag warn">P1</span></td><td>Legacy 后端脚本残留</td><td>迁移边界不清，工具链误报。</td><td>将 legacy 脚本移入独立文档或显式归档目录；正常开发脚本只保留当前前端职责。</td></tr>
+          <tr><td><span class="tag blue">P2</span></td><td>缺少自动化 UI 回归信号</td><td>复杂工作区交互容易出现视觉/布局退化。</td><td>为登录、主 Shell、菜单管理、定义中心、弹性组合、Native Pages 增加 Playwright 冒烟截图。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>八、建议路线图</h2>
+      <table>
+        <thead><tr><th>阶段</th><th>目标</th><th>交付物</th></tr></thead>
+        <tbody>
+          <tr><td>1 周内</td><td>恢复质量门禁</td><td>修复 lint 脚本；处理或显式安全豁免 <code>workspace-native-pages.js</code>；清理未使用变量 warning。</td></tr>
+          <tr><td>2-3 周</td><td>降低体积与首屏风险</td><td>重模块动态导入；Vite manualChunks；bundle size 报告；首屏加载基线。</td></tr>
+          <tr><td>1 个月</td><td>拆分核心大组件</td><td>定义中心与弹性组合 manager 分层拆分；API/状态/视图/对话框职责分离。</td></tr>
+          <tr><td>持续</td><td>前端平台稳定化</td><td>Playwright 冒烟；复用规范检查；安全审查清单；文档入口更新。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>九、证据附录</h2>
+      <h3>执行过的关键命令</h3>
+      <pre><code>sed -n '1,260p' /Users/nanomesh/Workspace/presentation/FRONTEND_CONVENTIONS.md
+npm run build
+npm run lint
+npx eslint "src/**/*.js" vite.config.js
+find src -type f \( -name '*.js' -o -name '*.css' -o -name '*.html' \) | wc -l
+find src -type f \( -name '*.js' -o -name '*.css' -o -name '*.html' \) -print0 | xargs -0 wc -l
+find src -type f -name '*.js' -print0 | xargs -0 wc -l | sort -nr | head -25
+find dist/assets -type f \( -name '*.js' -o -name '*.css' \) -print0 | xargs -0 ls -l</code></pre>
+
+      <h3>最大源码文件样本</h3>
+      <table>
+        <thead><tr><th>文件</th><th>行数</th><th>建议</th></tr></thead>
+        <tbody>
+          <tr><td><code>src/components/portal-flexible-combination-manager.js</code></td><td>4426</td><td>拆出规则加载、成员构造、诊断面板、对话框与持久化逻辑。</td></tr>
+          <tr><td><code>src/components/portal-definition-manager.js</code></td><td>4214</td><td>拆出列表、编辑器、文件操作、错误展示、表单校验。</td></tr>
+          <tr><td><code>src/components/portal-agent-console.js</code></td><td>1662</td><td>按会话、消息渲染、工具调用、审批卡片拆分。</td></tr>
+          <tr><td><code>src/components/portal-workspace-node-dialog.js</code></td><td>1392</td><td>复用 CmxFloatingDialog 表单模式，减少内聚压力。</td></tr>
+          <tr><td><code>src/components/portal-workspace-float-window.js</code></td><td>1289</td><td>拆分拖拽、持久化、tab 管理、渲染层。</td></tr>
+        </tbody>
+      </table>
+
+      <p class="small">说明：本报告是工程评估，不等同于完整安全审计或浏览器兼容性测试。动态页面执行模型、权限边界、真实后端接口兼容性和多浏览器行为仍需专项验证。</p>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-shellbar-item>",
+  "isVoid": true,
+  "tag": "ui5-shellbar-item",
+  "description": "UI5 Fiori Shellbar 溢出图标按钮",
+  "canNest": false,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "icon",
+      "label": "icon",
+      "type": "text",
+      "placeholder": "sap-icon://add"
+    },
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "count",
+      "label": "count",
+      "type": "text",
+      "placeholder": "0"
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

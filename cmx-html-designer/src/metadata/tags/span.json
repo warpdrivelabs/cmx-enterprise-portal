@@ -1,0 +1,20 @@
+{
+  "tag": "span",
+  "group": "default",
+  "label": "<span>",
+  "description": "行内容器",
+  "isVoid": false,
+  "canNest": false,
+  "attrs": [],
+  "defaults": {
+    "text": "行内文本"
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

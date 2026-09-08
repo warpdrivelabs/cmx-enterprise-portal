@@ -1,0 +1,61 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-title>",
+  "defaults": {
+    "text": "UI5 标题",
+    "attributes": {
+      "level": "H4"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-title",
+  "description": "UI5 标题",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "wrapping-type",
+      "label": "wrapping-type",
+      "type": "select",
+      "options": [
+        "None",
+        "Normal"
+      ]
+    },
+    {
+      "name": "level",
+      "label": "level",
+      "type": "select",
+      "options": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6"
+      ]
+    },
+    {
+      "name": "size",
+      "label": "size",
+      "type": "select",
+      "options": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6"
+      ]
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

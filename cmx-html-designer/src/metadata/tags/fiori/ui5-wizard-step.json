@@ -1,0 +1,58 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-wizard-step>",
+  "defaults": {
+    "attributes": {
+      "title-text": "步骤"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-wizard-step",
+  "description": "Fiori 向导步骤",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "title-text",
+      "label": "title-text",
+      "type": "text",
+      "placeholder": "标题"
+    },
+    {
+      "name": "subtitle-text",
+      "label": "subtitle-text",
+      "type": "text",
+      "placeholder": "副标题"
+    },
+    {
+      "name": "icon",
+      "label": "icon",
+      "type": "text",
+      "placeholder": "sap-icon://add"
+    },
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    },
+    {
+      "name": "selected",
+      "label": "selected",
+      "type": "boolean"
+    },
+    {
+      "name": "branching",
+      "label": "branching",
+      "type": "boolean"
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

@@ -1,0 +1,20 @@
+{
+  "name": "cmx-shared",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "CMX 平台共享纯工具域注册中心：运行时挂 globalThis.cmx.{domain}（native/html 资产页经全局取用，与组件库 cmx-data-comp 解耦）",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./core": "./src/core.js",
+    "./datetime": "./src/datetime.js"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.10"
+  }
+}

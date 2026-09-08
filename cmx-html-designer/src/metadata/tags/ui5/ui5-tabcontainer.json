@@ -1,0 +1,76 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-tabcontainer>",
+  "isVoid": false,
+  "tag": "ui5-tabcontainer",
+  "description": "UI5 页签容器",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "collapsed",
+      "label": "collapsed",
+      "type": "boolean"
+    },
+    {
+      "name": "tab-layout",
+      "label": "tab-layout",
+      "type": "select",
+      "options": [
+        "Inline",
+        "Standard"
+      ]
+    },
+    {
+      "name": "overflow-mode",
+      "label": "overflow-mode",
+      "type": "select",
+      "options": [
+        "End",
+        "StartAndEnd"
+      ]
+    },
+    {
+      "name": "header-background-design",
+      "label": "header-background-design",
+      "type": "select",
+      "options": [
+        "Solid",
+        "Transparent",
+        "Translucent"
+      ]
+    },
+    {
+      "name": "content-background-design",
+      "label": "content-background-design",
+      "type": "select",
+      "options": [
+        "Solid",
+        "Transparent",
+        "Translucent"
+      ]
+    },
+    {
+      "name": "no-auto-selection",
+      "label": "no-auto-selection",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "",
+    "overflowButton",
+    "startOverflowButton"
+  ],
+  "extraEvents": [
+    "tab-select",
+    "move-over",
+    "move"
+  ]
+}

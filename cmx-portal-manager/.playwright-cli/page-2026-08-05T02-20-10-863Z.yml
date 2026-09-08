@@ -1,0 +1,195 @@
+- generic [ref=f2e1]:
+  - generic:
+    - alert
+    - alert
+  - generic [ref=f2e2]:
+    - generic [ref=f2e4]:
+      - banner "外壳栏" [ref=f2e7]:
+        - button [ref=f2e10] [cursor=pointer]
+        - link "Logo" [ref=f2e14] [cursor=pointer]:
+          - generic "Logo" [ref=f2e15]:
+            - img "CMX" [ref=f2e16]
+          - heading "CMX Enterprise Portal" [level=1] [ref=f2e18]
+        - generic [ref=f2e20]:
+          - search [ref=f2e27]:
+            - searchbox "搜索字段" [ref=f2e29]
+          - button [ref=f2e35] [cursor=pointer]
+          - button [ref=f2e40] [cursor=pointer]
+          - button "帮助" [ref=f2e47] [cursor=pointer]
+          - button "欢迎页面" [ref=f2e54] [cursor=pointer]
+          - button "DAM注册中心" [ref=f2e61] [cursor=pointer]
+          - button "集群数据源" [ref=f2e68] [cursor=pointer]
+          - button "菜单管理" [ref=f2e75] [cursor=pointer]
+          - button "切换主题" [ref=f2e82] [cursor=pointer]
+          - button "切换语言 🇨🇳" [ref=f2e89] [cursor=pointer]:
+            - generic [ref=f2e90]: 🇨🇳
+          - button [ref=f2e93] [cursor=pointer]:
+            - button "用户与账号" [ref=f2e97]
+          - button [ref=f2e102] [cursor=pointer]
+      - tooltip
+    - generic [ref=f2e106]:
+      - generic [ref=f2e108]:
+        - button "会计核算" [ref=f2e109] [cursor=pointer]
+        - button "SAP" [ref=f2e110] [cursor=pointer]
+        - button "Oracle EBS" [ref=f2e111] [cursor=pointer]
+        - button "用友" [ref=f2e112] [cursor=pointer]
+        - button "金蝶" [ref=f2e113] [cursor=pointer]
+      - generic [ref=f2e115]:
+        - generic [ref=f2e117]:
+          - generic [ref=f2e118]: 会计核算
+          - generic [ref=f2e126]:
+            - generic [ref=f2e127]:
+              - textbox "搜索菜单…（/ 或 Alt+S 聚焦）" [ref=f2e131]
+              - button "刷新菜单" [ref=f2e133] [cursor=pointer]
+            - generic [ref=f2e138]:
+              - region "总账" [ref=f2e139]:
+                - button "总账" [expanded] [ref=f2e140] [cursor=pointer]
+                - navigation [ref=f2e150]:
+                  - tree "主导航菜单" [ref=f2e151]:
+                    - generic:
+                      - generic [ref=f2e152]:
+                        - treeitem "基础数据管理" [expanded] [ref=f2e153] [cursor=pointer]
+                        - group "基础数据管理" [ref=f2e162]:
+                          - generic:
+                            - treeitem "系统控制" [ref=f2e164] [cursor=pointer]
+                            - treeitem "编辑用户" [ref=f2e179] [cursor=pointer]
+                            - treeitem "部署配置" [ref=f2e185] [cursor=pointer]
+                            - treeitem "页面组装测试" [ref=f2e191] [cursor=pointer]
+                            - treeitem "Outlook邮箱" [ref=f2e200] [cursor=pointer]
+                            - treeitem "主从表单生成测试" [ref=f2e206] [cursor=pointer]
+                            - treeitem "cmx-combo-box 三模式演示" [ref=f2e212] [cursor=pointer]
+                            - treeitem "cmx-tabulator 会计科目树" [ref=f2e221] [cursor=pointer]
+                            - treeitem "cmx-dict-select 数据字典选择演示" [ref=f2e237] [cursor=pointer]
+                            - treeitem "录入控件演示（文本/数字/日期/日期时间）" [ref=f2e246] [cursor=pointer]
+                            - treeitem "grid↔form 联动（四录入组件·模型面板）" [ref=f2e257] [cursor=pointer]
+                            - treeitem "财务会计凭证" [ref=f2e270] [cursor=pointer]
+                            - treeitem "会计凭证（三层·维度选择）" [ref=f2e280] [cursor=pointer]
+                            - treeitem "会计凭证（v1 单表多字典）" [ref=f2e290] [cursor=pointer]
+                            - treeitem "交易单据" [ref=f2e300] [cursor=pointer]
+                            - treeitem "差旅费报销" [ref=f2e311] [cursor=pointer]
+                            - treeitem "交易单据（表单视图）" [ref=f2e319] [cursor=pointer]
+                            - treeitem "会计凭证（弹性组合）" [ref=f2e330] [cursor=pointer]
+                            - treeitem "字典选择编辑器演示" [ref=f2e341] [cursor=pointer]
+                            - treeitem "总账主数据演示" [ref=f2e351] [cursor=pointer]
+                            - treeitem "主数据帮助测试" [ref=f2e363] [cursor=pointer]
+                            - treeitem "主数据帮助实验室" [ref=f2e373] [cursor=pointer]
+                            - treeitem "元数据模型服务测试" [ref=f2e381] [cursor=pointer]
+                            - treeitem "注册表编辑器" [ref=f2e387] [cursor=pointer]
+                            - treeitem "数据字典动态表格" [ref=f2e399] [cursor=pointer]
+                            - treeitem "ERP凭证样例(CNPC)" [ref=f2e405] [cursor=pointer]
+                            - treeitem "ERP凭证样例(MasterSlave模型版)" [ref=f2e411] [cursor=pointer]
+                            - treeitem "ERP凭证(三区工作台)" [ref=f2e417] [cursor=pointer]
+                            - treeitem "报表设计器" [ref=f2e423] [cursor=pointer]
+                            - treeitem "报表设计器（SpreadJS）" [ref=f2e429] [cursor=pointer]
+                            - treeitem "报表设计工作台" [ref=f2e439] [cursor=pointer]
+                            - treeitem "流程设计工作台" [ref=f2e445] [cursor=pointer]
+                            - treeitem "报表应用工作台" [ref=f2e451] [cursor=pointer]
+                            - treeitem "任务中心" [ref=f2e457] [cursor=pointer]
+                            - treeitem "ERP凭证(doc服务版)" [ref=f2e463] [cursor=pointer]
+                            - treeitem "合并组织机构维护" [ref=f2e469] [cursor=pointer]
+                            - treeitem "会计核算管理" [ref=f2e475] [cursor=pointer]
+                            - treeitem "总账科目维护" [ref=f2e481] [cursor=pointer]
+                            - treeitem "币种字典维护(平级)" [ref=f2e487] [cursor=pointer]
+                            - treeitem "总账科目维护(自分级)" [ref=f2e493] [cursor=pointer]
+                            - treeitem "总账科目维护(带分类)" [ref=f2e499] [cursor=pointer]
+                            - treeitem "核算主体分组关系维护" [ref=f2e505] [cursor=pointer]
+                            - treeitem "会计凭证①(html·DataSet)" [ref=f2e511] [cursor=pointer]
+                            - treeitem "会计凭证②(native·DataSet)" [ref=f2e519] [cursor=pointer]
+                            - treeitem "会计凭证③(html·Sqlx二进制)" [ref=f2e527] [cursor=pointer]
+                            - treeitem "会计凭证·单据列表(Sqlx)" [ref=f2e535] [cursor=pointer]
+                            - treeitem "会计凭证④(native·tokio二进制)" [ref=f2e543] [cursor=pointer]
+                            - treeitem "会计凭证⑤(native·Zmc→JSON)" [ref=f2e551] [cursor=pointer]
+                            - treeitem "加载服务自检(native)" [ref=f2e559] [cursor=pointer]
+                            - treeitem "加载服务自检(html)" [ref=f2e568] [cursor=pointer]
+                            - treeitem "AI员工信息表单" [ref=f2e577] [cursor=pointer]
+                        - generic: 要导航到导航项目 基础数据管理，请按空格键或 Enter。
+                      - generic [ref=f2e587]:
+                        - treeitem "Ignite 组件演示" [expanded] [ref=f2e588] [cursor=pointer]
+                        - group "Ignite 组件演示" [ref=f2e598]:
+                          - generic:
+                            - treeitem "Ignite 组合框编辑器" [ref=f2e600] [cursor=pointer]
+                            - treeitem "Ignite 列表主从" [ref=f2e609] [cursor=pointer]
+                        - generic: 要导航到导航项目 Ignite 组件演示，请按空格键或 Enter。
+                      - generic [ref=f2e615]:
+                        - treeitem "定义中心" [expanded] [ref=f2e616] [cursor=pointer]
+                        - group "定义中心" [ref=f2e628]:
+                          - generic:
+                            - treeitem "弹性组合管理" [ref=f2e630] [cursor=pointer]
+                            - treeitem "数据字典定义" [ref=f2e645] [cursor=pointer]
+                            - treeitem "字典数据维护" [ref=f2e654] [cursor=pointer]
+                            - treeitem "字典数据维护（HTML）" [ref=f2e664] [cursor=pointer]
+                            - treeitem "业务单据定义" [ref=f2e674] [cursor=pointer]
+                            - treeitem "编码规则管理" [ref=f2e683] [cursor=pointer]
+                            - treeitem "字典基础元数据" [ref=f2e696] [cursor=pointer]
+                            - treeitem "字典基础元数据(native_pages)" [ref=f2e705] [cursor=pointer]
+                            - treeitem "原生页面联动演示(native_pages·CE+context)" [ref=f2e714] [cursor=pointer]
+                            - treeitem "单据基础元数据" [ref=f2e732] [cursor=pointer]
+                            - treeitem "自定义页面设计" [ref=f2e741] [cursor=pointer]
+                            - treeitem "科目弹性组合" [ref=f2e752] [cursor=pointer]
+                            - treeitem "交易弹性组合" [ref=f2e761] [cursor=pointer]
+                            - treeitem "CCM全属性测试" [ref=f2e776] [cursor=pointer]
+                            - treeitem "工作区节点编辑" [ref=f2e786] [cursor=pointer]
+                        - generic: 要导航到导航项目 定义中心，请按空格键或 Enter。
+                      - generic [ref=f2e796]:
+                        - treeitem "页面管理" [expanded] [ref=f2e797] [cursor=pointer]
+                        - group "页面管理" [ref=f2e805]:
+                          - generic:
+                            - treeitem "首页" [ref=f2e807] [cursor=pointer]
+                            - treeitem "用户管理" [ref=f2e810] [cursor=pointer]
+                            - treeitem "权限配置" [ref=f2e813] [cursor=pointer]
+                            - treeitem "报表中心" [ref=f2e816] [cursor=pointer]
+                        - generic: 要导航到导航项目 页面管理，请按空格键或 Enter。
+                      - treeitem "DAM 注册管理中心" [ref=f2e819] [cursor=pointer]
+                      - generic [ref=f2e824]:
+                        - treeitem "组件库" [ref=f2e825] [cursor=pointer]
+                        - generic: 要导航到导航项目 组件库，请按空格键或 Enter。
+                      - generic [ref=f2e833]:
+                        - treeitem "服务接入" [ref=f2e834] [cursor=pointer]
+                        - generic: 要导航到导航项目 服务接入，请按空格键或 Enter。
+                      - generic [ref=f2e842]:
+                        - treeitem "数据资产" [ref=f2e843] [cursor=pointer]
+                        - generic: 要导航到导航项目 数据资产，请按空格键或 Enter。
+                      - treeitem "展示组件库演示" [ref=f2e852] [cursor=pointer]
+              - region "报表" [ref=f2e862]:
+                - button "报表" [ref=f2e863] [cursor=pointer]
+        - generic [ref=f2e874]:
+          - generic [ref=f2e876]:
+            - generic [ref=f2e1107] [cursor=pointer]:
+              - generic [ref=f2e1112]: 欢迎
+              - generic "关闭" [ref=f2e1113]
+            - generic [ref=f2e1118] [cursor=pointer]:
+              - generic [ref=f2e1120]: 编码规则管理
+              - generic "关闭" [ref=f2e1121]
+          - generic [ref=f2e1129]:
+            - generic [ref=f2e1130]:
+              - generic [ref=f2e1131]:
+                - generic [ref=f2e1132]: 编码规则
+                - button "⟳" [ref=f2e1133] [cursor=pointer]
+                - button "＋ 新建" [ref=f2e1134] [cursor=pointer]
+              - generic [ref=f2e1135]: 暂无规则
+            - generic [ref=f2e1137]:
+              - generic [ref=f2e1138]: 段序列编辑
+              - generic [ref=f2e1140]: 请在左侧选择或新建规则
+            - generic [ref=f2e1142]:
+              - generic [ref=f2e1143]: 规则属性
+              - generic [ref=f2e1145]: 未选择规则
+    - generic [ref=f2e1070]:
+      - generic [ref=f2e1071]:
+        - generic "⎇ main" [ref=f2e1072]
+        - generic "⊘ 0" [ref=f2e1077]
+        - generic "⚠ 1" [ref=f2e1082]
+        - generic "● 准备就绪" [ref=f2e1087]
+      - generic [ref=f2e1090]:
+        - generic [ref=f2e1091]:
+          - generic "UTF-8" [ref=f2e1092]
+          - generic "JavaScript" [ref=f2e1094]
+        - generic [ref=f2e1097]:
+          - generic "通知" [ref=f2e1098] [cursor=pointer]
+          - generic "用户" [ref=f2e1102] [cursor=pointer]
+    - button "AI 助手 / 浮动视图" [ref=f2e1106]
+  - alertdialog [ref=f2e1148]:
+    - heading "加载规则列表失败" [level=2] [ref=f2e1153]
+    - paragraph [ref=f2e1155]: 数据库操作失败：列出规则失败：数据库不存在
+    - generic [ref=f2e1156]:
+      - button "获取帮助" [ref=f2e1157] [cursor=pointer]
+      - button "确定" [ref=f2e1160] [cursor=pointer]

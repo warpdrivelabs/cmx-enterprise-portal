@@ -1,0 +1,35 @@
+{
+  "tag": "option",
+  "group": "default",
+  "label": "<option>",
+  "description": "下拉选项",
+  "isVoid": false,
+  "canNest": false,
+  "attrs": [
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": "选项值"
+    },
+    {
+      "name": "selected",
+      "label": "selected",
+      "type": "boolean"
+    }
+  ],
+  "defaults": {
+    "text": "新选项",
+    "attributes": {
+      "value": "new"
+    }
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "custom"
+}

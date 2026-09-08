@@ -1,0 +1,79 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-menu-item>",
+  "defaults": {
+    "attributes": {
+      "text": "菜单项"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-menu-item",
+  "description": "UI5 菜单项",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "additional-text",
+      "label": "additional-text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "icon",
+      "label": "icon",
+      "type": "text",
+      "placeholder": "sap-icon://add"
+    },
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    },
+    {
+      "name": "loading",
+      "label": "loading",
+      "type": "boolean"
+    },
+    {
+      "name": "loading-delay",
+      "label": "loading-delay",
+      "type": "text",
+      "placeholder": "1000"
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "tooltip",
+      "label": "tooltip",
+      "type": "text",
+      "placeholder": "提示文本"
+    },
+    {
+      "name": "checked",
+      "label": "checked",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "",
+    "endContent"
+  ],
+  "extraEvents": []
+}

@@ -1,0 +1,32 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-search-scope>",
+  "isVoid": true,
+  "tag": "ui5-search-scope",
+  "description": "UI5 Fiori 搜索范围选择项",
+  "canNest": false,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

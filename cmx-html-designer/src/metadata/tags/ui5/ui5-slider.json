@@ -1,0 +1,39 @@
+{
+  "eventPreset": "ui5Form",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-slider>",
+  "defaults": {
+    "attributes": {
+      "min": "0",
+      "max": "100",
+      "value": "30"
+    }
+  },
+  "isVoid": true,
+  "tag": "ui5-slider",
+  "description": "UI5 滑块",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": "0"
+    },
+    {
+      "name": "step",
+      "label": "step",
+      "type": "text",
+      "placeholder": "1"
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

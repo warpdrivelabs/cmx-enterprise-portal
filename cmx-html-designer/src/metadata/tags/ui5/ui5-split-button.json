@@ -1,0 +1,63 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-split-button>",
+  "defaults": {
+    "text": "操作",
+    "attributes": {
+      "design": "Emphasized"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-split-button",
+  "description": "UI5 分割按钮（带下拉箭头）",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "icon",
+      "label": "icon",
+      "type": "text",
+      "placeholder": "sap-icon://add"
+    },
+    {
+      "name": "active-arrow-button",
+      "label": "active-arrow-button",
+      "type": "boolean"
+    },
+    {
+      "name": "design",
+      "label": "design",
+      "type": "select",
+      "options": [
+        "Default",
+        "Positive",
+        "Negative",
+        "Transparent",
+        "Emphasized",
+        "Attention"
+      ]
+    },
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "arrow-click"
+  ]
+}

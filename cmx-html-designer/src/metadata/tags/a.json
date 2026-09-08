@@ -1,0 +1,42 @@
+{
+  "tag": "a",
+  "group": "default",
+  "label": "<a>",
+  "description": "超链接元素",
+  "isVoid": false,
+  "canNest": false,
+  "attrs": [
+    {
+      "name": "href",
+      "label": "href",
+      "type": "url",
+      "placeholder": "https://..."
+    },
+    {
+      "name": "target",
+      "label": "target",
+      "type": "select",
+      "options": [
+        "",
+        "_self",
+        "_blank",
+        "_parent",
+        "_top"
+      ]
+    }
+  ],
+  "defaults": {
+    "text": "链接文本",
+    "attributes": {
+      "href": "#"
+    }
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

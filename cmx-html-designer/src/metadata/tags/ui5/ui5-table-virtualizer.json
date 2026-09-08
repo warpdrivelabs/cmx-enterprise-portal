@@ -1,0 +1,40 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-table-virtualizer>",
+  "isVoid": true,
+  "tag": "ui5-table-virtualizer",
+  "description": "UI5 表格虚拟滚动扩展",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "row-height",
+      "label": "row-height",
+      "type": "text",
+      "placeholder": "45"
+    },
+    {
+      "name": "row-count",
+      "label": "row-count",
+      "type": "text",
+      "placeholder": "100"
+    },
+    {
+      "name": "extra-rows",
+      "label": "extra-rows",
+      "type": "text",
+      "placeholder": "0"
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "range-change"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "tag": "details",
+  "group": "default",
+  "label": "<details>",
+  "description": "可折叠详情容器",
+  "isVoid": false,
+  "canNest": true,
+  "attrs": [
+    {
+      "name": "open",
+      "label": "open",
+      "type": "boolean"
+    }
+  ],
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common",
+  "extraEvents": [
+    "toggle"
+  ]
+}

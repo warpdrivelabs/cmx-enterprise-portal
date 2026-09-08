@@ -1,0 +1,36 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-button-badge>",
+  "isVoid": true,
+  "tag": "ui5-button-badge",
+  "description": "UI5 按钮徽标",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "design",
+      "label": "design",
+      "type": "select",
+      "options": [
+        "InlineText",
+        "OverlayText",
+        "AttentionDot"
+      ]
+    },
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

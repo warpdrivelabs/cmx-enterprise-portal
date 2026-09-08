@@ -1,0 +1,49 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-page>",
+  "isVoid": false,
+  "tag": "ui5-page",
+  "description": "Fiori 页面容器",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "background-design",
+      "label": "background-design",
+      "type": "select",
+      "options": [
+        "List",
+        "Solid",
+        "Transparent"
+      ]
+    },
+    {
+      "name": "no-scrolling",
+      "label": "no-scrolling",
+      "type": "boolean"
+    },
+    {
+      "name": "fixed-footer",
+      "label": "fixed-footer",
+      "type": "boolean"
+    },
+    {
+      "name": "hide-footer",
+      "label": "hide-footer",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "header",
+    "",
+    "footer"
+  ],
+  "extraEvents": []
+}

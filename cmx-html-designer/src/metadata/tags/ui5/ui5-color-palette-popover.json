@@ -1,0 +1,78 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-color-palette-popover>",
+  "isVoid": false,
+  "tag": "ui5-color-palette-popover",
+  "description": "UI5 颜色调色板弹出框",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "show-recent-colors",
+      "label": "show-recent-colors",
+      "type": "boolean"
+    },
+    {
+      "name": "show-more-colors",
+      "label": "show-more-colors",
+      "type": "boolean"
+    },
+    {
+      "name": "show-default-color",
+      "label": "show-default-color",
+      "type": "boolean"
+    },
+    {
+      "name": "default-color",
+      "label": "default-color",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    },
+    {
+      "name": "open",
+      "label": "open",
+      "type": "boolean"
+    },
+    {
+      "name": "opener",
+      "label": "opener",
+      "type": "text",
+      "placeholder": "元素ID"
+    },
+    {
+      "name": "placement",
+      "label": "placement",
+      "type": "select",
+      "options": [
+        "Start",
+        "End",
+        "Top",
+        "Bottom"
+      ]
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "item-click",
+    "close"
+  ]
+}

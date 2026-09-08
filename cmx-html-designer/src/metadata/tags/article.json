@@ -1,0 +1,17 @@
+{
+  "tag": "article",
+  "group": "default",
+  "label": "<article>",
+  "description": "独立可复用内容块",
+  "isVoid": false,
+  "canNest": true,
+  "attrs": [],
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

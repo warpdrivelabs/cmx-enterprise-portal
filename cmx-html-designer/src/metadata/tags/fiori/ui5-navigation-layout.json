@@ -1,0 +1,36 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-navigation-layout>",
+  "isVoid": false,
+  "tag": "ui5-navigation-layout",
+  "description": "UI5 Fiori 侧边导航布局",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "mode",
+      "label": "mode",
+      "type": "select",
+      "options": [
+        "Auto",
+        "Collapsed",
+        "Expanded"
+      ]
+    }
+  ],
+  "slots": [
+    "header",
+    "sideContent",
+    ""
+  ],
+  "extraEvents": [
+    "item-click"
+  ]
+}

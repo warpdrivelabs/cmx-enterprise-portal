@@ -1,0 +1,116 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-button>",
+  "defaults": {
+    "text": "按钮",
+    "attributes": {
+      "design": "Emphasized"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-button",
+  "description": "UI5 按钮",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "design",
+      "label": "design",
+      "type": "select",
+      "options": [
+        "Default",
+        "Positive",
+        "Negative",
+        "Transparent",
+        "Emphasized",
+        "Attention"
+      ]
+    },
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    },
+    {
+      "name": "icon",
+      "label": "icon",
+      "type": "text",
+      "placeholder": "sap-icon://add"
+    },
+    {
+      "name": "end-icon",
+      "label": "end-icon",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "submits",
+      "label": "submits",
+      "type": "boolean"
+    },
+    {
+      "name": "form",
+      "label": "form",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "tooltip",
+      "label": "tooltip",
+      "type": "text",
+      "placeholder": "提示文本"
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    },
+    {
+      "name": "accessible-description",
+      "label": "accessible-description",
+      "type": "text",
+      "placeholder": "无障碍描述"
+    },
+    {
+      "name": "accessible-role",
+      "label": "accessible-role",
+      "type": "select",
+      "options": [
+        "Button",
+        "Link"
+      ]
+    },
+    {
+      "name": "loading",
+      "label": "loading",
+      "type": "boolean"
+    },
+    {
+      "name": "loading-delay",
+      "label": "loading-delay",
+      "type": "text",
+      "placeholder": "1000"
+    }
+  ],
+  "slots": [
+    "",
+    "badge"
+  ],
+  "extraEvents": [
+    "active-state-change"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-calendar>",
+  "isVoid": false,
+  "tag": "ui5-calendar",
+  "description": "UI5 日历选择器",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "selection-mode",
+      "label": "selection-mode",
+      "type": "select",
+      "options": [
+        "Single",
+        "Multiple",
+        "Range"
+      ]
+    },
+    {
+      "name": "hide-week-numbers",
+      "label": "hide-week-numbers",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "calendarLegend",
+    "",
+    "specialDates",
+    "disabledDates"
+  ],
+  "extraEvents": []
+}

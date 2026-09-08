@@ -1,0 +1,19 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-responsive-popover>",
+  "isVoid": false,
+  "tag": "ui5-responsive-popover",
+  "description": "UI5 响应式弹出框",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [],
+  "slots": [],
+  "extraEvents": []
+}

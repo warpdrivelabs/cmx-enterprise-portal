@@ -1,0 +1,70 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-timeline-item>",
+  "defaults": {
+    "attributes": {
+      "title-text": "标题",
+      "subtitle-text": "副标题"
+    },
+    "text": "时间线内容"
+  },
+  "isVoid": false,
+  "tag": "ui5-timeline-item",
+  "description": "Fiori 时间线项",
+  "canNest": false,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "icon",
+      "label": "icon",
+      "type": "text",
+      "placeholder": "sap-icon://add"
+    },
+    {
+      "name": "name",
+      "label": "name",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "name-clickable",
+      "label": "name-clickable",
+      "type": "boolean"
+    },
+    {
+      "name": "title-text",
+      "label": "title-text",
+      "type": "text",
+      "placeholder": "标题"
+    },
+    {
+      "name": "subtitle-text",
+      "label": "subtitle-text",
+      "type": "text",
+      "placeholder": "副标题"
+    },
+    {
+      "name": "state",
+      "label": "state",
+      "type": "select",
+      "options": [
+        "None",
+        "Positive",
+        "Critical",
+        "Negative",
+        "Information"
+      ]
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "name-click"
+  ]
+}

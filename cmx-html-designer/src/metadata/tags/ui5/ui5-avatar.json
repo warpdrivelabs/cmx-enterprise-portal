@@ -1,0 +1,118 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-avatar>",
+  "defaults": {
+    "attributes": {
+      "initials": "UI",
+      "size": "M"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-avatar",
+  "description": "UI5 头像",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    },
+    {
+      "name": "interactive",
+      "label": "interactive",
+      "type": "boolean"
+    },
+    {
+      "name": "mode",
+      "label": "mode",
+      "type": "select",
+      "options": [
+        "img",
+        "Image",
+        "presentation",
+        "true",
+        "Decorative",
+        "button",
+        "Interactive"
+      ]
+    },
+    {
+      "name": "icon",
+      "label": "icon",
+      "type": "text",
+      "placeholder": "sap-icon://add"
+    },
+    {
+      "name": "fallback-icon",
+      "label": "fallback-icon",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "initials",
+      "label": "initials",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "shape",
+      "label": "shape",
+      "type": "select",
+      "options": [
+        "Circle",
+        "Square"
+      ]
+    },
+    {
+      "name": "size",
+      "label": "size",
+      "type": "select",
+      "options": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "name": "color-scheme",
+      "label": "color-scheme",
+      "type": "select",
+      "options": [
+        "Auto",
+        "Accent1",
+        "Accent2",
+        "Accent3",
+        "Accent4",
+        "Accent5",
+        "Accent6",
+        "Accent7",
+        "Accent8",
+        "Accent9",
+        "Accent10",
+        "Placeholder",
+        "Transparent"
+      ]
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    }
+  ],
+  "slots": [
+    "",
+    "badge"
+  ],
+  "extraEvents": []
+}

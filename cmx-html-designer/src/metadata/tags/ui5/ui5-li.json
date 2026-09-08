@@ -1,0 +1,87 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-li>",
+  "defaults": {
+    "text": "列表项"
+  },
+  "isVoid": false,
+  "tag": "ui5-li",
+  "description": "UI5 列表项",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "description",
+      "label": "description",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "icon",
+      "label": "icon",
+      "type": "text",
+      "placeholder": "sap-icon://add"
+    },
+    {
+      "name": "icon-end",
+      "label": "icon-end",
+      "type": "boolean"
+    },
+    {
+      "name": "additional-text",
+      "label": "additional-text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "additional-text-state",
+      "label": "additional-text-state",
+      "type": "select",
+      "options": [
+        "None",
+        "Positive",
+        "Critical",
+        "Negative",
+        "Information"
+      ]
+    },
+    {
+      "name": "movable",
+      "label": "movable",
+      "type": "boolean"
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "wrapping-type",
+      "label": "wrapping-type",
+      "type": "select",
+      "options": [
+        "None",
+        "Normal"
+      ]
+    }
+  ],
+  "slots": [
+    "",
+    "image"
+  ],
+  "extraEvents": []
+}

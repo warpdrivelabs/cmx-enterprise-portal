@@ -1,0 +1,23 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-menu-separator>",
+  "isVoid": true,
+  "tag": "ui5-menu-separator",
+  "description": "UI5 菜单分隔线",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [],
+  "slots": [],
+  "extraEvents": [
+    "request-tabindex-change",
+    "forward-after",
+    "forward-before"
+  ]
+}

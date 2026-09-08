@@ -1,0 +1,19 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-shellbar-spacer>",
+  "isVoid": true,
+  "tag": "ui5-shellbar-spacer",
+  "description": "UI5 Fiori Shellbar 间隔填充",
+  "canNest": false,
+  "group": "fiori",
+  "attrs": [],
+  "slots": [],
+  "extraEvents": []
+}

@@ -1,0 +1,38 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-dynamic-date-range>",
+  "isVoid": true,
+  "tag": "ui5-dynamic-date-range",
+  "description": "UI5 动态日期范围输入",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "operator",
+      "label": "operator",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "options",
+      "label": "options",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

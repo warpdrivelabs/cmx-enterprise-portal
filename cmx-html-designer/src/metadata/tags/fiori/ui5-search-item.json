@@ -1,0 +1,61 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-search-item>",
+  "isVoid": false,
+  "tag": "ui5-search-item",
+  "description": "UI5 Fiori 搜索结果项",
+  "canNest": false,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "description",
+      "label": "description",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "icon",
+      "label": "icon",
+      "type": "text",
+      "placeholder": "sap-icon://add"
+    },
+    {
+      "name": "selected",
+      "label": "selected",
+      "type": "boolean"
+    },
+    {
+      "name": "deletable",
+      "label": "deletable",
+      "type": "boolean"
+    },
+    {
+      "name": "scope-name",
+      "label": "scope-name",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [
+    "image",
+    "actions"
+  ],
+  "extraEvents": [
+    "request-tabindex-change",
+    "forward-after",
+    "forward-before"
+  ]
+}

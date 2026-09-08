@@ -1,0 +1,17 @@
+{
+  "tag": "tr",
+  "group": "default",
+  "label": "<tr>",
+  "description": "表格行",
+  "isVoid": false,
+  "canNest": true,
+  "attrs": [],
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

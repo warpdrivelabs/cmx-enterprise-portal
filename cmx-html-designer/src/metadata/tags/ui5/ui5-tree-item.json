@@ -1,0 +1,38 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-tree-item>",
+  "defaults": {
+    "attributes": {
+      "text": "节点",
+      "expanded": "true"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-tree-item",
+  "description": "UI5 树形节点",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "additional-text",
+      "label": "additional-text",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

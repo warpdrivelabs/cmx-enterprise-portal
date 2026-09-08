@@ -1,0 +1,544 @@
+{
+  "generatedAt": "2026-04-27T00:57:27.597Z",
+  "bundleMode": true,
+  "totalUi5Tags": 67,
+  "missingCount": 0,
+  "items": [
+    {
+      "tag": "ui5-avatar",
+      "package": "@ui5/webcomponents",
+      "module": "Avatar",
+      "importKey": "@ui5/webcomponents/Avatar",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Avatar.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-badge",
+      "package": "@ui5/webcomponents",
+      "module": "Badge",
+      "importKey": "@ui5/webcomponents/Badge",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Badge.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-bar",
+      "package": "@ui5/webcomponents",
+      "module": "Bar",
+      "importKey": "@ui5/webcomponents/Bar",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Bar.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-breadcrumbs",
+      "package": "@ui5/webcomponents",
+      "module": "Breadcrumbs",
+      "importKey": "@ui5/webcomponents/Breadcrumbs",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Breadcrumbs.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-breadcrumbs-item",
+      "package": "@ui5/webcomponents",
+      "module": "BreadcrumbsItem",
+      "importKey": "@ui5/webcomponents/BreadcrumbsItem",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/BreadcrumbsItem.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-busy-indicator",
+      "package": "@ui5/webcomponents",
+      "module": "BusyIndicator",
+      "importKey": "@ui5/webcomponents/BusyIndicator",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/BusyIndicator.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-button",
+      "package": "@ui5/webcomponents",
+      "module": "Button",
+      "importKey": "@ui5/webcomponents/Button",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Button.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-card",
+      "package": "@ui5/webcomponents",
+      "module": "Card",
+      "importKey": "@ui5/webcomponents/Card",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Card.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-cb-item",
+      "package": "@ui5/webcomponents",
+      "module": "ComboBoxItem",
+      "importKey": "@ui5/webcomponents/ComboBoxItem",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/ComboBoxItem.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-checkbox",
+      "package": "@ui5/webcomponents",
+      "module": "CheckBox",
+      "importKey": "@ui5/webcomponents/CheckBox",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/CheckBox.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-combobox",
+      "package": "@ui5/webcomponents",
+      "module": "ComboBox",
+      "importKey": "@ui5/webcomponents/ComboBox",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/ComboBox.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-date-picker",
+      "package": "@ui5/webcomponents",
+      "module": "DatePicker",
+      "importKey": "@ui5/webcomponents/DatePicker",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/DatePicker.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-dialog",
+      "package": "@ui5/webcomponents",
+      "module": "Dialog",
+      "importKey": "@ui5/webcomponents/Dialog",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Dialog.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-flexible-column-layout",
+      "package": "@ui5/webcomponents-fiori",
+      "module": "FlexibleColumnLayout",
+      "importKey": "@ui5/webcomponents-fiori/FlexibleColumnLayout",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents-fiori/dist/FlexibleColumnLayout.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-icon",
+      "package": "@ui5/webcomponents",
+      "module": "Icon",
+      "importKey": "@ui5/webcomponents/Icon",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Icon.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-input",
+      "package": "@ui5/webcomponents",
+      "module": "Input",
+      "importKey": "@ui5/webcomponents/Input",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Input.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-label",
+      "package": "@ui5/webcomponents",
+      "module": "Label",
+      "importKey": "@ui5/webcomponents/Label",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Label.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-li",
+      "package": "@ui5/webcomponents",
+      "module": "ListItemStandard",
+      "importKey": "@ui5/webcomponents/ListItemStandard",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/ListItemStandard.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-link",
+      "package": "@ui5/webcomponents",
+      "module": "Link",
+      "importKey": "@ui5/webcomponents/Link",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Link.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-list",
+      "package": "@ui5/webcomponents",
+      "module": "List",
+      "importKey": "@ui5/webcomponents/List",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/List.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-mcb-item",
+      "package": "@ui5/webcomponents",
+      "module": "MultiComboBoxItem",
+      "importKey": "@ui5/webcomponents/MultiComboBoxItem",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/MultiComboBoxItem.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-media-gallery",
+      "package": "@ui5/webcomponents-fiori",
+      "module": "MediaGallery",
+      "importKey": "@ui5/webcomponents-fiori/MediaGallery",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents-fiori/dist/MediaGallery.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-media-gallery-item",
+      "package": "@ui5/webcomponents-fiori",
+      "module": "MediaGalleryItem",
+      "importKey": "@ui5/webcomponents-fiori/MediaGalleryItem",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents-fiori/dist/MediaGalleryItem.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-menu",
+      "package": "@ui5/webcomponents",
+      "module": "Menu",
+      "importKey": "@ui5/webcomponents/Menu",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Menu.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-menu-item",
+      "package": "@ui5/webcomponents",
+      "module": "MenuItem",
+      "importKey": "@ui5/webcomponents/MenuItem",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/MenuItem.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-message-strip",
+      "package": "@ui5/webcomponents",
+      "module": "MessageStrip",
+      "importKey": "@ui5/webcomponents/MessageStrip",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/MessageStrip.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-multi-combobox",
+      "package": "@ui5/webcomponents",
+      "module": "MultiComboBox",
+      "importKey": "@ui5/webcomponents/MultiComboBox",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/MultiComboBox.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-notification-action",
+      "package": "@ui5/webcomponents-fiori",
+      "module": "NotificationAction",
+      "importKey": "@ui5/webcomponents-fiori/NotificationAction",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents-fiori/dist/NotificationAction.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-notification-list",
+      "package": "@ui5/webcomponents-fiori",
+      "module": "NotificationList",
+      "importKey": "@ui5/webcomponents-fiori/NotificationList",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents-fiori/dist/NotificationList.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-notification-list-item",
+      "package": "@ui5/webcomponents-fiori",
+      "module": "NotificationListItem",
+      "importKey": "@ui5/webcomponents-fiori/NotificationListItem",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents-fiori/dist/NotificationListItem.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-option",
+      "package": "@ui5/webcomponents",
+      "module": "Option",
+      "importKey": "@ui5/webcomponents/Option",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Option.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-page",
+      "package": "@ui5/webcomponents-fiori",
+      "module": "Page",
+      "importKey": "@ui5/webcomponents-fiori/Page",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents-fiori/dist/Page.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-panel",
+      "package": "@ui5/webcomponents",
+      "module": "Panel",
+      "importKey": "@ui5/webcomponents/Panel",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Panel.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-popover",
+      "package": "@ui5/webcomponents",
+      "module": "Popover",
+      "importKey": "@ui5/webcomponents/Popover",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Popover.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-product-switch",
+      "package": "@ui5/webcomponents-fiori",
+      "module": "ProductSwitch",
+      "importKey": "@ui5/webcomponents-fiori/ProductSwitch",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents-fiori/dist/ProductSwitch.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-product-switch-item",
+      "package": "@ui5/webcomponents-fiori",
+      "module": "ProductSwitchItem",
+      "importKey": "@ui5/webcomponents-fiori/ProductSwitchItem",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents-fiori/dist/ProductSwitchItem.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-progress-indicator",
+      "package": "@ui5/webcomponents",
+      "module": "ProgressIndicator",
+      "importKey": "@ui5/webcomponents/ProgressIndicator",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/ProgressIndicator.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-range-slider",
+      "package": "@ui5/webcomponents",
+      "module": "RangeSlider",
+      "importKey": "@ui5/webcomponents/RangeSlider",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/RangeSlider.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-segmented-button",
+      "package": "@ui5/webcomponents",
+      "module": "SegmentedButton",
+      "importKey": "@ui5/webcomponents/SegmentedButton",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/SegmentedButton.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-segmented-button-item",
+      "package": "@ui5/webcomponents",
+      "module": "SegmentedButtonItem",
+      "importKey": "@ui5/webcomponents/SegmentedButtonItem",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/SegmentedButtonItem.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-select",
+      "package": "@ui5/webcomponents",
+      "module": "Select",
+      "importKey": "@ui5/webcomponents/Select",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Select.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-shellbar",
+      "package": "@ui5/webcomponents-fiori",
+      "module": "ShellBar",
+      "importKey": "@ui5/webcomponents-fiori/ShellBar",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents-fiori/dist/ShellBar.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-side-navigation",
+      "package": "@ui5/webcomponents-fiori",
+      "module": "SideNavigation",
+      "importKey": "@ui5/webcomponents-fiori/SideNavigation",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents-fiori/dist/SideNavigation.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-side-navigation-item",
+      "package": "@ui5/webcomponents-fiori",
+      "module": "SideNavigationItem",
+      "importKey": "@ui5/webcomponents-fiori/SideNavigationItem",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents-fiori/dist/SideNavigationItem.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-side-navigation-sub-item",
+      "package": "@ui5/webcomponents-fiori",
+      "module": "SideNavigationSubItem",
+      "importKey": "@ui5/webcomponents-fiori/SideNavigationSubItem",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents-fiori/dist/SideNavigationSubItem.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-slider",
+      "package": "@ui5/webcomponents",
+      "module": "Slider",
+      "importKey": "@ui5/webcomponents/Slider",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Slider.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-step-input",
+      "package": "@ui5/webcomponents",
+      "module": "StepInput",
+      "importKey": "@ui5/webcomponents/StepInput",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/StepInput.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-switch",
+      "package": "@ui5/webcomponents",
+      "module": "Switch",
+      "importKey": "@ui5/webcomponents/Switch",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Switch.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-tab",
+      "package": "@ui5/webcomponents",
+      "module": "Tab",
+      "importKey": "@ui5/webcomponents/Tab",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Tab.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-tabcontainer",
+      "package": "@ui5/webcomponents",
+      "module": "TabContainer",
+      "importKey": "@ui5/webcomponents/TabContainer",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/TabContainer.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-table",
+      "package": "@ui5/webcomponents",
+      "module": "Table",
+      "importKey": "@ui5/webcomponents/Table",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Table.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-table-cell",
+      "package": "@ui5/webcomponents",
+      "module": "TableCell",
+      "importKey": "@ui5/webcomponents/TableCell",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/TableCell.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-table-header-cell",
+      "package": "@ui5/webcomponents",
+      "module": "TableHeaderCell",
+      "importKey": "@ui5/webcomponents/TableHeaderCell",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/TableHeaderCell.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-table-header-row",
+      "package": "@ui5/webcomponents",
+      "module": "TableHeaderRow",
+      "importKey": "@ui5/webcomponents/TableHeaderRow",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/TableHeaderRow.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-table-row",
+      "package": "@ui5/webcomponents",
+      "module": "TableRow",
+      "importKey": "@ui5/webcomponents/TableRow",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/TableRow.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-textarea",
+      "package": "@ui5/webcomponents",
+      "module": "TextArea",
+      "importKey": "@ui5/webcomponents/TextArea",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/TextArea.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-timeline",
+      "package": "@ui5/webcomponents-fiori",
+      "module": "Timeline",
+      "importKey": "@ui5/webcomponents-fiori/Timeline",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents-fiori/dist/Timeline.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-timeline-item",
+      "package": "@ui5/webcomponents-fiori",
+      "module": "TimelineItem",
+      "importKey": "@ui5/webcomponents-fiori/TimelineItem",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents-fiori/dist/TimelineItem.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-title",
+      "package": "@ui5/webcomponents",
+      "module": "Title",
+      "importKey": "@ui5/webcomponents/Title",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Title.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-toolbar",
+      "package": "@ui5/webcomponents",
+      "module": "Toolbar",
+      "importKey": "@ui5/webcomponents/Toolbar",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Toolbar.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-toolbar-button",
+      "package": "@ui5/webcomponents",
+      "module": "ToolbarButton",
+      "importKey": "@ui5/webcomponents/ToolbarButton",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/ToolbarButton.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-toolbar-select",
+      "package": "@ui5/webcomponents",
+      "module": "ToolbarSelect",
+      "importKey": "@ui5/webcomponents/ToolbarSelect",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/ToolbarSelect.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-toolbar-spacer",
+      "package": "@ui5/webcomponents",
+      "module": "ToolbarSpacer",
+      "importKey": "@ui5/webcomponents/ToolbarSpacer",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/ToolbarSpacer.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-user-menu",
+      "package": "@ui5/webcomponents-fiori",
+      "module": "UserMenu",
+      "importKey": "@ui5/webcomponents-fiori/UserMenu",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents-fiori/dist/UserMenu.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-user-menu-item",
+      "package": "@ui5/webcomponents-fiori",
+      "module": "UserMenuItem",
+      "importKey": "@ui5/webcomponents-fiori/UserMenuItem",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents-fiori/dist/UserMenuItem.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-wizard",
+      "package": "@ui5/webcomponents",
+      "module": "Wizard",
+      "importKey": "@ui5/webcomponents/Wizard",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/Wizard.js?module\";",
+      "imported": true
+    },
+    {
+      "tag": "ui5-wizard-step",
+      "package": "@ui5/webcomponents",
+      "module": "WizardStep",
+      "importKey": "@ui5/webcomponents/WizardStep",
+      "importStatement": "import \"https://unpkg.com/@ui5/webcomponents/dist/WizardStep.js?module\";",
+      "imported": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "tag": "table",
+  "group": "default",
+  "label": "<table>",
+  "description": "表格根元素",
+  "isVoid": false,
+  "canNest": true,
+  "attrs": [],
+  "defaults": {
+    "style": {
+      "borderCollapse": "collapse",
+      "width": "100%"
+    }
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

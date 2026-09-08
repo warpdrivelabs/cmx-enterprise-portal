@@ -1,0 +1,63 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-tokenizer>",
+  "isVoid": false,
+  "tag": "ui5-tokenizer",
+  "description": "UI5 Token 容器",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "readonly",
+      "label": "readonly",
+      "type": "boolean"
+    },
+    {
+      "name": "multi-line",
+      "label": "multi-line",
+      "type": "boolean"
+    },
+    {
+      "name": "name",
+      "label": "name",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "show-clear-all",
+      "label": "show-clear-all",
+      "type": "boolean"
+    },
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "token-delete",
+    "selection-change",
+    "show-more-items-press",
+    "before-more-popover-open"
+  ]
+}

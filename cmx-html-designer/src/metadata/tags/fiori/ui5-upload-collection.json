@@ -1,0 +1,75 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-upload-collection>",
+  "isVoid": false,
+  "tag": "ui5-upload-collection",
+  "description": "UI5 Fiori 上传文件列表",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "selection-mode",
+      "label": "selection-mode",
+      "type": "select",
+      "options": [
+        "None",
+        "Single",
+        "SingleStart",
+        "SingleEnd",
+        "SingleAuto",
+        "Multiple"
+      ]
+    },
+    {
+      "name": "no-data-description",
+      "label": "no-data-description",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "no-data-text",
+      "label": "no-data-text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "no-data-header-level",
+      "label": "no-data-header-level",
+      "type": "select",
+      "options": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6"
+      ]
+    },
+    {
+      "name": "hide-drag-overlay",
+      "label": "hide-drag-overlay",
+      "type": "boolean"
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    }
+  ],
+  "slots": [
+    "",
+    "header"
+  ],
+  "extraEvents": [
+    "item-delete",
+    "selection-change"
+  ]
+}

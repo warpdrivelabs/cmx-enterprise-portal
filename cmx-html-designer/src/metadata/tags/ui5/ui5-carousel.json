@@ -1,0 +1,100 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-carousel>",
+  "isVoid": false,
+  "tag": "ui5-carousel",
+  "description": "UI5 轮播组件",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    },
+    {
+      "name": "cyclic",
+      "label": "cyclic",
+      "type": "boolean"
+    },
+    {
+      "name": "items-per-page",
+      "label": "items-per-page",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "hide-navigation-arrows",
+      "label": "hide-navigation-arrows",
+      "type": "boolean"
+    },
+    {
+      "name": "hide-page-indicator",
+      "label": "hide-page-indicator",
+      "type": "boolean"
+    },
+    {
+      "name": "page-indicator-type",
+      "label": "page-indicator-type",
+      "type": "select",
+      "options": [
+        "Default",
+        "Numeric"
+      ]
+    },
+    {
+      "name": "background-design",
+      "label": "background-design",
+      "type": "select",
+      "options": [
+        "Solid",
+        "Transparent",
+        "Translucent"
+      ]
+    },
+    {
+      "name": "page-indicator-background-design",
+      "label": "page-indicator-background-design",
+      "type": "select",
+      "options": [
+        "Solid",
+        "Transparent",
+        "Translucent"
+      ]
+    },
+    {
+      "name": "page-indicator-border-design",
+      "label": "page-indicator-border-design",
+      "type": "select",
+      "options": [
+        "Solid",
+        "None"
+      ]
+    },
+    {
+      "name": "arrows-placement",
+      "label": "arrows-placement",
+      "type": "select",
+      "options": [
+        "Content",
+        "Navigation"
+      ]
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

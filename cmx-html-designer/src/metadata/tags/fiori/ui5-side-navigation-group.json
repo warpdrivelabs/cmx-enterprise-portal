@@ -1,0 +1,25 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-side-navigation-group>",
+  "isVoid": false,
+  "tag": "ui5-side-navigation-group",
+  "description": "UI5 Fiori 侧边导航分组",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "expanded",
+      "label": "expanded",
+      "type": "boolean"
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

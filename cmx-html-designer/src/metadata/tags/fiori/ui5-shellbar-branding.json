@@ -1,0 +1,41 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-shellbar-branding>",
+  "isVoid": false,
+  "tag": "ui5-shellbar-branding",
+  "description": "UI5 Fiori Shellbar 自定义品牌区域",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "href",
+      "label": "href",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "target",
+      "label": "target",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    }
+  ],
+  "slots": [
+    "",
+    "logo"
+  ],
+  "extraEvents": []
+}

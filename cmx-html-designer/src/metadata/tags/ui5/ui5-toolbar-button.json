@@ -1,0 +1,107 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-toolbar-button>",
+  "defaults": {
+    "attributes": {
+      "text": "按钮"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-toolbar-button",
+  "description": "UI5 工具栏按钮",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "overflow-priority",
+      "label": "overflow-priority",
+      "type": "select",
+      "options": [
+        "Default",
+        "NeverOverflow",
+        "AlwaysOverflow"
+      ]
+    },
+    {
+      "name": "prevent-overflow-closing",
+      "label": "prevent-overflow-closing",
+      "type": "boolean"
+    },
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    },
+    {
+      "name": "design",
+      "label": "design",
+      "type": "select",
+      "options": [
+        "Default",
+        "Positive",
+        "Negative",
+        "Transparent",
+        "Emphasized",
+        "Attention"
+      ]
+    },
+    {
+      "name": "icon",
+      "label": "icon",
+      "type": "text",
+      "placeholder": "sap-icon://add"
+    },
+    {
+      "name": "end-icon",
+      "label": "end-icon",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "tooltip",
+      "label": "tooltip",
+      "type": "text",
+      "placeholder": "提示文本"
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    },
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "show-overflow-text",
+      "label": "show-overflow-text",
+      "type": "boolean"
+    },
+    {
+      "name": "width",
+      "label": "width",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "close-overflow"
+  ]
+}

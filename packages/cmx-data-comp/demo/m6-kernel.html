@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>M6 · cmx-spreadjs-sheet (mega 内核) 组件级验证</title>
+<style>
+  html,body{height:100%;margin:0;background:#0f1117;color:#e6e9f0;font:14px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+  #host{position:absolute;inset:12px;display:flex;flex-direction:column}
+  cmx-spreadjs-sheet{flex:1;min-height:0;border:1px solid #262b3a;border-radius:8px;overflow:hidden}
+</style>
+</head>
+<body>
+<div id="host"><cmx-spreadjs-sheet id="sheet" data-cmx-theme="dark"></cmx-spreadjs-sheet></div>
+<script type="module">
+  // 强制 mega 内核（barrel 择核；这里直接注册 mega 类到标签）
+  window.__CMX_SHEET_KERNEL__ = 'mega'
+  import('../src/components/spreadjs/cmx-spreadjs-sheet-mega.js').then((mod) => {
+    if (!customElements.get('cmx-spreadjs-sheet')) customElements.define('cmx-spreadjs-sheet', mod.CmxSpreadjsSheetMega)
+    window.__ready = true
+  })
+</script>
+</body>
+</html>

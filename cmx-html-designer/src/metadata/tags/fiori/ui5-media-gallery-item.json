@@ -1,0 +1,42 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-media-gallery-item>",
+  "isVoid": false,
+  "tag": "ui5-media-gallery-item",
+  "description": "Fiori 媒体画廊项",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "selected",
+      "label": "selected",
+      "type": "boolean"
+    },
+    {
+      "name": "disabled",
+      "label": "disabled",
+      "type": "boolean"
+    },
+    {
+      "name": "layout",
+      "label": "layout",
+      "type": "select",
+      "options": [
+        "Square",
+        "Wide"
+      ]
+    }
+  ],
+  "slots": [
+    "",
+    "thumbnail"
+  ],
+  "extraEvents": []
+}

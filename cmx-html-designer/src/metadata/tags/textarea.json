@@ -1,0 +1,42 @@
+{
+  "tag": "textarea",
+  "group": "default",
+  "label": "<textarea>",
+  "description": "多行输入框",
+  "isVoid": false,
+  "canNest": false,
+  "attrs": [
+    {
+      "name": "name",
+      "label": "name",
+      "type": "text",
+      "placeholder": "字段名"
+    },
+    {
+      "name": "rows",
+      "label": "rows",
+      "type": "number",
+      "placeholder": "4"
+    },
+    {
+      "name": "placeholder",
+      "label": "placeholder",
+      "type": "text",
+      "placeholder": "占位提示"
+    }
+  ],
+  "defaults": {
+    "attributes": {
+      "rows": "4",
+      "placeholder": "请输入内容"
+    }
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "form"
+}

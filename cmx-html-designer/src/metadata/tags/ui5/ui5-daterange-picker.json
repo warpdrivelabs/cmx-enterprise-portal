@@ -1,0 +1,26 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-daterange-picker>",
+  "isVoid": true,
+  "tag": "ui5-daterange-picker",
+  "description": "UI5 日期范围选择器",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "delimiter",
+      "label": "delimiter",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

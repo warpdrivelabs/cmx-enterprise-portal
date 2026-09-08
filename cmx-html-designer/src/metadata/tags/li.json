@@ -1,0 +1,20 @@
+{
+  "tag": "li",
+  "group": "default",
+  "label": "<li>",
+  "description": "列表项",
+  "isVoid": false,
+  "canNest": false,
+  "attrs": [],
+  "defaults": {
+    "text": "列表项"
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

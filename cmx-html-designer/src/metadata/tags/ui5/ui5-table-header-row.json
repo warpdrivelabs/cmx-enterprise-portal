@@ -1,0 +1,25 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-table-header-row>",
+  "isVoid": false,
+  "tag": "ui5-table-header-row",
+  "description": "UI5 表头行",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "sticky",
+      "label": "sticky",
+      "type": "boolean"
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

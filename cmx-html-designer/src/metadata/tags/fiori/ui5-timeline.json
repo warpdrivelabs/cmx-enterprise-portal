@@ -1,0 +1,58 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-timeline>",
+  "isVoid": false,
+  "tag": "ui5-timeline",
+  "description": "Fiori 时间线",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "layout",
+      "label": "layout",
+      "type": "select",
+      "options": [
+        "Vertical",
+        "Horizontal"
+      ]
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "loading",
+      "label": "loading",
+      "type": "boolean"
+    },
+    {
+      "name": "loading-delay",
+      "label": "loading-delay",
+      "type": "text",
+      "placeholder": "1000"
+    },
+    {
+      "name": "growing",
+      "label": "growing",
+      "type": "select",
+      "options": [
+        "Button",
+        "Scroll",
+        "None"
+      ]
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "load-more"
+  ]
+}

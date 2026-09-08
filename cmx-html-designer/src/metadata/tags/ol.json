@@ -1,0 +1,30 @@
+{
+  "tag": "ol",
+  "group": "default",
+  "label": "<ol>",
+  "description": "有序列表",
+  "isVoid": false,
+  "canNest": true,
+  "attrs": [
+    {
+      "name": "type",
+      "label": "type",
+      "type": "select",
+      "options": [
+        "1",
+        "a",
+        "A",
+        "i",
+        "I"
+      ]
+    }
+  ],
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

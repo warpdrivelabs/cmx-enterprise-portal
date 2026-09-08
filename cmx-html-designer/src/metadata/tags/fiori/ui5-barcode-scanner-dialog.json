@@ -1,0 +1,31 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-barcode-scanner-dialog>",
+  "isVoid": true,
+  "tag": "ui5-barcode-scanner-dialog",
+  "description": "UI5 Fiori 条形码/二维码扫描对话框",
+  "canNest": false,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "open",
+      "label": "open",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "header",
+    "footer"
+  ],
+  "extraEvents": [
+    "scan-success",
+    "scan-error"
+  ]
+}

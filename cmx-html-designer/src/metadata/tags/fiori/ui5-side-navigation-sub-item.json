@@ -1,0 +1,42 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-side-navigation-sub-item>",
+  "defaults": {
+    "attributes": {
+      "text": "子导航项",
+      "icon": "document"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-side-navigation-sub-item",
+  "description": "Fiori 侧边子导航项",
+  "canNest": false,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "icon",
+      "label": "icon",
+      "type": "text",
+      "placeholder": "SAP / Tabler 图标名，如 home 或 tabler-outline/home"
+    },
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text"
+    },
+    {
+      "name": "selected",
+      "label": "selected",
+      "type": "boolean"
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

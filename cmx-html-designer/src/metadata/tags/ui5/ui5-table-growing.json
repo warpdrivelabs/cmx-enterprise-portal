@@ -1,0 +1,43 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-table-growing>",
+  "isVoid": true,
+  "tag": "ui5-table-growing",
+  "description": "UI5 表格加载更多扩展",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "mode",
+      "label": "mode",
+      "type": "select",
+      "options": [
+        "Button",
+        "Scroll"
+      ]
+    },
+    {
+      "name": "text",
+      "label": "text",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "subtext",
+      "label": "subtext",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "load-more"
+  ]
+}

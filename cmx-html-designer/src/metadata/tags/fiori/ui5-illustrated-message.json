@@ -1,0 +1,82 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-illustrated-message>",
+  "defaults": {
+    "attributes": {
+      "name": "BeforeSearch",
+      "design": "Scene"
+    }
+  },
+  "isVoid": false,
+  "tag": "ui5-illustrated-message",
+  "description": "UI5 Fiori 插图空状态提示",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "name",
+      "label": "name",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "design",
+      "label": "design",
+      "type": "select",
+      "options": [
+        "Auto",
+        "Base",
+        "Dot",
+        "Spot",
+        "Dialog",
+        "Scene",
+        "ExtraSmall",
+        "Small",
+        "Medium",
+        "Large"
+      ]
+    },
+    {
+      "name": "subtitle-text",
+      "label": "subtitle-text",
+      "type": "text",
+      "placeholder": "副标题"
+    },
+    {
+      "name": "title-text",
+      "label": "title-text",
+      "type": "text",
+      "placeholder": "标题"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    },
+    {
+      "name": "decorative",
+      "label": "decorative",
+      "type": "boolean"
+    },
+    {
+      "name": "title",
+      "label": "title",
+      "type": "text",
+      "placeholder": ""
+    }
+  ],
+  "slots": [
+    "title",
+    "subtitle",
+    ""
+  ],
+  "extraEvents": []
+}

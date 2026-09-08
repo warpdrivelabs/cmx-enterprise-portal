@@ -1,0 +1,37 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-avatar-group>",
+  "isVoid": false,
+  "tag": "ui5-avatar-group",
+  "description": "UI5 头像组容器",
+  "canNest": true,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    }
+  ],
+  "slots": [
+    "",
+    "overflowButton"
+  ],
+  "extraEvents": [
+    "overflow"
+  ]
+}

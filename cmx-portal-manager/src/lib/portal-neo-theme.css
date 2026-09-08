@@ -1,0 +1,58 @@
+/**
+ * CMX Portal Neo 根级 CSS 变量（亮/暗随 UI5 --sap* 自适应）
+ */
+:root {
+  --neo-cyan: #00b4d8;
+  --neo-violet: #7c3aed;
+  --neo-mint: #10b981;
+  --neo-warn: #f59e0b;
+  --neo-accent: var(--neo-cyan);
+  --neo-accent-2: var(--neo-violet);
+  --neo-glass: color-mix(in srgb, var(--sapList_Background, #fff) 88%, transparent);
+  --neo-glass-strong: color-mix(in srgb, var(--sapObjectHeader_Background, #f5f6f7) 93%, transparent);
+  --neo-border: color-mix(in srgb, var(--neo-cyan) 28%, var(--sapGroup_ContentBorderColor, #d9d9d9));
+  --neo-border-subtle: color-mix(in srgb, var(--neo-cyan) 12%, var(--sapGroup_TitleBorderColor, #ddd));
+  --neo-glow: color-mix(in srgb, var(--neo-cyan) 20%, transparent);
+  --neo-glow-violet: color-mix(in srgb, var(--neo-violet) 16%, transparent);
+  --portal-tab-row-bg:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--sapObjectHeader_Background, #fff) 92%, var(--neo-violet) 8%),
+      color-mix(in srgb, var(--sapObjectHeader_Background, #fff) 96%, var(--neo-cyan) 4%)
+    );
+  --portal-panel-bg:
+    linear-gradient(
+      165deg,
+      color-mix(in srgb, var(--sapGroup_ContentBackground, #fafafa) 97%, var(--neo-violet) 3%),
+      color-mix(in srgb, var(--sapGroup_ContentBackground, #fafafa) 98%, var(--neo-cyan) 2%)
+    );
+  --portal-workspace-bg:
+    radial-gradient(ellipse 120% 70% at 0% 0%, color-mix(in srgb, var(--neo-violet) 7%, transparent), transparent 52%),
+    radial-gradient(ellipse 90% 60% at 100% 100%, color-mix(in srgb, var(--neo-cyan) 6%, transparent), transparent 48%),
+    var(--sapBackgroundColor, #f5f6f7);
+  --portal-shellbar-bg:
+    radial-gradient(ellipse 90% 180% at 0% -40%, color-mix(in srgb, var(--neo-violet) 24%, transparent), transparent 58%),
+    radial-gradient(ellipse 80% 160% at 100% -30%, color-mix(in srgb, var(--neo-cyan) 22%, transparent), transparent 55%),
+    radial-gradient(ellipse 60% 120% at 50% 120%, color-mix(in srgb, var(--neo-mint) 14%, transparent), transparent 60%),
+    linear-gradient(
+      102deg,
+      color-mix(in srgb, var(--sapShellColor, #1b2a3b) 68%, var(--neo-violet) 32%),
+      color-mix(in srgb, var(--sapShellColor, #1b2a3b) 72%, var(--neo-cyan) 28%) 48%,
+      color-mix(in srgb, var(--sapShellColor, #1b2a3b) 76%, var(--neo-mint) 24%)
+    );
+  --portal-statusbar-bg:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--sapShellColor, #1b2a3b) 92%, var(--neo-violet) 8%),
+      color-mix(in srgb, var(--sapShellColor, #1b2a3b) 94%, var(--neo-cyan) 6%)
+    );
+}
+
+/*
+ * 原生 <select> option 弹层换肤（增强层，仅 Chrome/Edge 生效；Firefox/Safari 由 :root color-scheme 兜底）。
+ * 仅覆盖主文档 light DOM 内的 select；各 Shadow DOM 组件需自带同名规则（shadow 边界隔离，全局规则无法穿透）。
+ */
+select option {
+  background: var(--sapField_Background, #fff);
+  color: var(--sapField_TextColor, var(--sapTextColor, #1d2d3e));
+}

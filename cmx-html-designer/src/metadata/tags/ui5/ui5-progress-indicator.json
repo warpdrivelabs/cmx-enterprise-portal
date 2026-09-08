@@ -1,0 +1,61 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-progress-indicator>",
+  "defaults": {
+    "attributes": {
+      "value": "40",
+      "display-value": "40%"
+    }
+  },
+  "isVoid": true,
+  "tag": "ui5-progress-indicator",
+  "description": "UI5 进度条",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "hide-value",
+      "label": "hide-value",
+      "type": "boolean"
+    },
+    {
+      "name": "value",
+      "label": "value",
+      "type": "text",
+      "placeholder": "0"
+    },
+    {
+      "name": "display-value",
+      "label": "display-value",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "value-state",
+      "label": "value-state",
+      "type": "select",
+      "options": [
+        "None",
+        "Positive",
+        "Critical",
+        "Negative",
+        "Information"
+      ]
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

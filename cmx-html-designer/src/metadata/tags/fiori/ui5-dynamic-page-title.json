@@ -1,0 +1,31 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-dynamic-page-title>",
+  "isVoid": false,
+  "tag": "ui5-dynamic-page-title",
+  "description": "UI5 Fiori 页面标题区域（含操作栏）",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [],
+  "slots": [
+    "heading",
+    "snappedHeading",
+    "snappedTitleOnMobile",
+    "actionsBar",
+    "navigationBar",
+    "",
+    "subheading",
+    "snappedSubheading",
+    "breadcrumbs"
+  ],
+  "extraEvents": [
+    "toggle-title"
+  ]
+}

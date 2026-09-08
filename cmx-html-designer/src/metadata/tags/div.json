@@ -1,0 +1,34 @@
+{
+  "tag": "div",
+  "group": "default",
+  "label": "<div>",
+  "description": "通用块级容器",
+  "isVoid": false,
+  "canNest": true,
+  "attrs": [
+    {
+      "name": "role",
+      "label": "role",
+      "type": "text",
+      "placeholder": "main/navigation"
+    }
+  ],
+  "defaults": {
+    "text": "div 内容"
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common",
+  "extraEvents": [
+    "dragstart",
+    "drag",
+    "dragend",
+    "dragover",
+    "drop"
+  ]
+}

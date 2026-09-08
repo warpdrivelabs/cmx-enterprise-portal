@@ -1,0 +1,19 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-product-switch>",
+  "isVoid": false,
+  "tag": "ui5-product-switch",
+  "description": "Fiori 产品切换器",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [],
+  "slots": [],
+  "extraEvents": []
+}

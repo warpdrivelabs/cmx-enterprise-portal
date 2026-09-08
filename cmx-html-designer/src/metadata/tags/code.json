@@ -1,0 +1,20 @@
+{
+  "tag": "code",
+  "group": "default",
+  "label": "<code>",
+  "description": "行内代码",
+  "isVoid": false,
+  "canNest": false,
+  "attrs": [],
+  "defaults": {
+    "text": "const x = 1;"
+  },
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "common"
+}

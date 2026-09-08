@@ -1,0 +1,48 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-label>",
+  "defaults": {
+    "text": "文本标签"
+  },
+  "isVoid": false,
+  "tag": "ui5-label",
+  "description": "UI5 标签",
+  "canNest": false,
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "for",
+      "label": "for",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "show-colon",
+      "label": "show-colon",
+      "type": "boolean"
+    },
+    {
+      "name": "required",
+      "label": "required",
+      "type": "boolean"
+    },
+    {
+      "name": "wrapping-type",
+      "label": "wrapping-type",
+      "type": "select",
+      "options": [
+        "None",
+        "Normal"
+      ]
+    }
+  ],
+  "slots": [],
+  "extraEvents": []
+}

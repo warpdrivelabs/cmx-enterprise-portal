@@ -1,0 +1,62 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-bar>",
+  "defaults": {
+    "attributes": {
+      "design": "Header"
+    },
+    "text": "页面标题"
+  },
+  "isVoid": false,
+  "tag": "ui5-bar",
+  "description": "Fiori 页面标题栏",
+  "canNest": true,
+  "slotOrientation": "horizontal",
+  "group": "ui5",
+  "attrs": [
+    {
+      "name": "design",
+      "label": "design",
+      "type": "select",
+      "options": [
+        "Header",
+        "Subheader",
+        "Footer",
+        "FloatingFooter"
+      ]
+    },
+    {
+      "name": "accessible-role",
+      "label": "accessible-role",
+      "type": "select",
+      "options": [
+        "Toolbar",
+        "None"
+      ]
+    },
+    {
+      "name": "accessible-name",
+      "label": "accessible-name",
+      "type": "text",
+      "placeholder": "无障碍名称"
+    },
+    {
+      "name": "accessible-name-ref",
+      "label": "accessible-name-ref",
+      "type": "text",
+      "placeholder": "关联元素ID"
+    }
+  ],
+  "slots": [
+    "startContent",
+    "",
+    "endContent"
+  ],
+  "extraEvents": []
+}

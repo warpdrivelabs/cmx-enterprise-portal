@@ -1,0 +1,19 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-user-menu-item-group>",
+  "isVoid": false,
+  "tag": "ui5-user-menu-item-group",
+  "description": "UI5 Fiori 用户菜单项分组",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [],
+  "slots": [],
+  "extraEvents": []
+}

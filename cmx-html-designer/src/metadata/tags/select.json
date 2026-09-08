@@ -1,0 +1,29 @@
+{
+  "tag": "select",
+  "group": "default",
+  "label": "<select>",
+  "description": "下拉选择框",
+  "isVoid": false,
+  "canNest": true,
+  "attrs": [
+    {
+      "name": "name",
+      "label": "name",
+      "type": "text",
+      "placeholder": "字段名"
+    },
+    {
+      "name": "multiple",
+      "label": "multiple",
+      "type": "boolean"
+    }
+  ],
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "eventPreset": "form"
+}

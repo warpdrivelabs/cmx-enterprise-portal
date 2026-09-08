@@ -1,0 +1,43 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-dynamic-page>",
+  "isVoid": false,
+  "tag": "ui5-dynamic-page",
+  "description": "UI5 Fiori 动态页面（可折叠标题）",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "hide-pin-button",
+      "label": "hide-pin-button",
+      "type": "boolean"
+    },
+    {
+      "name": "header-pinned",
+      "label": "header-pinned",
+      "type": "boolean"
+    },
+    {
+      "name": "show-footer",
+      "label": "show-footer",
+      "type": "boolean"
+    }
+  ],
+  "slots": [
+    "",
+    "titleArea",
+    "headerArea",
+    "footerArea"
+  ],
+  "extraEvents": [
+    "pin-button-toggle",
+    "title-toggle"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "eventPreset": "ui5",
+  "styleGroups": [
+    "layout",
+    "flex",
+    "text",
+    "box",
+    "position"
+  ],
+  "label": "<ui5-timeline-group-item>",
+  "isVoid": false,
+  "tag": "ui5-timeline-group-item",
+  "description": "UI5 Fiori 时间轴分组项",
+  "canNest": true,
+  "group": "fiori",
+  "attrs": [
+    {
+      "name": "group-name",
+      "label": "group-name",
+      "type": "text",
+      "placeholder": ""
+    },
+    {
+      "name": "collapsed",
+      "label": "collapsed",
+      "type": "boolean"
+    }
+  ],
+  "slots": [],
+  "extraEvents": [
+    "toggle"
+  ]
+}
