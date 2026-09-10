@@ -31,6 +31,8 @@
  *   page-sizes      - 可选每页条数列表（逗号分隔，如 "5,10,20,50"）
  *   total           - 总记录数（null 时显示 '?'）
  *   compact         - 紧凑模式
+ *   no-total        - 隐藏总数文案：信息段只显示「第 x / y 页」，不显示「（共 N 条）」。
+ *                     默认显示总数。窄容器（侧栏等）关掉它避免换行/截断，总条数可由页面自身计数补足
  *   master-slave-id - 协作模式：绑定的协调器 id
  *   layer           - 协作模式：分页所辖层标识
  *
@@ -84,7 +86,7 @@ const TEMPLATE_HTML = `
 export class CmxPager extends HTMLElement {
   /** 返回需要监听的 attribute 列表（驱动 attributeChangedCallback） */
   static get observedAttributes () {
-    return ['page', 'page-size', 'page-sizes', 'total', 'compact', 'master-slave-id', 'layer']
+    return ['page', 'page-size', 'page-sizes', 'total', 'compact', 'no-total', 'master-slave-id', 'layer']
   }
 
   constructor () {
@@ -151,6 +153,9 @@ export class CmxPager extends HTMLElement {
         break
       case 'compact':
         this._applyCompact()
+        break
+      case 'no-total':
+        this._refresh()
         break
       case 'page':
       case 'page-size':
@@ -527,7 +532,7 @@ export class CmxPager extends HTMLElement {
     }
     this._hidePlaceholder()
 
-    // 文案：第 N / M 页（共 X 条）
+    // 文案：第 N / M 页（共 X 条）；no-total 时只显示页码部分（隐藏「（共 X 条）」）
     const totalPages = this._totalPages()
     let text
     if (this._total === 0) {
@@ -535,10 +540,13 @@ export class CmxPager extends HTMLElement {
     } else if (this._total == null) {
       // total 未知（独立模式未回填）
       text = `第 ${this._page} 页`
+    } else if (this.hasAttribute('no-total')) {
+      text = `第 ${this._page} / ${totalPages} 页`
     } else {
       text = `第 ${this._page} / ${totalPages} 页（共 ${this._total} 条）`
     }
     this._infoEl.textContent = text
+    this._infoEl.hidden = false
 
     // 按钮 disabled 规则
     const isFirst = this._page <= 1
