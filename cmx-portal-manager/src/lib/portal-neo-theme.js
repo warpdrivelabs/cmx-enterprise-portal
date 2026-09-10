@@ -519,9 +519,10 @@ export const PORTAL_NEO_SIDE_NAV_STYLES = `
     height: 100%;
     box-sizing: border-box;
     --_ui5_side_navigation_width: 100%;
-    /* 空间紧凑化：容器左垫 8px→4px；首层（无图标）项左垫 16px→4px，尽量贴齐模块头文字列 */
-    --_ui5_side_navigation_padding-flexible: 0.25rem 0 0 0.25rem;
-    --_ui5_side_navigation_padding-fixed: 0 0 0.25rem 0.25rem;
+    /* 空间紧凑化：容器左垫 8px→4px；首层（无图标）项左垫 16px→4px，尽量贴齐模块头文字列。
+       上下垫对称（各 4px）：选中项高亮胶囊不贴死相邻分组头，fixed/flexible 两模式保持一致 */
+    --_ui5_side_navigation_padding-flexible: 0.25rem 0 0.25rem 0.25rem;
+    --_ui5_side_navigation_padding-fixed: 0.25rem 0 0.25rem 0.25rem;
     --_ui5_side_navigation_item_padding_left: 0.25rem;
     background: transparent !important;
     --_ui5_side_navigation_box_shadow: none;
