@@ -363,36 +363,41 @@ export class CmxFloatingDialog extends HTMLElement {
     }
   }
 
-  /** 绑定底部按钮事件：自定义按钮（spec.buttons）、closable ✕、确认 / 取消按钮均触发 _emitClose。 */
+  /** 绑定底部按钮事件：自定义按钮（spec.buttons）统一渲染到底部按钮区（dlg-footer-actions，
+   *  追加在内置取消/确定之后 = 最右主按钮位；标题栏只留 closable ✕）、closable ✕、
+   *  确认 / 取消按钮均触发 _emitClose。 */
   _wireButtons () {
     const sr = this.shadowRoot
     const spec = this._spec || {}
+    const actionsEl = sr.getElementById('dlg-footer-actions')
+    if (actionsEl instanceof HTMLElement && Array.isArray(spec.buttons)) {
+      for (const btn of spec.buttons) {
+        const b = document.createElement('ui5-button')
+        b.setAttribute('design', btn.design || 'Transparent')
+        if (btn.icon) b.setAttribute('icon', safeDialogIconName(btn.icon))
+        if (btn.disabled) b.setAttribute('disabled', '')
+        b.textContent = btn.text || ''
+        b.dataset.dlgBtnId = String(btn.id)
+        actionsEl.appendChild(b)
+      }
+      actionsEl.addEventListener('click', (e) => {
+        const path = e.composedPath()
+        const target = path.find(
+          (el) => el instanceof HTMLElement && el.dataset.dlgBtnId != null,
+        )
+        if (target instanceof HTMLElement) this._emitClose('button', target.dataset.dlgBtnId)
+      })
+    }
+    // 标题栏委托仅处理 closable ✕（✕ 由 _applySpec 创建，可能晚于本 wiring，
+    // 委托绑定不依赖元素存在时机）
     const endEl = sr.getElementById('dlg-bar-end')
     if (endEl instanceof HTMLElement) {
-      if (Array.isArray(spec.buttons)) {
-        for (const btn of spec.buttons) {
-          const b = document.createElement('ui5-button')
-          b.setAttribute('design', btn.design || 'Transparent')
-          if (btn.icon) b.setAttribute('icon', safeDialogIconName(btn.icon))
-          if (btn.disabled) b.setAttribute('disabled', '')
-          b.textContent = btn.text || ''
-          b.dataset.dlgBtnId = String(btn.id)
-          endEl.appendChild(b)
-        }
-      }
-      // 委托同时覆盖自定义按钮与 closable ✕（✕ 由 _applySpec 创建，可能晚于本 wiring，
-      // 委托绑定不依赖元素存在时机）
       endEl.addEventListener('click', (e) => {
         const path = e.composedPath()
         const closeX = sr.getElementById('dlg-close-x')
         if (closeX && path.includes(closeX)) {
           this._emitClose('cancel')
-          return
         }
-        const target = path.find(
-          (el) => el instanceof HTMLElement && el.dataset.dlgBtnId != null,
-        )
-        if (target instanceof HTMLElement) this._emitClose('button', target.dataset.dlgBtnId)
       })
     }
     const cancelBtn = sr.getElementById('dlg-cancel-btn')
