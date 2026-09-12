@@ -1,5 +1,8 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { promises as fsp } from 'node:fs'
+import zlib from 'node:zlib'
+import { promisify } from 'node:util'
 import {
   cmxIconResourceChunkFileNames,
   cmxIconResourceResolveAliases,
@@ -90,6 +93,7 @@ export function defineCmxUi5RuntimeViteConfig() {
       localeDataWhitelistPlugin,
       cmxIconResourceStripIconSourceMapsPlugin(),
       manifestPlugin,
+      cmxPrecompressPlugin(),
     ],
     resolve: {
       alias: [
@@ -153,6 +157,94 @@ export function defineCmxUi5RuntimeViteConfig() {
         '@ui5/webcomponents-icons-tnt',
         '@ui5/webcomponents-icons-business-suite',
       ],
+    },
+  }
+}
+
+/* 可压缩的文本类扩展名（woff/ttf 为裸字体，gzip 后约省一半；woff2/png 等已压缩格式不压）。 */
+const PRECOMPRESS_EXTS = new Set([
+  '.js', '.mjs', '.css', '.html', '.htm', '.json',
+  '.svg', '.txt', '.xml', '.map', '.woff', '.ttf',
+])
+const PRECOMPRESS_MIN_BYTES = 1024
+const PRECOMPRESS_CONCURRENCY = 8
+/* brotli 质量：默认 9（比 gzip9 再小 ~10%，构建时间可接受）；发版构建可设
+   CMX_PRECOMPRESS_BR_QUALITY=11 换极限体积（11 比 9 慢 ~4 倍）。 */
+const PRECOMPRESS_BR_QUALITY = Number(process.env.CMX_PRECOMPRESS_BR_QUALITY || 9)
+
+const gzipAsync = promisify(zlib.gzip)
+const brotliAsync = promisify(zlib.brotliCompress)
+
+/** @param {string} dir @returns {Promise<string[]>} */
+async function collectPrecompressFiles(dir) {
+  const files = []
+  const walk = async (sub) => {
+    for (const entry of await fsp.readdir(sub, { withFileTypes: true })) {
+      const full = path.join(sub, entry.name)
+      if (entry.isDirectory()) {
+        await walk(full)
+      } else if (
+        entry.isFile()
+        && !entry.name.endsWith('.gz')
+        && !entry.name.endsWith('.br')
+        && PRECOMPRESS_EXTS.has(path.extname(entry.name).toLowerCase())
+      ) {
+        files.push(full)
+      }
+    }
+  }
+  await walk(dir)
+  return files
+}
+
+/** 预压缩产物插件：build 收尾为 outDir 内文本类静态资源生成同名 `.gz` / `.br` 伴生文件，
+ *  供服务端 ServeDir 的 precompressed_gzip/br 按 Accept-Encoding 直出（运行时零压缩 CPU 开销）。
+ *  <1KB 小文件与已压缩格式跳过；预压缩文件缺失时服务端自动回退原文件，新旧 dist 混部安全。
+ *  ui5-runtime / Portal / Designer 三处构建共享本插件。 */
+export function cmxPrecompressPlugin() {
+  /** @type {import('vite').ResolvedConfig} */
+  let resolvedConfig
+  return {
+    name: 'cmx-precompress',
+    apply: 'build',
+    configResolved(config) { resolvedConfig = config },
+    async closeBundle() {
+      const outDir = path.resolve(resolvedConfig.root, resolvedConfig.build.outDir)
+      const startedAt = Date.now()
+      const files = await collectPrecompressFiles(outDir)
+      const candidates = []
+      for (const file of files) {
+        if ((await fsp.stat(file)).size < PRECOMPRESS_MIN_BYTES) continue
+        candidates.push(file)
+      }
+      if (candidates.length === 0) return
+      console.log(`[cmx-precompress] 生成 .gz/.br 伴生文件：${candidates.length} 个文件…`)
+      let srcBytes = 0
+      let gzBytes = 0
+      let brBytes = 0
+      for (let i = 0; i < candidates.length; i += PRECOMPRESS_CONCURRENCY) {
+        await Promise.all(candidates.slice(i, i + PRECOMPRESS_CONCURRENCY).map(async (file) => {
+          const data = await fsp.readFile(file)
+          const [gz, br] = await Promise.all([
+            gzipAsync(data, { level: 9 }),
+            brotliAsync(data, {
+              params: { [zlib.constants.BROTLI_PARAM_QUALITY]: PRECOMPRESS_BR_QUALITY },
+            }),
+          ])
+          await Promise.all([
+            fsp.writeFile(`${file}.gz`, gz),
+            fsp.writeFile(`${file}.br`, br),
+          ])
+          srcBytes += data.length
+          gzBytes += gz.length
+          brBytes += br.length
+        }))
+      }
+      const mb = (n) => `${(n / 1024 / 1024).toFixed(1)}MB`
+      console.log(
+        `[cmx-precompress] 完成：${mb(srcBytes)} → gz ${mb(gzBytes)} / br ${mb(brBytes)}，`
+        + `耗时 ${((Date.now() - startedAt) / 1000).toFixed(1)}s`,
+      )
     },
   }
 }

@@ -3,7 +3,7 @@ import { readFileSync } from 'fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { cmxUi5RuntimeAppPlugin, cmxUi5SideEffectShimPlugin } from 'cmx-ui5-runtime/vite-app';
-import { localeDataWhitelistPlugin } from 'cmx-ui5-runtime/vite';
+import { localeDataWhitelistPlugin, cmxPrecompressPlugin } from 'cmx-ui5-runtime/vite';
 import { designerMetadataPlugin } from './vite-designer-metadata-plugin.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -33,7 +33,7 @@ export default defineConfig(({ mode }) => {
   return {
     /** 生产构建用绝对 base（/html/），避免 /html 无尾斜杠时相对路径解析到 /assets/ */
     base: appBase,
-    plugins: [cmxUi5SideEffectShimPlugin(), cmxUi5RuntimeAppPlugin(), localeDataWhitelistPlugin, designerMetadataPlugin()],
+    plugins: [cmxUi5SideEffectShimPlugin(), cmxUi5RuntimeAppPlugin(), localeDataWhitelistPlugin, cmxPrecompressPlugin(), designerMetadataPlugin()],
     resolve: {
       alias: [
         {

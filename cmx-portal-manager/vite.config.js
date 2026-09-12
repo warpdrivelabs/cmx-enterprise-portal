@@ -3,7 +3,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { readFileSync } from 'node:fs'
 import { cmxUi5RuntimeAppPlugin, cmxUi5SideEffectShimPlugin } from 'cmx-ui5-runtime/vite-app'
-import { localeDataWhitelistPlugin } from 'cmx-ui5-runtime/vite'
+import { localeDataWhitelistPlugin, cmxPrecompressPlugin } from 'cmx-ui5-runtime/vite'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const pkg = JSON.parse(readFileSync(path.join(__dirname, 'package.json'), 'utf-8'))
@@ -38,7 +38,7 @@ export default defineConfig(({ mode }) => {
     },
     /** 生产构建用绝对 base（/portal/），避免 /portal 无尾斜杠时相对路径解析到 /assets/ */
     base: appBase,
-    plugins: [cmxUi5SideEffectShimPlugin(), cmxUi5RuntimeAppPlugin(), localeDataWhitelistPlugin],
+    plugins: [cmxUi5SideEffectShimPlugin(), cmxUi5RuntimeAppPlugin(), localeDataWhitelistPlugin, cmxPrecompressPlugin()],
     resolve: {
       alias: [
         { find: '@cmx-html-designer', replacement: path.resolve(__dirname, '../cmx-html-designer') },
