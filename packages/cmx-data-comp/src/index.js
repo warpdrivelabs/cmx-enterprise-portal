@@ -25,24 +25,20 @@ import './components/cmx-datetime-input.js'
 /* Ignite 组件（igc-* 封装）：门户运行时通过 barrel 注册自定义元素。 */
 import './components/ignite/cmx-ignite-combo.js'
 import './components/ignite/cmx-ignite-list.js'
-/* Ignite Spreadsheet + SpreadJS（电子表格内核，仅报表页用）：
-   懒注册——不进 barrel 首屏，避免 6.4MB ignite-spreadsheet + spreadjs vendor 污染所有页面。
+/* Ignite Spreadsheet + 自研 mega 电子表格（电子表格内核，仅报表页用）：
+   懒注册——不进 barrel 首屏，避免大体积 vendor 污染所有页面。
    页面首次出现 <cmx-spreadsheet> / <cmx-spreadjs-sheet> 标签时才动态 import 加载。
-   报表页已确保使用前标签已注册（见 packages/cmx-data-comp/src/components/spreadjs/sheet-kernel.js）。 */
-import { resolveSheetKernel } from './components/spreadjs/sheet-kernel.js'
+   内核统一走自研 cmx-megasheet；SpreadJS(@mescius) 商业内核已废弃并归档到 bak/，不再加载。 */
 const _SHEET_TAGS = ['cmx-spreadsheet', 'cmx-spreadjs-sheet']
 let _sheetLoaded = false
 function _loadSheetComponents () {
   if (_sheetLoaded) return
   _sheetLoaded = true
   import('./components/ignite/cmx-spreadsheet.js')
-  import('./components/spreadjs/cmx-spreadjs-sheet.js').then(() => {
-    import('./components/spreadjs/cmx-spreadjs-sheet-mega.js').then((m) => {
-      if (resolveSheetKernel() === 'mega') {
-        try { if (!customElements.get('cmx-spreadjs-sheet')) customElements.define('cmx-spreadjs-sheet', m.CmxSpreadjsSheet) } catch (_) {}
-      }
-    }).catch(() => {})
-  }).catch(() => {})
+  // <cmx-spreadjs-sheet> 标签固定绑定自研 mega 实现（沿用旧标签名，消费方零改）。
+  import('./components/spreadjs/cmx-spreadjs-sheet-mega.js').then((m) => {
+    try { if (!customElements.get('cmx-spreadjs-sheet')) customElements.define('cmx-spreadjs-sheet', m.CmxSpreadjsSheet) } catch (_) {}
+  }).catch((e) => { console.error('[cmx-data-comp] 自研电子表格组件(cmx-spreadjs-sheet / mega)加载失败：', e) })
 }
 // MutationObserver 监听文档：首次出现 sheet 标签时触发懒加载
 if (typeof document !== 'undefined' && typeof MutationObserver !== 'undefined') {
@@ -99,9 +95,8 @@ export { CmxDictMru, createMruServiceFromPageService } from './lib/cmx-dict-pers
 export { CmxIgniteCombo } from './components/ignite/cmx-ignite-combo.js'
 export { CmxIgniteList } from './components/ignite/cmx-ignite-list.js'
 // CmxSpreadsheet / CmxSpreadjsSheet 已改为懒注册（见文件顶部 _loadSheetComponents），
-// 不再从 barrel 静态 export，避免 6.4MB vendor 进首屏。
+// 不再从 barrel 静态 export，避免大体积 vendor 进首屏。
 // 如需直接引用类，用子路径：import { CmxSpreadsheet } from 'cmx-data-comp/components/ignite/cmx-spreadsheet.js'
-export { resolveSheetKernel }
 export { CmxFxEditor } from './components/cmx-fx-editor.js'
 export { CmxMasterSlave } from './lib/cmx-master-slave.js'
 export { loadDocData, saveDocData, saveDocDataBatch, ChangeSetCollector, loadChildren, formatViolations, extractViolations } from './lib/cmx-doc-source.js'
